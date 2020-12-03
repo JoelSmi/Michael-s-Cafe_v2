@@ -5,6 +5,7 @@ class Program
     {
     static void Main()
     {
-        Process.Start("\\Arturo's Half\\");
+        Process.Start("\\Arturo's Half\\program.cs
+                      ");
     }
 }
