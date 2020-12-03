@@ -5,7 +5,7 @@ class Program
     {
     static void Main()
     {
-        Process.Start("\\Arturo's Half\\program.cs
-                      ");
+        //This is the code for starting programs from other C# Programs, but the file that is being reached must be a .exe file to run properly.
+        Process.Start("\\Arturo's Half\\program.cs");
     }
 }
