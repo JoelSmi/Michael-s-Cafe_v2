@@ -14,7 +14,7 @@ namespace WindowsFormsApp1
 {
     public partial class Log_In_Screen : Form
     {
-        
+        private String Directory = Path.GetDirectoryName(Application.ExecutablePath).Substring(0, Path.GetDirectoryName(Application.ExecutablePath).IndexOf("bin"));
         string username;
         string password;
 
@@ -34,7 +34,6 @@ namespace WindowsFormsApp1
             TextBox objTextBox = (TextBox)sender;
             string userText = objTextBox.Text;
             username = userText;
-            
         }
         
         
@@ -67,12 +66,7 @@ namespace WindowsFormsApp1
 
         private void loginbutton_Click(object sender, EventArgs e)
         {
-            
-
-
-
-
-            using (StreamReader ab = new StreamReader(@"C:\Users\cjf52\source\repos\Michael-s-Cafe_v2\Arturo's Half\Michael_Cafe.txt"))
+            using (StreamReader ab = new StreamReader(@"" + Directory + "\\Michael_Cafe.txt"))
             {
                 string line1 = ab.ReadLine();
                 string line2 = ab.ReadLine();
@@ -94,9 +88,9 @@ namespace WindowsFormsApp1
                     {
                         MessageBox.Show("Your login credentials don't match an account in our system.", "Login Error",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        break;
                         username = null;
                         password = null;
+                        break;
                     }
 
                 }
@@ -114,6 +108,10 @@ namespace WindowsFormsApp1
 
         }
 
-
+        private void BackBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            new Form1().Show();
+        }
     }
 }
