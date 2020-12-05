@@ -24,94 +24,62 @@ namespace WindowsFormsApp1
             
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            TextBox objTextBox = (TextBox)sender;
-            string userText = objTextBox.Text;
-            username = userText;
-        }
-        
-        
-
         private void Log_In_Screen_Load(object sender, EventArgs e)
         {
 
         }
 
+        //Back Button
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
             new Form1().Show();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void BackBtn_Click(object sender, EventArgs e)
         {
-
+            this.Close();
+            new Form1().Show();
         }
 
-        private void textBox1_TextChanged_1(object sender, EventArgs e)
-        {
-            TextBox objTextBox = (TextBox)sender;
-            string passText = objTextBox.Text;
-            password = passText;
-
-        }
-
-
-
-        private void loginbutton_Click(object sender, EventArgs e)
+        private void loginbutton_Click_1(object sender, EventArgs e)
         {
             using (StreamReader ab = new StreamReader(@"" + Directory + "\\Michael_Cafe.txt"))
             {
                 string line1 = ab.ReadLine();
                 string line2 = ab.ReadLine();
-                
-
+                username = usernameTextBox1.Text;
+                password = textBox1.Text;
 
 
                 while ((line1 != null) && (line2 != null))
                 {
-                    if ((line1 == username) && (line2 == password))
+                    if ((line1.Equals(username)) && (line2.Equals(password)))
                     {
                         Console.WriteLine("Welcome");
                         this.Hide();
                         new Menu_Screen().Show();
                         break;
-                        
+
                     }
                     else
                     {
+                        username = null;
+                        usernameTextBox1.Text = null;
+                        password = null;
+                        textBox1.Text = null;
                         MessageBox.Show("Your login credentials don't match an account in our system.", "Login Error",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        username = null;
-                        password = null;
+                        
                         break;
+                        
                     }
 
                 }
                 ab.Close();
-                
+
 
             }
-
-
-
-        }
-
-        private void passwordLbl_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BackBtn_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            new Form1().Show();
         }
     }
 }

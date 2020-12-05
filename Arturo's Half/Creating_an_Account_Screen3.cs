@@ -115,5 +115,11 @@ namespace WindowsFormsApp1
             this.Hide();
             new Form1().Show();
         }
+
+        private void BackBtn_Click(object sender, EventArgs e)
+        {
+            new Creating_an_Account_Screen2().Show();
+            Close();
+        }
     }
 }

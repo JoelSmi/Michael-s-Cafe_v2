@@ -35,7 +35,7 @@
             this.passwordtextBox = new System.Windows.Forms.TextBox();
             this.reTypePasswordlabel = new System.Windows.Forms.Label();
             this.reTypePasswordtextBox = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.BackBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -107,17 +107,18 @@
             this.reTypePasswordtextBox.Size = new System.Drawing.Size(300, 20);
             this.reTypePasswordtextBox.TabIndex = 10;
             // 
-            // button3
+            // BackBtn
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(26, 424);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(104, 33);
-            this.button3.TabIndex = 41;
-            this.button3.Text = "< Back";
-            this.button3.UseVisualStyleBackColor = false;
+            this.BackBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BackBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BackBtn.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BackBtn.Location = new System.Drawing.Point(26, 424);
+            this.BackBtn.Name = "BackBtn";
+            this.BackBtn.Size = new System.Drawing.Size(104, 33);
+            this.BackBtn.TabIndex = 41;
+            this.BackBtn.Text = "< Back";
+            this.BackBtn.UseVisualStyleBackColor = false;
+            this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
             // 
             // label1
             // 
@@ -150,7 +151,7 @@
             this.ClientSize = new System.Drawing.Size(873, 483);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.reTypePasswordtextBox);
             this.Controls.Add(this.reTypePasswordlabel);
             this.Controls.Add(this.passwordtextBox);
@@ -174,7 +175,7 @@
         private System.Windows.Forms.TextBox passwordtextBox;
         private System.Windows.Forms.Label reTypePasswordlabel;
         private System.Windows.Forms.TextBox reTypePasswordtextBox;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button BackBtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
     }

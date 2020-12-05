@@ -83,6 +83,10 @@ namespace WindowsFormsApp1
             new Creating_an_Account_Screen().Show();
         }
 
-        
+        private void BackBtn_Click(object sender, EventArgs e)
+        {
+            new Creating_an_Account_Screen().Show();
+            Close();
+        }
     }
 }

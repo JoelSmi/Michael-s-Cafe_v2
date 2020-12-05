@@ -38,7 +38,7 @@ namespace Software_Engineering
         private void InitializeComponent()
         {
             this.Label1 = new System.Windows.Forms.Label();
-            this._Button1 = new System.Windows.Forms.Button();
+            this.BackBtn = new System.Windows.Forms.Button();
             this._Label2 = new System.Windows.Forms.Label();
             this.Item1 = new System.Windows.Forms.Label();
             this.Label4 = new System.Windows.Forms.Label();
@@ -58,8 +58,8 @@ namespace Software_Engineering
             this.ServiceFee = new System.Windows.Forms.Label();
             this.Label13 = new System.Windows.Forms.Label();
             this.TotalCost = new System.Windows.Forms.Label();
-            this.Button5 = new System.Windows.Forms.Button();
-            this.Button6 = new System.Windows.Forms.Button();
+            this.PlaceOrder = new System.Windows.Forms.Button();
+            this.Cancel = new System.Windows.Forms.Button();
             this.Panel1 = new System.Windows.Forms.Panel();
             this.ItemCost10 = new System.Windows.Forms.Label();
             this.ItemCost9 = new System.Windows.Forms.Label();
@@ -103,18 +103,19 @@ namespace Software_Engineering
             this.Label1.TabIndex = 0;
             this.Label1.Text = "Summary";
             // 
-            // _Button1
+            // BackBtn
             // 
-            this._Button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this._Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this._Button1.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._Button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this._Button1.Location = new System.Drawing.Point(57, 40);
-            this._Button1.Name = "_Button1";
-            this._Button1.Size = new System.Drawing.Size(75, 25);
-            this._Button1.TabIndex = 1;
-            this._Button1.Text = "< Back";
-            this._Button1.UseVisualStyleBackColor = false;
+            this.BackBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BackBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BackBtn.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BackBtn.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.BackBtn.Location = new System.Drawing.Point(57, 40);
+            this.BackBtn.Name = "BackBtn";
+            this.BackBtn.Size = new System.Drawing.Size(75, 25);
+            this.BackBtn.TabIndex = 1;
+            this.BackBtn.Text = "< Back";
+            this.BackBtn.UseVisualStyleBackColor = false;
+            this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
             // 
             // _Label2
             // 
@@ -334,30 +335,31 @@ namespace Software_Engineering
             this.TotalCost.TabIndex = 20;
             this.TotalCost.Text = "$0.00";
             // 
-            // Button5
+            // PlaceOrder
             // 
-            this.Button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Button5.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button5.Location = new System.Drawing.Point(153, 478);
-            this.Button5.Name = "Button5";
-            this.Button5.Size = new System.Drawing.Size(80, 23);
-            this.Button5.TabIndex = 21;
-            this.Button5.Text = "Place Order";
-            this.Button5.UseVisualStyleBackColor = false;
-            this.Button5.Click += new System.EventHandler(this.Button5_Click);
+            this.PlaceOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.PlaceOrder.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.PlaceOrder.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PlaceOrder.Location = new System.Drawing.Point(153, 478);
+            this.PlaceOrder.Name = "PlaceOrder";
+            this.PlaceOrder.Size = new System.Drawing.Size(80, 23);
+            this.PlaceOrder.TabIndex = 21;
+            this.PlaceOrder.Text = "Place Order";
+            this.PlaceOrder.UseVisualStyleBackColor = false;
+            this.PlaceOrder.Click += new System.EventHandler(this.PlaceOrder_Click);
             // 
-            // Button6
+            // Cancel
             // 
-            this.Button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Button6.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button6.Location = new System.Drawing.Point(370, 478);
-            this.Button6.Name = "Button6";
-            this.Button6.Size = new System.Drawing.Size(75, 23);
-            this.Button6.TabIndex = 22;
-            this.Button6.Text = "Cancel";
-            this.Button6.UseVisualStyleBackColor = false;
+            this.Cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Cancel.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cancel.Location = new System.Drawing.Point(370, 478);
+            this.Cancel.Name = "Cancel";
+            this.Cancel.Size = new System.Drawing.Size(75, 23);
+            this.Cancel.TabIndex = 22;
+            this.Cancel.Text = "Cancel";
+            this.Cancel.UseVisualStyleBackColor = false;
+            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
             // 
             // Panel1
             // 
@@ -753,8 +755,8 @@ namespace Software_Engineering
             this.Controls.Add(this.ItemRemove6);
             this.Controls.Add(this.ItemRemove5);
             this.Controls.Add(this.ItemRemove4);
-            this.Controls.Add(this.Button6);
-            this.Controls.Add(this.Button5);
+            this.Controls.Add(this.Cancel);
+            this.Controls.Add(this.PlaceOrder);
             this.Controls.Add(this.ItemRemove3);
             this.Controls.Add(this.ItemRemove2);
             this.Controls.Add(this.ItemRemove1);
@@ -763,7 +765,7 @@ namespace Software_Engineering
             this.Controls.Add(this.ItemQ1);
             this.Controls.Add(this.Label5);
             this.Controls.Add(this._Label2);
-            this.Controls.Add(this._Button1);
+            this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.Label1);
             this.Controls.Add(this.Panel1);
             this.Name = "OrderSummary";
@@ -777,7 +779,7 @@ namespace Software_Engineering
         }
 
         internal Label Label1;
-        private Button _Button1;
+        private Button BackBtn;
 
         private Label _Label2;
         private Label Item1;
@@ -800,8 +802,8 @@ namespace Software_Engineering
         internal Label ServiceFee;
         internal Label Label13;
         internal Label TotalCost;
-        internal Button Button5;
-        internal Button Button6;
+        internal Button PlaceOrder;
+        internal Button Cancel;
         internal Panel Panel1;
         internal Button ItemRemove4;
         internal Button ItemRemove5;
