@@ -34,5 +34,21 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void loginbutton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void createAccountButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Menu_Screen().Show();
+        }
     }
 }

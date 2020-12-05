@@ -91,6 +91,7 @@
             this.createAccountButton.TabIndex = 5;
             this.createAccountButton.Text = "Create an account";
             this.createAccountButton.UseVisualStyleBackColor = false;
+            this.createAccountButton.Click += new System.EventHandler(this.createAccountButton_Click);
             // 
             // loginbutton
             // 
@@ -103,6 +104,7 @@
             this.loginbutton.TabIndex = 6;
             this.loginbutton.Text = "Log In";
             this.loginbutton.UseVisualStyleBackColor = false;
+            this.loginbutton.Click += new System.EventHandler(this.loginbutton_Click);
             // 
             // panel1
             // 
@@ -125,6 +127,7 @@
             this.button1.TabIndex = 8;
             this.button1.Text = "Continue as Guest";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
