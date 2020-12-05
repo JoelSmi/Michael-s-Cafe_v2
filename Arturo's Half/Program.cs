@@ -15,13 +15,9 @@ namespace WindowsFormsApp1
         [STAThread]
         static void Main()
         {
-            bool isGuest = false;
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1(isGuest));
-            //Application.Run(new Form1());
-            Application.Run(new Log_In_Screen());
-            //Application.Run(new Creating_an_Account_Screen());
+            Application.Run(new Form1());
         }
     }
 }

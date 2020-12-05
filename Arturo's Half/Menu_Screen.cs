@@ -14,17 +14,17 @@ namespace WindowsFormsApp1
 {
     public partial class Menu_Screen : Form
     {
-        bool isGuest = false;
-        public Menu_Screen(bool isGuest)
+        private String Directory = Path.GetDirectoryName(Application.ExecutablePath);
+        public Menu_Screen()
         {
-            this.isGuest = isGuest;
             InitializeComponent();
         }
 
         private void Menu_Screen_Load(object sender, EventArgs e)
         {
             string str = "";
-            StreamReader sr = new StreamReader("C:\\Users\\fchsb\\Desktop\\Micheal's Cafe\\Arturo's Half\\MenuItems.txt");
+            Directory = Directory.Substring(0,Directory.IndexOf("bin"));
+            StreamReader sr = new StreamReader(@"" + Directory + "\\MenuItems.txt");
             str = sr.ReadLine();
             while (str != null)
             {
@@ -167,13 +167,13 @@ namespace WindowsFormsApp1
 
         private void Back_Click(object sender, EventArgs e)
         {
-            new Form1(isGuest).Show();
+            new Form1().Show();
             Close();
         }
 
         private void CheckOut_Click(object sender, EventArgs e)
         {
-            string order = "23030, \n";
+            string order = "23030 \n";
             //Beginning of the Side Quantity Calculation
             if (SideQ1.Value != 0){
                 order = order +  SideItem1.Text + "," +  SideQ1.Value.ToString() + "-" + (decimal.Parse(SidePrice1.Text.Substring(SidePrice1.Text.IndexOf('$')+1)) * SideQ1.Value).ToString() +"\n";
@@ -330,14 +330,12 @@ namespace WindowsFormsApp1
             }
 
             //Writing the Order to the File and closing the form to open up the Order Summary screen
-            StreamWriter sw = new StreamWriter("C:\\Users\\fchsb\\Desktop\\Michael's Cafe_v2\\Arturo's Half\\Order.txt");
+            StreamWriter sw = new StreamWriter(@"" + Directory + "\\Order.txt");
             sw.WriteLine(order);
             sw.Close();
-            
-            if (isGuest == true)
-                Process.Start("C:\\Users\\fchsb\\Desktop\\Micheal's Cafe\\Eric's Half\\bin\\Debug\\Software_Engineering.exe", "true");
-            else
-                Process.Start("C:\\Users\\fchsb\\Desktop\\Micheal's Cafe\\Eric's Half\\bin\\Debug\\Software_Engineering.exe", "false");
+
+            String CheckDirectory = Directory.Substring(0, Directory.IndexOf("Arturo's Half"));
+            Process.Start(@"" + CheckDirectory + "\\Eric's Half\\bin\\Debug\\Software_Engineering.exe");
             Close();
         }
     }

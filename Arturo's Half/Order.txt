@@ -1,5 +1,6 @@
-23030, 
-Grits Butter,2-3.80
-Bacon,1-1.29
-French Fries,1-2.49
+23030 
+As Plain or Toasted and Buttered,2-2.78
+With Egg and Cheese,1-2.79
+Turkey and Cheese Sandwich,1-4.89
+Grilled Chicken Breat Sandwich,1-5.49
 

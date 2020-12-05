@@ -5,10 +5,10 @@ namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
-        bool isGuest = false;
-        public Form1(bool isGuest)
+        
+        public Form1()
         {
-            this.isGuest = isGuest;
+            
             InitializeComponent();
         }
 
@@ -16,42 +16,22 @@ namespace WindowsFormsApp1
         {
 
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panelHeader1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void loginbutton_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            new Log_In_Screen().Show();
         }
 
         private void createAccountButton_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            new Creating_an_Account_Screen().Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            isGuest = true;
             this.Hide();
-            new Menu_Screen(isGuest).Show();
+            new Menu_Screen().Show();
         }
     }
 }

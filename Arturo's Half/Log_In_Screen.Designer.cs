@@ -35,7 +35,7 @@
             this.passwordLbl = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.loginbutton = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.BackBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,17 +98,18 @@
             this.loginbutton.Text = "Log In";
             this.loginbutton.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // BackBtn
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(29, 83);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(87, 23);
-            this.button2.TabIndex = 40;
-            this.button2.Text = "< Back";
-            this.button2.UseVisualStyleBackColor = false;
+            this.BackBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BackBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BackBtn.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BackBtn.Location = new System.Drawing.Point(29, 83);
+            this.BackBtn.Name = "BackBtn";
+            this.BackBtn.Size = new System.Drawing.Size(87, 23);
+            this.BackBtn.TabIndex = 40;
+            this.BackBtn.Text = "< Back";
+            this.BackBtn.UseVisualStyleBackColor = false;
+            this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
             // 
             // Log_In_Screen
             // 
@@ -116,7 +117,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Brown;
             this.ClientSize = new System.Drawing.Size(837, 506);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.loginbutton);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.passwordLbl);
@@ -140,6 +141,6 @@
         private System.Windows.Forms.Label passwordLbl;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button loginbutton;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button BackBtn;
     }
 }
