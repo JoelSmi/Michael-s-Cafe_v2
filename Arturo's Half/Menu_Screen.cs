@@ -224,13 +224,110 @@ namespace WindowsFormsApp1
             }
 
             //Beginning of Breakfast Sandwiches calculation
+            if (BSandwichQ1.Value != 0)
+            {
+                order = order + BSandwich1.Text + "," + BSandwichQ1.Value.ToString() + "-" + (decimal.Parse(BSandPrice1.Text.Substring(BSandPrice1.Text.IndexOf('$') + 1)) * BSandwichQ1.Value).ToString() + "\n";
+            }
+            if (BSandwichQ2.Value != 0)
+            {
+                order = order + BSandwich2.Text + "," + BSandwichQ2.Value.ToString() + "-" + (decimal.Parse(BSandPrice2.Text.Substring(BSandPrice2.Text.IndexOf('$') + 1)) * BSandwichQ2.Value).ToString() + "\n";
+            }
+            if (BSandwichQ3.Value != 0)
+            {
+                order = order + BSandwich3.Text + "," + BSandwichQ3.Value.ToString() + "-" + (decimal.Parse(BSandPrice3.Text.Substring(BSandPrice3.Text.IndexOf('$') + 1)) * BSandwichQ3.Value).ToString() + "\n";
+            }
+            if (BSandwichQ4.Value != 0)
+            {
+                order = order + BSandwich4.Text + "," + BSandwichQ4.Value.ToString() + "-" + (decimal.Parse(BSandPrice4.Text.Substring(BSandPrice4.Text.IndexOf('$') + 1)) * BSandwichQ4.Value).ToString() + "\n";
+            }
+            if (BSandwichQ5.Value != 0)
+            {
+                order = order + BSandwich5.Text + "," + BSandwichQ5.Value.ToString() + "-" + (decimal.Parse(BSandPrice5.Text.Substring(BSandPrice5.Text.IndexOf('$') + 1)) * BSandwichQ5.Value).ToString() + "\n";
+            }
 
             //Beginning of Breakfast Platters calculation
+            if (BPlattersQ1.Value != 0)
+            {
+                order = order + BPlatters1.Text + "," + BPlattersQ1.Value.ToString() + "-" + (decimal.Parse(BPlattersPrice1.Text.Substring(BPlattersPrice1.Text.IndexOf('$') + 1)) * BPlattersQ1.Value).ToString() + "\n";
+            }
+            if (BPlattersQ2.Value != 0)
+            {
+                order = order + BSandwich2.Text + "," + BPlattersQ2.Value.ToString() + "-" + (decimal.Parse(BPlattersPrice2.Text.Substring(BPlattersPrice2.Text.IndexOf('$') + 1)) * BPlattersQ2.Value).ToString() + "\n";
+            }
+            if (BPlattersQ3.Value != 0)
+            {
+                order = order + BPlatters3.Text + "," + BPlattersQ3.Value.ToString() + "-" + (decimal.Parse(BPlattersPrice3.Text.Substring(BPlattersPrice3.Text.IndexOf('$') + 1)) * BPlattersQ3.Value).ToString() + "\n";
+            }
+            if (BPlattersQ4.Value != 0)
+            {
+                order = order + BPlatters4.Text + "," + BPlattersQ4.Value.ToString() + "-" + (decimal.Parse(BPlattersPrice4.Text.Substring(BPlattersPrice4.Text.IndexOf('$') + 1)) * BPlattersQ4.Value).ToString() + "\n";
+            }
+            if (BSandwichQ5.Value != 0)
+            {
+                order = order + BPlatters5.Text + "," + BPlattersQ5.Value.ToString() + "-" + (decimal.Parse(BPlattersPrice5.Text.Substring(BPlattersPrice5.Text.IndexOf('$') + 1)) * BPlattersQ5.Value).ToString() + "\n";
+            }
 
             //Beginning of Lunch Sandwichs calculation
+            if (LSandwichQ1.Value != 0)
+            {
+                order = order + LSandwich1.Text + "," + LSandwichQ1.Value.ToString() + "-" + (decimal.Parse(LSandPrice1.Text.Substring(LSandPrice1.Text.IndexOf('$') + 1)) * LSandwichQ1.Value).ToString() + "\n";
+            }
+            if (LSandwichQ2.Value != 0)
+            {
+                order = order + LSandwich2.Text + "," + LSandwichQ2.Value.ToString() + "-" + (decimal.Parse(LSandPrice2.Text.Substring(LSandPrice2.Text.IndexOf('$') + 1)) * LSandwichQ2.Value).ToString() + "\n";
+            }
+            if (LSandwichQ3.Value != 0)
+            {
+                order = order + LSandwich3.Text + "," + LSandwichQ3.Value.ToString() + "-" + (decimal.Parse(LSandPrice3.Text.Substring(LSandPrice3.Text.IndexOf('$') + 1)) * LSandwichQ3.Value).ToString() + "\n";
+            }
+            if (LSandwichQ4.Value != 0)
+            {
+                order = order + LSandwich4.Text + "," + LSandwichQ4.Value.ToString() + "-" + (decimal.Parse(LSandPrice4.Text.Substring(LSandPrice4.Text.IndexOf('$') + 1)) * LSandwichQ4.Value).ToString() + "\n";
+            }
+            if (LSandwichQ5.Value != 0)
+            {
+                order = order + LSandwich5.Text + "," + LSandwichQ5.Value.ToString() + "-" + (decimal.Parse(LSandPrice5.Text.Substring(LSandPrice5.Text.IndexOf('$') + 1)) * LSandwichQ5.Value).ToString() + "\n";
+            }
+            if (LSandwichQ6.Value != 0)
+            {
+                order = order + LSandwich6.Text + "," + LSandwichQ6.Value.ToString() + "-" + (decimal.Parse(LSandPrice6.Text.Substring(LSandPrice6.Text.IndexOf('$') + 1)) * LSandwichQ6.Value).ToString() + "\n";
+            }
+            if (LSandwichQ7.Value != 0)
+            {
+                order = order + LSandwich7.Text + "," + LSandwichQ7.Value.ToString() + "-" + (decimal.Parse(LSandPrice7.Text.Substring(LSandPrice7.Text.IndexOf('$') + 1)) * LSandwichQ7.Value).ToString() + "\n";
+            }
 
             //Beginning of Lunch Specials calculation
+            if (LSpecialQ1.Value != 0)
+            {
+                order = order + LSpecial1.Text + "," + LSpecialQ1.Value.ToString() + "-" + (decimal.Parse(LSpecialPrice1.Text.Substring(LSpecialPrice1.Text.IndexOf('$') + 1)) * LSpecialQ1.Value).ToString() + "\n";
+            }
+            if (LSpecialQ2.Value != 0)
+            {
+                order = order + LSpecial2.Text + "," + LSpecialQ2.Value.ToString() + "-" + (decimal.Parse(LSpecialPrice2.Text.Substring(LSpecialPrice2.Text.IndexOf('$') + 1)) * LSpecialQ2.Value).ToString() + "\n";
+            }
+            if (LSpecialQ3.Value != 0)
+            {
+                order = order + LSpecial3.Text + "," + LSpecialQ3.Value.ToString() + "-" + (decimal.Parse(LSpecialPrice3.Text.Substring(LSpecialPrice3.Text.IndexOf('$') + 1)) * LSpecialQ3.Value).ToString() + "\n";
+            }
+            if (LSpecialQ4.Value != 0)
+            {
+                order = order + LSpecial4.Text + "," + LSpecialQ4.Value.ToString() + "-" + (decimal.Parse(LSpecialPrice4.Text.Substring(LSpecialPrice4.Text.IndexOf('$') + 1)) * LSpecialQ4.Value).ToString() + "\n";
+            }
+            if (LSpecialQ5.Value != 0)
+            {
+                order = order + LSpecial5.Text + "," + LSpecialQ5.Value.ToString() + "-" + (decimal.Parse(LSpecialPrice5.Text.Substring(LSpecialPrice5.Text.IndexOf('$') + 1)) * LSpecialQ5.Value).ToString() + "\n";
+            }
+            if (LSpecialQ6.Value != 0)
+            {
+                order = order + LSpecial6.Text + "," + LSpecialQ6.Value.ToString() + "-" + (decimal.Parse(LSpecialPrice6.Text.Substring(LSpecialPrice6.Text.IndexOf('$') + 1)) * LSpecialQ6.Value).ToString() + "\n";
+            }
+            if (LSpecialQ7.Value != 0)
+            {
+                order = order + LSpecial7.Text + "," + LSpecialQ7.Value.ToString() + "-" + (decimal.Parse(LSpecialPrice7.Text.Substring(LSpecialPrice7.Text.IndexOf('$') + 1)) * LSpecialQ7.Value).ToString() + "\n";
+            }
 
+            //Writing the Order to the File and closing the form to open up the Order Summary screen
             StreamWriter sw = new StreamWriter("C:\\Users\\fchsb\\Desktop\\Michael's Cafe_v2\\Arturo's Half\\Order.txt");
             sw.WriteLine(order);
             sw.Close();
