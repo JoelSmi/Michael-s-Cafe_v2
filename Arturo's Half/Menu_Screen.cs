@@ -14,15 +14,17 @@ namespace WindowsFormsApp1
 {
     public partial class Menu_Screen : Form
     {
-        public Menu_Screen()
+        bool isGuest = false;
+        public Menu_Screen(bool isGuest)
         {
+            this.isGuest = isGuest;
             InitializeComponent();
         }
 
         private void Menu_Screen_Load(object sender, EventArgs e)
         {
             string str = "";
-            StreamReader sr = new StreamReader("C:\\Users\\fchsb\\Desktop\\Michael's Cafe_v2\\Arturo's Half\\MenuItems.txt");
+            StreamReader sr = new StreamReader("C:\\Users\\fchsb\\Desktop\\Micheal's Cafe\\Arturo's Half\\MenuItems.txt");
             str = sr.ReadLine();
             while (str != null)
             {
@@ -165,7 +167,7 @@ namespace WindowsFormsApp1
 
         private void Back_Click(object sender, EventArgs e)
         {
-            new Form1().Show();
+            new Form1(isGuest).Show();
             Close();
         }
 
@@ -331,7 +333,11 @@ namespace WindowsFormsApp1
             StreamWriter sw = new StreamWriter("C:\\Users\\fchsb\\Desktop\\Michael's Cafe_v2\\Arturo's Half\\Order.txt");
             sw.WriteLine(order);
             sw.Close();
-            Process.Start("C:\\Users\\fchsb\\Desktop\\Michael's Cafe_v2\\Eric's Half\\bin\\Debug\\Software_Engineering.exe");
+            
+            if (isGuest == true)
+                Process.Start("C:\\Users\\fchsb\\Desktop\\Micheal's Cafe\\Eric's Half\\bin\\Debug\\Software_Engineering.exe", "true");
+            else
+                Process.Start("C:\\Users\\fchsb\\Desktop\\Micheal's Cafe\\Eric's Half\\bin\\Debug\\Software_Engineering.exe", "false");
             Close();
         }
     }
