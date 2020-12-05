@@ -145,5 +145,11 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void BackBtn_Click(object sender, EventArgs e)
+        {
+            new Form1().Show();
+            Close();
+        }
     }
 }

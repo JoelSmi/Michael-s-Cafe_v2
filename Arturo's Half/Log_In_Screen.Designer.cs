@@ -49,7 +49,6 @@
             this.usernamelbl.Size = new System.Drawing.Size(278, 21);
             this.usernamelbl.TabIndex = 0;
             this.usernamelbl.Text = "Username(email or phone number)";
-            this.usernamelbl.Click += new System.EventHandler(this.label1_Click);
             // 
             // usernameTextBox1
             // 
@@ -57,7 +56,6 @@
             this.usernameTextBox1.Name = "usernameTextBox1";
             this.usernameTextBox1.Size = new System.Drawing.Size(289, 20);
             this.usernameTextBox1.TabIndex = 1;
-            this.usernameTextBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // pictureBox1
             // 
@@ -97,6 +95,7 @@
             this.loginbutton.TabIndex = 5;
             this.loginbutton.Text = "Log In";
             this.loginbutton.UseVisualStyleBackColor = false;
+            this.loginbutton.Click += new System.EventHandler(this.loginbutton_Click_1);
             // 
             // BackBtn
             // 

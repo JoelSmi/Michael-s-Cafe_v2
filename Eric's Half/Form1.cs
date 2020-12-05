@@ -1,5 +1,7 @@
 ﻿using System;
 using System.IO;
+using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace Software_Engineering
 {
@@ -21,7 +23,7 @@ namespace Software_Engineering
         public OrderSummary()
         {
             InitializeComponent();
-            _Button1.Name = "Button1";
+            BackBtn.Name = "Button1";
             _Label2.Name = "Label2";
             Item1.Name = "Label3";
             Item2.Name = "Label6";
@@ -255,10 +257,26 @@ namespace Software_Engineering
         //To move on to the next screen for the ordering process, 
         //the next once will be the Payment -- or the Payment_Guest if 
         //they chose to continue as guest
-        private void Button5_Click(object sender, EventArgs e)
+        private void PlaceOrder_Click(object sender, EventArgs e)
         {
             Hide();
             new Payment_Guest().Show();
+        }
+
+        private void BackBtn_Click(object sender, EventArgs e)
+        {
+            String Directory = Path.GetDirectoryName(Application.ExecutablePath);
+            Directory = Directory.Substring(0, Directory.IndexOf("Eric's Half"));
+            Process.Start(@"" + Directory + "\\Arturo's Half\\bin\\Debug\\WindowsFormsApp1.exe");
+            Close();
+        }
+
+        private void Cancel_Click(object sender, EventArgs e)
+        {
+            String Directory = Path.GetDirectoryName(Application.ExecutablePath);
+            Directory = Directory.Substring(0, Directory.IndexOf("Eric's Half"));
+            Process.Start(@"" + Directory + "\\Arturo's Half\\bin\\Debug\\WindowsFormsApp1.exe");
+            Close();
         }
     }
 }

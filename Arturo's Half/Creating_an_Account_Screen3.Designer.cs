@@ -42,7 +42,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.phoneNumbertextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.BackBtn = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -178,17 +178,18 @@
             this.label6.TabIndex = 43;
             this.label6.Text = "Part 3 of Creating an Account (Part 3 out of 3)";
             // 
-            // button3
+            // BackBtn
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(12, 451);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(104, 33);
-            this.button3.TabIndex = 44;
-            this.button3.Text = "< Back";
-            this.button3.UseVisualStyleBackColor = false;
+            this.BackBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BackBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BackBtn.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BackBtn.Location = new System.Drawing.Point(12, 451);
+            this.BackBtn.Name = "BackBtn";
+            this.BackBtn.Size = new System.Drawing.Size(104, 33);
+            this.BackBtn.TabIndex = 44;
+            this.BackBtn.Text = "< Back";
+            this.BackBtn.UseVisualStyleBackColor = false;
+            this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
             // 
             // button2
             // 
@@ -209,7 +210,7 @@
             this.BackColor = System.Drawing.Color.Brown;
             this.ClientSize = new System.Drawing.Size(840, 496);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.phoneNumbertextBox);
             this.Controls.Add(this.label4);
@@ -247,7 +248,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox phoneNumbertextBox;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button BackBtn;
         private System.Windows.Forms.Button button2;
     }
 }
