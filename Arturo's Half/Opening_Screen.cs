@@ -5,8 +5,10 @@ namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        bool isGuest = false;
+        public Form1(bool isGuest)
         {
+            this.isGuest = isGuest;
             InitializeComponent();
         }
 
@@ -47,8 +49,9 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            isGuest = true;
             this.Hide();
-            new Menu_Screen().Show();
+            new Menu_Screen(isGuest).Show();
         }
     }
 }
