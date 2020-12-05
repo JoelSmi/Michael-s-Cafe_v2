@@ -1,0 +1,43 @@
+/Sides\
+Grits Butter, 1.90
+Hash Browns, 2.89
+Vegetables, .60
+Bacon, 1.29
+French Fries, 2.49
+Egg, .90
+/Beverages\
+Water, 2.00 
+Lemonade, 2.50
+Orange Juice, 2.50
+Coke, 2.50
+Coffee, 2.50
+Sprite, 2.50
+/Breakfast Sandwich\
+As Plain or Toasted and Buttered, 1.39
+With Egg and Cheese, 2.79
+With Meat and Cheese (No Egg), 2.89 
+With Meat and Egg (No Cheese), 3.09
+With Meat, Egg, and Cheese- 3.49
+/Breakfast Platters\
+Egg Special, 4.79
+Breakfast Supreme, 6.99
+Pancake Platter, 5.99
+Pancake with Eggs, 4.79
+Pancakes only, 3.99
+/Lunch Sandwiches\
+Ham and Cheese Sandwich, 4.89
+Turkey and Cheese Sandwich, 4.89
+Roast Beef and Cheese Sandwich, 5.39
+Chicken Salad Sandwich, 4.89
+Tuna Salad Sandwich, 4.89
+B.L.T., 4.29
+Hotdog-Grilled, 1.99 
+/Specialty Items\
+Grilled Chicken Breat Sandwich, 5.49
+Club Sandwich, 5.49
+Grilled Chicken Ceasar Pita wrap, 5.49
+Philly Cheese Sandwich, 5.49
+Fried Chicken Sandwich, 5.49
+Gyro Pita Wrap, 5.49
+Grilled Hamburger, 4.09
+#End of File#

@@ -1,0 +1,5 @@
+23030, 
+Grits Butter,2-3.80
+Bacon,1-1.29
+French Fries,1-2.49
+
