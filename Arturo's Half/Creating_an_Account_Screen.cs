@@ -13,10 +13,18 @@ namespace WindowsFormsApp1
 {
     public partial class Creating_an_Account_Screen : Form
     {
-        public string firstName;
-        public string lastName;
-        public string DOB;
-        public string gender;
+
+        private String Directory = Path.GetDirectoryName(Application.ExecutablePath).Substring(0, Path.GetDirectoryName(Application.ExecutablePath).IndexOf("bin"));
+
+        string firstName{ get; set; }
+        string lastName;
+        string DOB;
+        string gender;
+
+
+
+
+
 
 
         public Creating_an_Account_Screen()
@@ -130,8 +138,16 @@ namespace WindowsFormsApp1
 
             if ((firstName != null) && (lastName != null) && (DOB != null) && (gender != null))
             {
+
+
                 this.Hide();
                 new Creating_an_Account_Screen2().Show();
+            }
+
+            using (StreamWriter ab = new StreamWriter(@"" + Directory + "\\Michael_Cafe.txt", true))
+            {
+                ab.WriteLine("\nCustomer Information: " + firstName + " || " + lastName + " || " + DOB + " || " + gender);
+                ab.Close();
             }
 
         }
@@ -152,4 +168,6 @@ namespace WindowsFormsApp1
             Close();
         }
     }
+
+
 }

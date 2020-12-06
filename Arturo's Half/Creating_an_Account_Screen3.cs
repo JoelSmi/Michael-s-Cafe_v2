@@ -15,13 +15,18 @@ namespace WindowsFormsApp1
     {
         private String Directory = Path.GetDirectoryName(Application.ExecutablePath).Substring(0, Path.GetDirectoryName(Application.ExecutablePath).IndexOf("bin"));
 
-        
+        Creating_an_Account_Screen pass1 = new Creating_an_Account_Screen();
+        string firstName;
+
         string address;
         string infoAddress;
         string city;
         string state;
         string zipCode;
         string phoneNumber;
+
+
+        
         public Creating_an_Account_Screen3()
         {
             InitializeComponent();
@@ -116,7 +121,8 @@ namespace WindowsFormsApp1
 
             using (StreamWriter ab = new StreamWriter(@"" + Directory + "\\Michael_Cafe.txt", true))
             {
-                ab.WriteLine("\nCustomer Name: ");
+                ab.WriteLine("\nCustomer address information:\n" + address + " " + infoAddress + "\n" + city + " " + state + " " + zipCode + "\nPhone Number: " + phoneNumber);
+                ab.WriteLine("====================================");
                 ab.Close();
             }
 

@@ -13,7 +13,9 @@ namespace WindowsFormsApp1
 {
     public partial class Creating_an_Account_Screen2 : Form
     {
-        
+
+        private String Directory = Path.GetDirectoryName(Application.ExecutablePath).Substring(0, Path.GetDirectoryName(Application.ExecutablePath).IndexOf("bin"));
+
         string email;
         string password;
         string retypePassword;
@@ -75,6 +77,12 @@ namespace WindowsFormsApp1
             }
             this.Hide();
             new Creating_an_Account_Screen3().Show();
+
+            using (StreamWriter ab = new StreamWriter(@"" + Directory + "\\Michael_Cafe.txt", true))
+            {
+                ab.WriteLine("\nEmail address and password:\n" + email + "\n" + password);
+                ab.Close();
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
