@@ -325,6 +325,7 @@ namespace Software_Engineering
             this.SignatureText.TabIndex = 39;
             this.SignatureText.Text = "Signature";
             this.SignatureText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.SignatureText.TextChanged += new System.EventHandler(this.SignatureText_TextChanged);
             // 
             // Panel1
             // 

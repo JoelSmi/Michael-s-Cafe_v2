@@ -3,6 +3,7 @@ namespace Software_Engineering
 {
     public partial class Reciept_Card
     {
+        string CustomerSignature;
         public Reciept_Card()
         {
             InitializeComponent();
@@ -48,6 +49,11 @@ namespace Software_Engineering
         private void CustomerNameText_TextChanged(object sender, System.EventArgs e)
         {
             //Retrieve customer name from file or customer object and display
+        }
+
+        private void SignatureText_TextChanged(object sender, System.EventArgs e)
+        {
+            CustomerSignature = SignatureText.Text;
         }
     }
 }
