@@ -394,6 +394,7 @@ namespace Software_Engineering
             this.Panel1.Name = "Panel1";
             this.Panel1.Size = new System.Drawing.Size(232, 372);
             this.Panel1.TabIndex = 23;
+            this.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
             // 
             // ItemCost10
             // 

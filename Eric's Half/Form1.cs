@@ -260,5 +260,10 @@ namespace Software_Engineering
             Hide();
             new Payment_Guest().Show();
         }
+
+        private void Panel1_Paint(object sender, System.Windows.Forms.PaintEventArgs e)
+        {
+
+        }
     }
 }
