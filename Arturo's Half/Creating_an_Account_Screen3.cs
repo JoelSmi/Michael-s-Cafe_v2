@@ -7,12 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace WindowsFormsApp1
 {
     public partial class Creating_an_Account_Screen3 : Form
     {
+        private String Directory = Path.GetDirectoryName(Application.ExecutablePath).Substring(0, Path.GetDirectoryName(Application.ExecutablePath).IndexOf("bin"));
 
+        
         string address;
         string infoAddress;
         string city;
@@ -109,6 +112,12 @@ namespace WindowsFormsApp1
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
 
+            }
+
+            using (StreamWriter ab = new StreamWriter(@"" + Directory + "\\Michael_Cafe.txt", true))
+            {
+                ab.WriteLine("\nCustomer Name: ");
+                ab.Close();
             }
 
 

@@ -46,34 +46,48 @@ namespace WindowsFormsApp1
         {
             using (StreamReader ab = new StreamReader(@"" + Directory + "\\Michael_Cafe.txt"))
             {
-                string line1 = ab.ReadLine();
-                string line2 = ab.ReadLine();
+                string line1 = null;
+                string line2 = null;
                 username = usernameTextBox1.Text;
                 password = textBox1.Text;
 
-
-                while ((line1 != null) && (line2 != null))
+                if (usernameTextBox1.Text.Trim() == string.Empty)
                 {
-                    if ((line1.Equals(username)) && (line2.Equals(password)))
-                    {
-                        Console.WriteLine("Welcome");
-                        this.Hide();
-                        new Menu_Screen().Show();
-                        break;
+                    MessageBox.Show("Username is not entered.", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else if (textBox1.Text.Trim() == string.Empty)
+                {
+                    MessageBox.Show("Password is not entered.", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
-                    }
-                    else
+                while ((line1 = ab.ReadLine()) != null)
+                {
+                    if (line1.Contains(username))
                     {
-                        username = null;
-                        usernameTextBox1.Text = null;
-                        password = null;
-                        textBox1.Text = null;
-                        MessageBox.Show("Your login credentials don't match an account in our system.", "Login Error",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        
+                        line2 = ab.ReadLine();
                         break;
-                        
                     }
+                }
+
+
+
+
+
+                if ((line1.Equals(username)) && (line2.Equals(password)))
+                {
+                    Console.WriteLine("Welcome");
+                    this.Hide();
+                    new Menu_Screen().Show();
+                }
+
+                else
+                {
+                    MessageBox.Show("Your login credentials don't match an account in our system.", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
                 ab.Close();

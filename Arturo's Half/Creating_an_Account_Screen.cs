@@ -13,10 +13,10 @@ namespace WindowsFormsApp1
 {
     public partial class Creating_an_Account_Screen : Form
     {
-        string firstName;
-        string lastName;
-        string DOB;
-        string gender;
+        public string firstName;
+        public string lastName;
+        public string DOB;
+        public string gender;
 
 
         public Creating_an_Account_Screen()

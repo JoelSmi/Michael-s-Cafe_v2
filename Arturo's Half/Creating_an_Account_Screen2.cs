@@ -13,6 +13,7 @@ namespace WindowsFormsApp1
 {
     public partial class Creating_an_Account_Screen2 : Form
     {
+        
         string email;
         string password;
         string retypePassword;
