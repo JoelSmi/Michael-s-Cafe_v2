@@ -35,366 +35,368 @@ namespace Software_Engineering
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            Button1 = new Button();
-            Label1 = new Label();
-            TextBox1 = new TextBox();
-            TextBox2 = new TextBox();
-            Label13 = new Label();
-            Label11 = new Label();
-            Label7 = new Label();
-            Label6 = new Label();
-            Label3 = new Label();
-            Label2 = new Label();
-            Label4 = new Label();
-            Label5 = new Label();
-            Label8 = new Label();
-            Label9 = new Label();
-            Label10 = new Label();
-            Label12 = new Label();
-            TextBox3 = new TextBox();
-            TextBox4 = new TextBox();
-            TextBox5 = new TextBox();
-            Label14 = new Label();
-            Button2 = new Button();
-            Button3 = new Button();
-            Button4 = new Button();
-            TextBox6 = new TextBox();
-            Panel1 = new Panel();
-            SuspendLayout();
+            this.BackButton = new System.Windows.Forms.Button();
+            this.Label1 = new System.Windows.Forms.Label();
+            this.CustomerNameText = new System.Windows.Forms.TextBox();
+            this.OrderNumberText = new System.Windows.Forms.TextBox();
+            this.TotalText = new System.Windows.Forms.Label();
+            this.TaxText = new System.Windows.Forms.Label();
+            this.Item3 = new System.Windows.Forms.Label();
+            this.Item2 = new System.Windows.Forms.Label();
+            this.Item1 = new System.Windows.Forms.Label();
+            this.Label2 = new System.Windows.Forms.Label();
+            this.TotalAmount = new System.Windows.Forms.Label();
+            this.TaxAmount = new System.Windows.Forms.Label();
+            this.Item3Price = new System.Windows.Forms.Label();
+            this.Item2Price = new System.Windows.Forms.Label();
+            this.Item1Price = new System.Windows.Forms.Label();
+            this.Label12 = new System.Windows.Forms.Label();
+            this.QuantityText3 = new System.Windows.Forms.TextBox();
+            this.QuantityText2 = new System.Windows.Forms.TextBox();
+            this.QuantityText1 = new System.Windows.Forms.TextBox();
+            this.Label14 = new System.Windows.Forms.Label();
+            this.DeliveryButton = new System.Windows.Forms.Button();
+            this.CarryoutButton = new System.Windows.Forms.Button();
+            this.PrintButton = new System.Windows.Forms.Button();
+            this.SignatureText = new System.Windows.Forms.TextBox();
+            this.Panel1 = new System.Windows.Forms.Panel();
+            this.SuspendLayout();
             // 
-            // Button1
+            // BackButton
             // 
-            Button1.BackColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(255)), Conversions.ToInteger(Conversions.ToByte(255)), Conversions.ToInteger(Conversions.ToByte(192)));
-            Button1.FlatStyle = FlatStyle.Popup;
-            Button1.Font = new Font("Microsoft YaHei", 8.25f, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            Button1.ForeColor = SystemColors.ControlText;
-            Button1.Location = new Point(30, 28);
-            Button1.Name = "Button1";
-            Button1.Size = new Size(75, 25);
-            Button1.TabIndex = 2;
-            Button1.Text = "< Back";
-            Button1.UseVisualStyleBackColor = false;
+            this.BackButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BackButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BackButton.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BackButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.BackButton.Location = new System.Drawing.Point(30, 28);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.Size = new System.Drawing.Size(75, 25);
+            this.BackButton.TabIndex = 2;
+            this.BackButton.Text = "< Back";
+            this.BackButton.UseVisualStyleBackColor = false;
             // 
             // Label1
             // 
-            Label1.AutoSize = true;
-            Label1.Font = new Font("Microsoft YaHei", 20.25f, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            Label1.ForeColor = SystemColors.ControlLightLight;
-            Label1.Location = new Point(227, 17);
-            Label1.Name = "Label1";
-            Label1.Size = new Size(117, 36);
-            Label1.TabIndex = 3;
-            Label1.Text = "Receipt";
+            this.Label1.AutoSize = true;
+            this.Label1.Font = new System.Drawing.Font("Microsoft YaHei", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Label1.Location = new System.Drawing.Point(227, 17);
+            this.Label1.Name = "Label1";
+            this.Label1.Size = new System.Drawing.Size(117, 36);
+            this.Label1.TabIndex = 3;
+            this.Label1.Text = "Receipt";
             // 
-            // TextBox1
+            // CustomerNameText
             // 
-            TextBox1.Font = new Font("Microsoft YaHei", 8.25f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            TextBox1.Location = new Point(30, 69);
-            TextBox1.Name = "TextBox1";
-            TextBox1.Size = new Size(100, 22);
-            TextBox1.TabIndex = 4;
-            TextBox1.Text = "Customer Name";
-            TextBox1.TextAlign = HorizontalAlignment.Center;
+            this.CustomerNameText.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CustomerNameText.Location = new System.Drawing.Point(30, 69);
+            this.CustomerNameText.Name = "CustomerNameText";
+            this.CustomerNameText.Size = new System.Drawing.Size(100, 22);
+            this.CustomerNameText.TabIndex = 4;
+            this.CustomerNameText.Text = "Customer Name";
+            this.CustomerNameText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // TextBox2
+            // OrderNumberText
             // 
-            TextBox2.Font = new Font("Microsoft YaHei", 8.25f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            TextBox2.Location = new Point(433, 70);
-            TextBox2.Name = "TextBox2";
-            TextBox2.Size = new Size(104, 22);
-            TextBox2.TabIndex = 5;
-            TextBox2.Text = "Order Number: ";
-            TextBox2.TextAlign = HorizontalAlignment.Center;
+            this.OrderNumberText.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OrderNumberText.Location = new System.Drawing.Point(433, 70);
+            this.OrderNumberText.Name = "OrderNumberText";
+            this.OrderNumberText.Size = new System.Drawing.Size(104, 22);
+            this.OrderNumberText.TabIndex = 5;
+            this.OrderNumberText.Text = "Order Number: ";
+            this.OrderNumberText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.OrderNumberText.TextChanged += new System.EventHandler(this.OrderNumberText_TextChanged);
             // 
-            // Label13
+            // TotalText
             // 
-            Label13.AutoSize = true;
-            Label13.BackColor = Color.White;
-            Label13.Font = new Font("Microsoft YaHei", 9.75f, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            Label13.Location = new Point(36, 265);
-            Label13.Name = "Label13";
-            Label13.Size = new Size(43, 19);
-            Label13.TabIndex = 25;
-            Label13.Text = "Total";
+            this.TotalText.AutoSize = true;
+            this.TotalText.BackColor = System.Drawing.Color.White;
+            this.TotalText.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalText.Location = new System.Drawing.Point(36, 265);
+            this.TotalText.Name = "TotalText";
+            this.TotalText.Size = new System.Drawing.Size(43, 19);
+            this.TotalText.TabIndex = 25;
+            this.TotalText.Text = "Total";
             // 
-            // Label11
+            // TaxText
             // 
-            Label11.AutoSize = true;
-            Label11.BackColor = Color.White;
-            Label11.Font = new Font("Microsoft YaHei", 9.75f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            Label11.Location = new Point(36, 231);
-            Label11.Name = "Label11";
-            Label11.Size = new Size(81, 19);
-            Label11.TabIndex = 24;
-            Label11.Text = "Service Fee:";
+            this.TaxText.AutoSize = true;
+            this.TaxText.BackColor = System.Drawing.Color.White;
+            this.TaxText.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaxText.Location = new System.Drawing.Point(36, 231);
+            this.TaxText.Name = "TaxText";
+            this.TaxText.Size = new System.Drawing.Size(33, 19);
+            this.TaxText.TabIndex = 24;
+            this.TaxText.Text = "Tax:";
             // 
-            // Label7
+            // Item3
             // 
-            Label7.AutoSize = true;
-            Label7.BackColor = Color.White;
-            Label7.Font = new Font("Microsoft YaHei", 9.75f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            Label7.Location = new Point(36, 204);
-            Label7.Name = "Label7";
-            Label7.Size = new Size(83, 19);
-            Label7.TabIndex = 23;
-            Label7.Text = "Hash Brown";
+            this.Item3.AutoSize = true;
+            this.Item3.BackColor = System.Drawing.Color.White;
+            this.Item3.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Item3.Location = new System.Drawing.Point(36, 204);
+            this.Item3.Name = "Item3";
+            this.Item3.Size = new System.Drawing.Size(83, 19);
+            this.Item3.TabIndex = 23;
+            this.Item3.Text = "Hash Brown";
             // 
-            // Label6
+            // Item2
             // 
-            Label6.AutoSize = true;
-            Label6.BackColor = Color.White;
-            Label6.Font = new Font("Microsoft YaHei", 9.75f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            Label6.Location = new Point(36, 174);
-            Label6.Name = "Label6";
-            Label6.Size = new Size(125, 19);
-            Label6.TabIndex = 22;
-            Label6.Text = "Breakfast Supreme";
+            this.Item2.AutoSize = true;
+            this.Item2.BackColor = System.Drawing.Color.White;
+            this.Item2.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Item2.Location = new System.Drawing.Point(36, 174);
+            this.Item2.Name = "Item2";
+            this.Item2.Size = new System.Drawing.Size(125, 19);
+            this.Item2.TabIndex = 22;
+            this.Item2.Text = "Breakfast Supreme";
             // 
-            // Label3
+            // Item1
             // 
-            Label3.AutoSize = true;
-            Label3.BackColor = Color.White;
-            Label3.Font = new Font("Microsoft YaHei", 9.75f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            Label3.Location = new Point(36, 142);
-            Label3.Name = "Label3";
-            Label3.Size = new Size(103, 19);
-            Label3.TabIndex = 21;
-            Label3.Text = "Garden Omelet";
+            this.Item1.AutoSize = true;
+            this.Item1.BackColor = System.Drawing.Color.White;
+            this.Item1.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Item1.Location = new System.Drawing.Point(36, 142);
+            this.Item1.Name = "Item1";
+            this.Item1.Size = new System.Drawing.Size(103, 19);
+            this.Item1.TabIndex = 21;
+            this.Item1.Text = "Garden Omelet";
             // 
             // Label2
             // 
-            Label2.AutoSize = true;
-            Label2.BackColor = Color.White;
-            Label2.Font = new Font("Microsoft YaHei", 14.25f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            Label2.Location = new Point(35, 102);
-            Label2.Name = "Label2";
-            Label2.Size = new Size(63, 25);
-            Label2.TabIndex = 20;
-            Label2.Text = "Items";
+            this.Label2.AutoSize = true;
+            this.Label2.BackColor = System.Drawing.Color.White;
+            this.Label2.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label2.Location = new System.Drawing.Point(35, 102);
+            this.Label2.Name = "Label2";
+            this.Label2.Size = new System.Drawing.Size(63, 25);
+            this.Label2.TabIndex = 20;
+            this.Label2.Text = "Items";
             // 
-            // Label4
+            // TotalAmount
             // 
-            Label4.AutoSize = true;
-            Label4.BackColor = Color.White;
-            Label4.Font = new Font("Microsoft YaHei", 9.75f, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            Label4.Location = new Point(192, 265);
-            Label4.Name = "Label4";
-            Label4.Size = new Size(53, 19);
-            Label4.TabIndex = 31;
-            Label4.Text = "$18.06";
+            this.TotalAmount.AutoSize = true;
+            this.TotalAmount.BackColor = System.Drawing.Color.White;
+            this.TotalAmount.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalAmount.Location = new System.Drawing.Point(192, 265);
+            this.TotalAmount.Name = "TotalAmount";
+            this.TotalAmount.Size = new System.Drawing.Size(53, 19);
+            this.TotalAmount.TabIndex = 31;
+            this.TotalAmount.Text = "$18.06";
             // 
-            // Label5
+            // TaxAmount
             // 
-            Label5.AutoSize = true;
-            Label5.BackColor = Color.White;
-            Label5.Font = new Font("Microsoft YaHei", 9.75f, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            Label5.Location = new Point(192, 231);
-            Label5.Name = "Label5";
-            Label5.Size = new Size(45, 19);
-            Label5.TabIndex = 30;
-            Label5.Text = "$0.50";
+            this.TaxAmount.AutoSize = true;
+            this.TaxAmount.BackColor = System.Drawing.Color.White;
+            this.TaxAmount.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaxAmount.Location = new System.Drawing.Point(192, 231);
+            this.TaxAmount.Name = "TaxAmount";
+            this.TaxAmount.Size = new System.Drawing.Size(45, 19);
+            this.TaxAmount.TabIndex = 30;
+            this.TaxAmount.Text = "$0.50";
             // 
-            // Label8
+            // Item3Price
             // 
-            Label8.AutoSize = true;
-            Label8.BackColor = Color.White;
-            Label8.Font = new Font("Microsoft YaHei", 9.75f, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            Label8.Location = new Point(192, 204);
-            Label8.Name = "Label8";
-            Label8.Size = new Size(45, 19);
-            Label8.TabIndex = 29;
-            Label8.Text = "$2.89";
+            this.Item3Price.AutoSize = true;
+            this.Item3Price.BackColor = System.Drawing.Color.White;
+            this.Item3Price.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Item3Price.Location = new System.Drawing.Point(192, 204);
+            this.Item3Price.Name = "Item3Price";
+            this.Item3Price.Size = new System.Drawing.Size(45, 19);
+            this.Item3Price.TabIndex = 29;
+            this.Item3Price.Text = "$2.89";
             // 
-            // Label9
+            // Item2Price
             // 
-            Label9.AutoSize = true;
-            Label9.BackColor = Color.White;
-            Label9.Font = new Font("Microsoft YaHei", 9.75f, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            Label9.Location = new Point(192, 174);
-            Label9.Name = "Label9";
-            Label9.Size = new Size(45, 19);
-            Label9.TabIndex = 28;
-            Label9.Text = "$6.99";
+            this.Item2Price.AutoSize = true;
+            this.Item2Price.BackColor = System.Drawing.Color.White;
+            this.Item2Price.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Item2Price.Location = new System.Drawing.Point(192, 174);
+            this.Item2Price.Name = "Item2Price";
+            this.Item2Price.Size = new System.Drawing.Size(45, 19);
+            this.Item2Price.TabIndex = 28;
+            this.Item2Price.Text = "$6.99";
             // 
-            // Label10
+            // Item1Price
             // 
-            Label10.AutoSize = true;
-            Label10.BackColor = Color.White;
-            Label10.Font = new Font("Microsoft YaHei", 9.75f, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            Label10.Location = new Point(192, 142);
-            Label10.Name = "Label10";
-            Label10.Size = new Size(45, 19);
-            Label10.TabIndex = 27;
-            Label10.Text = "$4.79";
+            this.Item1Price.AutoSize = true;
+            this.Item1Price.BackColor = System.Drawing.Color.White;
+            this.Item1Price.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Item1Price.Location = new System.Drawing.Point(192, 142);
+            this.Item1Price.Name = "Item1Price";
+            this.Item1Price.Size = new System.Drawing.Size(45, 19);
+            this.Item1Price.TabIndex = 27;
+            this.Item1Price.Text = "$4.79";
             // 
             // Label12
             // 
-            Label12.AutoSize = true;
-            Label12.BackColor = Color.White;
-            Label12.Font = new Font("Microsoft YaHei", 14.25f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            Label12.Location = new Point(191, 102);
-            Label12.Name = "Label12";
-            Label12.Size = new Size(57, 25);
-            Label12.TabIndex = 26;
-            Label12.Text = "Price";
+            this.Label12.AutoSize = true;
+            this.Label12.BackColor = System.Drawing.Color.White;
+            this.Label12.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label12.Location = new System.Drawing.Point(191, 102);
+            this.Label12.Name = "Label12";
+            this.Label12.Size = new System.Drawing.Size(57, 25);
+            this.Label12.TabIndex = 26;
+            this.Label12.Text = "Price";
             // 
-            // TextBox3
+            // QuantityText3
             // 
-            TextBox3.Font = new Font("Microsoft YaHei", 8.25f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            TextBox3.Location = new Point(293, 200);
-            TextBox3.Name = "TextBox3";
-            TextBox3.Size = new Size(100, 22);
-            TextBox3.TabIndex = 35;
-            TextBox3.Text = "2";
-            TextBox3.TextAlign = HorizontalAlignment.Center;
+            this.QuantityText3.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuantityText3.Location = new System.Drawing.Point(294, 204);
+            this.QuantityText3.Name = "QuantityText3";
+            this.QuantityText3.Size = new System.Drawing.Size(87, 22);
+            this.QuantityText3.TabIndex = 35;
+            this.QuantityText3.Text = "2";
+            this.QuantityText3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // TextBox4
+            // QuantityText2
             // 
-            TextBox4.Font = new Font("Microsoft YaHei", 8.25f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            TextBox4.Location = new Point(293, 170);
-            TextBox4.Name = "TextBox4";
-            TextBox4.Size = new Size(100, 22);
-            TextBox4.TabIndex = 34;
-            TextBox4.Text = "1";
-            TextBox4.TextAlign = HorizontalAlignment.Center;
+            this.QuantityText2.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuantityText2.Location = new System.Drawing.Point(294, 174);
+            this.QuantityText2.Name = "QuantityText2";
+            this.QuantityText2.Size = new System.Drawing.Size(87, 22);
+            this.QuantityText2.TabIndex = 34;
+            this.QuantityText2.Text = "1";
+            this.QuantityText2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // TextBox5
+            // QuantityText1
             // 
-            TextBox5.Font = new Font("Microsoft YaHei", 8.25f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            TextBox5.Location = new Point(293, 138);
-            TextBox5.Name = "TextBox5";
-            TextBox5.Size = new Size(100, 22);
-            TextBox5.TabIndex = 33;
-            TextBox5.Text = "1";
-            TextBox5.TextAlign = HorizontalAlignment.Center;
+            this.QuantityText1.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuantityText1.Location = new System.Drawing.Point(294, 142);
+            this.QuantityText1.Name = "QuantityText1";
+            this.QuantityText1.Size = new System.Drawing.Size(87, 22);
+            this.QuantityText1.TabIndex = 33;
+            this.QuantityText1.Text = "1";
+            this.QuantityText1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Label14
             // 
-            Label14.AutoSize = true;
-            Label14.Font = new Font("Microsoft YaHei", 14.25f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            Label14.ForeColor = Color.White;
-            Label14.Location = new Point(289, 102);
-            Label14.Name = "Label14";
-            Label14.Size = new Size(91, 25);
-            Label14.TabIndex = 32;
-            Label14.Text = "Quantity";
+            this.Label14.AutoSize = true;
+            this.Label14.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label14.ForeColor = System.Drawing.Color.White;
+            this.Label14.Location = new System.Drawing.Point(289, 102);
+            this.Label14.Name = "Label14";
+            this.Label14.Size = new System.Drawing.Size(91, 25);
+            this.Label14.TabIndex = 32;
+            this.Label14.Text = "Quantity";
             // 
-            // Button2
+            // DeliveryButton
             // 
-            Button2.BackColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(255)), Conversions.ToInteger(Conversions.ToByte(255)), Conversions.ToInteger(Conversions.ToByte(192)));
-            Button2.FlatStyle = FlatStyle.Popup;
-            Button2.Font = new Font("Microsoft YaHei", 8.25f, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            Button2.Location = new Point(107, 303);
-            Button2.Name = "Button2";
-            Button2.Size = new Size(75, 23);
-            Button2.TabIndex = 36;
-            Button2.Text = "Delivery";
-            Button2.UseVisualStyleBackColor = false;
+            this.DeliveryButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.DeliveryButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.DeliveryButton.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeliveryButton.Location = new System.Drawing.Point(107, 303);
+            this.DeliveryButton.Name = "DeliveryButton";
+            this.DeliveryButton.Size = new System.Drawing.Size(75, 23);
+            this.DeliveryButton.TabIndex = 36;
+            this.DeliveryButton.Text = "Delivery";
+            this.DeliveryButton.UseVisualStyleBackColor = false;
             // 
-            // Button3
+            // CarryoutButton
             // 
-            Button3.BackColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(255)), Conversions.ToInteger(Conversions.ToByte(255)), Conversions.ToInteger(Conversions.ToByte(192)));
-            Button3.FlatStyle = FlatStyle.Popup;
-            Button3.Font = new Font("Microsoft YaHei", 8.25f, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            Button3.Location = new Point(343, 303);
-            Button3.Name = "Button3";
-            Button3.Size = new Size(75, 23);
-            Button3.TabIndex = 37;
-            Button3.Text = "Carryout";
-            Button3.UseVisualStyleBackColor = false;
+            this.CarryoutButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.CarryoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.CarryoutButton.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CarryoutButton.Location = new System.Drawing.Point(343, 303);
+            this.CarryoutButton.Name = "CarryoutButton";
+            this.CarryoutButton.Size = new System.Drawing.Size(75, 23);
+            this.CarryoutButton.TabIndex = 37;
+            this.CarryoutButton.Text = "Carryout";
+            this.CarryoutButton.UseVisualStyleBackColor = false;
             // 
-            // Button4
+            // PrintButton
             // 
-            Button4.BackColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(255)), Conversions.ToInteger(Conversions.ToByte(255)), Conversions.ToInteger(Conversions.ToByte(192)));
-            Button4.FlatStyle = FlatStyle.Popup;
-            Button4.Font = new Font("Microsoft YaHei", 8.25f, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            Button4.Location = new Point(233, 320);
-            Button4.Name = "Button4";
-            Button4.Size = new Size(75, 23);
-            Button4.TabIndex = 38;
-            Button4.Text = "Print";
-            Button4.UseVisualStyleBackColor = false;
+            this.PrintButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.PrintButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.PrintButton.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PrintButton.Location = new System.Drawing.Point(233, 320);
+            this.PrintButton.Name = "PrintButton";
+            this.PrintButton.Size = new System.Drawing.Size(75, 23);
+            this.PrintButton.TabIndex = 38;
+            this.PrintButton.Text = "Print";
+            this.PrintButton.UseVisualStyleBackColor = false;
             // 
-            // TextBox6
+            // SignatureText
             // 
-            TextBox6.Font = new Font("Microsoft YaHei", 8.25f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            TextBox6.Location = new Point(433, 323);
-            TextBox6.Name = "TextBox6";
-            TextBox6.Size = new Size(166, 22);
-            TextBox6.TabIndex = 39;
-            TextBox6.Text = "Signature";
-            TextBox6.TextAlign = HorizontalAlignment.Center;
+            this.SignatureText.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SignatureText.Location = new System.Drawing.Point(433, 323);
+            this.SignatureText.Name = "SignatureText";
+            this.SignatureText.Size = new System.Drawing.Size(166, 22);
+            this.SignatureText.TabIndex = 39;
+            this.SignatureText.Text = "Signature";
+            this.SignatureText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Panel1
             // 
-            Panel1.BackColor = Color.White;
-            Panel1.BorderStyle = BorderStyle.FixedSingle;
-            Panel1.Location = new Point(30, 96);
-            Panel1.Name = "Panel1";
-            Panel1.Size = new Size(224, 201);
-            Panel1.TabIndex = 40;
+            this.Panel1.BackColor = System.Drawing.Color.White;
+            this.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Panel1.Location = new System.Drawing.Point(30, 96);
+            this.Panel1.Name = "Panel1";
+            this.Panel1.Size = new System.Drawing.Size(224, 201);
+            this.Panel1.TabIndex = 40;
             // 
             // Reciept_Card
             // 
-            AutoScaleDimensions = new SizeF(6.0f, 13.0f);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Brown;
-            ClientSize = new Size(603, 355);
-            Controls.Add(TextBox6);
-            Controls.Add(Button4);
-            Controls.Add(Button3);
-            Controls.Add(Button2);
-            Controls.Add(TextBox3);
-            Controls.Add(TextBox4);
-            Controls.Add(TextBox5);
-            Controls.Add(Label14);
-            Controls.Add(Label4);
-            Controls.Add(Label5);
-            Controls.Add(Label8);
-            Controls.Add(Label9);
-            Controls.Add(Label10);
-            Controls.Add(Label12);
-            Controls.Add(Label13);
-            Controls.Add(Label11);
-            Controls.Add(Label7);
-            Controls.Add(Label6);
-            Controls.Add(Label3);
-            Controls.Add(Label2);
-            Controls.Add(TextBox2);
-            Controls.Add(TextBox1);
-            Controls.Add(Label1);
-            Controls.Add(Button1);
-            Controls.Add(Panel1);
-            Name = "Reciept_Card";
-            Text = "Reciept_Card";
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Brown;
+            this.ClientSize = new System.Drawing.Size(603, 355);
+            this.Controls.Add(this.SignatureText);
+            this.Controls.Add(this.PrintButton);
+            this.Controls.Add(this.CarryoutButton);
+            this.Controls.Add(this.DeliveryButton);
+            this.Controls.Add(this.QuantityText3);
+            this.Controls.Add(this.QuantityText2);
+            this.Controls.Add(this.QuantityText1);
+            this.Controls.Add(this.Label14);
+            this.Controls.Add(this.TotalAmount);
+            this.Controls.Add(this.TaxAmount);
+            this.Controls.Add(this.Item3Price);
+            this.Controls.Add(this.Item2Price);
+            this.Controls.Add(this.Item1Price);
+            this.Controls.Add(this.Label12);
+            this.Controls.Add(this.TotalText);
+            this.Controls.Add(this.TaxText);
+            this.Controls.Add(this.Item3);
+            this.Controls.Add(this.Item2);
+            this.Controls.Add(this.Item1);
+            this.Controls.Add(this.Label2);
+            this.Controls.Add(this.OrderNumberText);
+            this.Controls.Add(this.CustomerNameText);
+            this.Controls.Add(this.Label1);
+            this.Controls.Add(this.BackButton);
+            this.Controls.Add(this.Panel1);
+            this.Name = "Reciept_Card";
+            this.Text = "Reciept_Card";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
-        internal Button Button1;
+        internal Button BackButton;
         internal Label Label1;
-        internal TextBox TextBox1;
-        internal TextBox TextBox2;
-        internal Label Label13;
-        internal Label Label11;
-        internal Label Label7;
-        internal Label Label6;
-        internal Label Label3;
+        internal TextBox CustomerNameText;
+        internal TextBox OrderNumberText;
+        internal Label TotalText;
+        internal Label TaxText;
+        internal Label Item3;
+        internal Label Item2;
+        internal Label Item1;
         internal Label Label2;
-        internal Label Label4;
-        internal Label Label5;
-        internal Label Label8;
-        internal Label Label9;
-        internal Label Label10;
+        internal Label TotalAmount;
+        internal Label TaxAmount;
+        internal Label Item3Price;
+        internal Label Item2Price;
+        internal Label Item1Price;
         internal Label Label12;
-        internal TextBox TextBox3;
-        internal TextBox TextBox4;
-        internal TextBox TextBox5;
+        internal TextBox QuantityText3;
+        internal TextBox QuantityText2;
+        internal TextBox QuantityText1;
         internal Label Label14;
-        internal Button Button2;
-        internal Button Button3;
-        internal Button Button4;
-        internal TextBox TextBox6;
+        internal Button DeliveryButton;
+        internal Button CarryoutButton;
+        internal Button PrintButton;
+        internal TextBox SignatureText;
         internal Panel Panel1;
     }
 }
