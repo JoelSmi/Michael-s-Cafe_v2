@@ -101,6 +101,7 @@
             this.button2.TabIndex = 44;
             this.button2.Text = "Next Part";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 
@@ -130,6 +131,7 @@
             this.gendertextBox.Name = "gendertextBox";
             this.gendertextBox.Size = new System.Drawing.Size(300, 20);
             this.gendertextBox.TabIndex = 10;
+            this.gendertextBox.TextChanged += new System.EventHandler(this.gendertextBox_TextChanged);
             // 
             // genderlabel
             // 
@@ -148,6 +150,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(300, 20);
             this.textBox1.TabIndex = 8;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // dateofbirthlabel1
             // 
@@ -166,6 +169,7 @@
             this.LastNametextBox2.Name = "LastNametextBox2";
             this.LastNametextBox2.Size = new System.Drawing.Size(300, 20);
             this.LastNametextBox2.TabIndex = 6;
+            this.LastNametextBox2.TextChanged += new System.EventHandler(this.LastNametextBox2_TextChanged);
             // 
             // LastNameLabel
             // 
@@ -184,6 +188,7 @@
             this.firstNametextBox1.Name = "firstNametextBox1";
             this.firstNametextBox1.Size = new System.Drawing.Size(300, 20);
             this.firstNametextBox1.TabIndex = 4;
+            this.firstNametextBox1.TextChanged += new System.EventHandler(this.firstNametextBox1_TextChanged);
             // 
             // firstNameLabel
             // 

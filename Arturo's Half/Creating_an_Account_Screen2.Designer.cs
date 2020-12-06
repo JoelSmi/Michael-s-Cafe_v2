@@ -68,7 +68,7 @@
             this.emailtextBox.Name = "emailtextBox";
             this.emailtextBox.Size = new System.Drawing.Size(300, 20);
             this.emailtextBox.TabIndex = 6;
-            // 
+            this.emailtextBox.TextChanged += new System.EventHandler(this.emailtextBox_TextChanged);            // 
             // passwordlabel
             // 
             this.passwordlabel.AutoSize = true;
@@ -87,6 +87,7 @@
             this.passwordtextBox.Name = "passwordtextBox";
             this.passwordtextBox.Size = new System.Drawing.Size(300, 20);
             this.passwordtextBox.TabIndex = 8;
+            this.passwordtextBox.TextChanged += new System.EventHandler(this.passwordtextBox_TextChanged);
             // 
             // reTypePasswordlabel
             // 
@@ -106,6 +107,7 @@
             this.reTypePasswordtextBox.Name = "reTypePasswordtextBox";
             this.reTypePasswordtextBox.Size = new System.Drawing.Size(300, 20);
             this.reTypePasswordtextBox.TabIndex = 10;
+            this.reTypePasswordtextBox.TextChanged += new System.EventHandler(this.reTypePasswordtextBox_TextChanged);
             // 
             // BackBtn
             // 
@@ -142,6 +144,7 @@
             this.button2.TabIndex = 43;
             this.button2.Text = "Next Part";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Creating_an_Account_Screen2
             // 
