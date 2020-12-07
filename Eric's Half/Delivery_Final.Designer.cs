@@ -39,7 +39,6 @@ namespace Software_Engineering
             this.BackButton = new System.Windows.Forms.Button();
             this.PhoneNumberText = new System.Windows.Forms.TextBox();
             this.CustomerNameText = new System.Windows.Forms.TextBox();
-            this.OrderNumberText = new System.Windows.Forms.TextBox();
             this.DeliverNameText = new System.Windows.Forms.TextBox();
             this.DeliverAddrText = new System.Windows.Forms.TextBox();
             this.CustomerAddressText = new System.Windows.Forms.Label();
@@ -53,7 +52,7 @@ namespace Software_Engineering
             this.Label1.AutoSize = true;
             this.Label1.Font = new System.Drawing.Font("Microsoft YaHei", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Label1.Location = new System.Drawing.Point(215, 38);
+            this.Label1.Location = new System.Drawing.Point(213, 15);
             this.Label1.Name = "Label1";
             this.Label1.Size = new System.Drawing.Size(127, 36);
             this.Label1.TabIndex = 10;
@@ -65,7 +64,7 @@ namespace Software_Engineering
             this.BackButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BackButton.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BackButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BackButton.Location = new System.Drawing.Point(34, 52);
+            this.BackButton.Location = new System.Drawing.Point(34, 28);
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(75, 25);
             this.BackButton.TabIndex = 9;
@@ -76,7 +75,7 @@ namespace Software_Engineering
             // PhoneNumberText
             // 
             this.PhoneNumberText.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PhoneNumberText.Location = new System.Drawing.Point(218, 96);
+            this.PhoneNumberText.Location = new System.Drawing.Point(34, 101);
             this.PhoneNumberText.Name = "PhoneNumberText";
             this.PhoneNumberText.Size = new System.Drawing.Size(100, 22);
             this.PhoneNumberText.TabIndex = 13;
@@ -87,7 +86,7 @@ namespace Software_Engineering
             // CustomerNameText
             // 
             this.CustomerNameText.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CustomerNameText.Location = new System.Drawing.Point(34, 96);
+            this.CustomerNameText.Location = new System.Drawing.Point(34, 73);
             this.CustomerNameText.Name = "CustomerNameText";
             this.CustomerNameText.ReadOnly = true;
             this.CustomerNameText.Size = new System.Drawing.Size(100, 22);
@@ -96,22 +95,10 @@ namespace Software_Engineering
             this.CustomerNameText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.CustomerNameText.TextChanged += new System.EventHandler(this.CustomerNameText_TextChanged);
             // 
-            // OrderNumberText
-            // 
-            this.OrderNumberText.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OrderNumberText.Location = new System.Drawing.Point(447, 96);
-            this.OrderNumberText.Name = "OrderNumberText";
-            this.OrderNumberText.ReadOnly = true;
-            this.OrderNumberText.Size = new System.Drawing.Size(100, 22);
-            this.OrderNumberText.TabIndex = 39;
-            this.OrderNumberText.Text = "Order Number";
-            this.OrderNumberText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.OrderNumberText.TextChanged += new System.EventHandler(this.OrderNumberText_TextChanged);
-            // 
             // DeliverNameText
             // 
             this.DeliverNameText.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeliverNameText.Location = new System.Drawing.Point(34, 137);
+            this.DeliverNameText.Location = new System.Drawing.Point(34, 151);
             this.DeliverNameText.Name = "DeliverNameText";
             this.DeliverNameText.ReadOnly = true;
             this.DeliverNameText.Size = new System.Drawing.Size(100, 22);
@@ -123,7 +110,7 @@ namespace Software_Engineering
             // DeliverAddrText
             // 
             this.DeliverAddrText.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeliverAddrText.Location = new System.Drawing.Point(34, 181);
+            this.DeliverAddrText.Location = new System.Drawing.Point(34, 179);
             this.DeliverAddrText.Name = "DeliverAddrText";
             this.DeliverAddrText.Size = new System.Drawing.Size(100, 22);
             this.DeliverAddrText.TabIndex = 41;
@@ -148,7 +135,7 @@ namespace Software_Engineering
             this.DoneButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.DoneButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.DoneButton.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DoneButton.Location = new System.Drawing.Point(270, 256);
+            this.DoneButton.Location = new System.Drawing.Point(431, 269);
             this.DoneButton.Name = "DoneButton";
             this.DoneButton.Size = new System.Drawing.Size(75, 23);
             this.DoneButton.TabIndex = 43;
@@ -161,11 +148,11 @@ namespace Software_Engineering
             this.OrderedItemsText.AutoSize = true;
             this.OrderedItemsText.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OrderedItemsText.ForeColor = System.Drawing.Color.White;
-            this.OrderedItemsText.Location = new System.Drawing.Point(219, 137);
+            this.OrderedItemsText.Location = new System.Drawing.Point(216, 73);
             this.OrderedItemsText.Name = "OrderedItemsText";
-            this.OrderedItemsText.Size = new System.Drawing.Size(82, 16);
+            this.OrderedItemsText.Size = new System.Drawing.Size(85, 16);
             this.OrderedItemsText.TabIndex = 44;
-            this.OrderedItemsText.Text = "Ordered Items";
+            this.OrderedItemsText.Text = "Ordered Items:";
             this.OrderedItemsText.Click += new System.EventHandler(this.OrderedItemsText_Click);
             // 
             // TotalAmountText
@@ -192,7 +179,6 @@ namespace Software_Engineering
             this.Controls.Add(this.CustomerAddressText);
             this.Controls.Add(this.DeliverAddrText);
             this.Controls.Add(this.DeliverNameText);
-            this.Controls.Add(this.OrderNumberText);
             this.Controls.Add(this.PhoneNumberText);
             this.Controls.Add(this.CustomerNameText);
             this.Controls.Add(this.Label1);
@@ -208,7 +194,6 @@ namespace Software_Engineering
         internal Button BackButton;
         internal TextBox PhoneNumberText;
         internal TextBox CustomerNameText;
-        internal TextBox OrderNumberText;
         internal TextBox DeliverNameText;
         internal TextBox DeliverAddrText;
         internal Label CustomerAddressText;

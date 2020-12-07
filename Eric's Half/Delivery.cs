@@ -1,23 +1,38 @@
-﻿
+﻿using System;
+using System.IO;
+using System.Windows.Forms;
+using System.Diagnostics;
 namespace Software_Engineering
 {
     public partial class Delivery
     {
-        private string PhoneNumber, StreetName, AptNum, City, State, Zip;
-
-
+        private string Directory = Path.GetDirectoryName(Application.ExecutablePath);
+        string[] NameArray = new string[2];
+        string PhoneLine;
         public Delivery()
         {
             InitializeComponent();
         }
 
-        private void DefaultAddButton_CheckedChanged(object sender, System.EventArgs e)
+        private void Delivery_Load_1(object sender, EventArgs e)
         {
-            //Keep address info the same
-        }
-        private void DiffAddButton_CheckedChanged(object sender, System.EventArgs e)
-        {
-            //Set address info to info provided by user
+            Directory = Path.GetDirectoryName(Application.ExecutablePath);
+            string OpenFile = Directory.Substring(0, Directory.IndexOf("Eric's Half")) + "Arturo's Half\\Michael_Cafe.txt";
+            StreamReader sr = new StreamReader(OpenFile);
+            string CurrLine = sr.ReadLine();
+
+            while (!CurrLine.Contains("#End Of File#"))
+            {
+                if (CurrLine.Contains("LoggedIn"))
+                {
+                    CurrLine = sr.ReadLine();
+                    NameArray = CurrLine.Split(',');
+                }
+                else
+                {
+                    CurrLine = sr.ReadLine();
+                }
+            }
         }
 
         private void BackButton_Click(object sender, System.EventArgs e)
@@ -35,11 +50,6 @@ namespace Software_Engineering
         {
             this.Hide();
             new Delivery_Final().Show();
-        }
-
-        private void PhoneNumberText_TextChanged_1(object sender, System.EventArgs e)
-        {
-
         }
 
         private void StreetNameText_TextChanged(object sender, System.EventArgs e)
