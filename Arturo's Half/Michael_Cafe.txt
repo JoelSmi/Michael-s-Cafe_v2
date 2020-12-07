@@ -8,3 +8,20 @@ Email address and password:
 
 First Name Test:
 
+
+Customer address information:
+1234 Test St. 
+Marietta GA 30060
+Phone Number: 7701234567
+/Person 1-
+,
+,
+7701234567
+1234 Test St.,Marietta-GA.30060
+
+/Person 1-
+test@gmail.com,Password
+Joel,Smith
+7701234567
+1234 Test St,Marietta-GA.30060
+

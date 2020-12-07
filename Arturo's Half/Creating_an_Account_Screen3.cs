@@ -15,29 +15,29 @@ namespace WindowsFormsApp1
     {
         private String Directory = Path.GetDirectoryName(Application.ExecutablePath).Substring(0, Path.GetDirectoryName(Application.ExecutablePath).IndexOf("bin"));
 
-        string firstName;
-        string lastName;
-        string DOB;
-        string gender;
-        string email;
-        string password;
-        string address;
-        string infoAddress;
-        string city;
-        string state;
-        string zipCode;
-        string phoneNumber;
+        string firstName = "";
+        string lastName = "";
+        string DOB = "";
+        string gender = "";
+        string email = "";
+        string password = "";
+        string address = "";
+        string infoAddress = "";
+        string city = "";
+        string state = "";
+        string zipCode = "";
+        string phoneNumber = "";
 
         public Creating_an_Account_Screen3(string firstName, string lastName, string DOB, string gender, string email, string password)
         {
             InitializeComponent();
 
-            firstName = this.firstName;
-            lastName = this.lastName;
-            DOB = this.DOB;
-            gender = this.gender;
-            email = this.email;
-            password = this.password;
+            this.firstName = firstName;
+            this.lastName =lastName;
+            this.DOB =DOB;
+            this.gender =gender;
+            this.email =email;
+            this.password = password;
 
         }
 
@@ -137,11 +137,11 @@ namespace WindowsFormsApp1
 
             }
 
-            using (StreamWriter ab = new StreamWriter(@"" + Directory + "\\Michael_Cafe.txt", true))
+            /*using (StreamWriter ab = new StreamWriter(@"" + Directory + "\\Michael_Cafe.txt", true))
             {
                 ab.WriteLine("\nCustomer address information:\n" + address + " " + infoAddress + "\n" + city + " " + state + " " + zipCode + "\nPhone Number: " + phoneNumber);
                 ab.Close();
-            }
+            }*/
 
             ///firstName, lastName, DOB, gender, email, password, address, infoAddress, city, state, zipcode, phonenumber
             ///
@@ -152,6 +152,15 @@ namespace WindowsFormsApp1
             ////////////////Street,City - State.Zip
 
             string line1 = email + "," + password;
+            string line2 = firstName + "," + lastName;
+            string line3 = phoneNumber;
+            string line4 = address + "," + city + "-" + state + "." + zipCode;
+
+            using (StreamWriter ab = new StreamWriter(@"" + Directory + "\\Michael_Cafe.txt", true))
+            {
+                ab.WriteLine("/Person 1-\n" + line1 + "\n" + line2 + "\n" + line3 + "\n" + line4 + "\n");
+                ab.Close();
+            }
 
             this.Hide();
             new Form1().Show();

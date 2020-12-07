@@ -28,10 +28,10 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
 
-            firstName = this.firstName;
-            lastName = this.lastName;
-            DOB = this.DOB;
-            gender = this.gender;
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.DOB = DOB;
+            this.gender = gender;
 
         }
         
