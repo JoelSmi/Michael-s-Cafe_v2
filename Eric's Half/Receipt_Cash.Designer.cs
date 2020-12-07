@@ -126,7 +126,6 @@ namespace Software_Engineering
             this.OrderNumberText.TabIndex = 5;
             this.OrderNumberText.Text = "Order Number: ";
             this.OrderNumberText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.OrderNumberText.TextChanged += new System.EventHandler(this.OrderNumberText_TextChanged);
             // 
             // TotalText
             // 
@@ -138,7 +137,6 @@ namespace Software_Engineering
             this.TotalText.Size = new System.Drawing.Size(43, 19);
             this.TotalText.TabIndex = 25;
             this.TotalText.Text = "Total";
-            this.TotalText.Click += new System.EventHandler(this.TotalText_Click);
             // 
             // TaxText
             // 
@@ -200,7 +198,7 @@ namespace Software_Engineering
             this.TotalAmount.AutoSize = true;
             this.TotalAmount.BackColor = System.Drawing.Color.White;
             this.TotalAmount.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalAmount.Location = new System.Drawing.Point(153, 387);
+            this.TotalAmount.Location = new System.Drawing.Point(161, 387);
             this.TotalAmount.Name = "TotalAmount";
             this.TotalAmount.Size = new System.Drawing.Size(45, 19);
             this.TotalAmount.TabIndex = 31;

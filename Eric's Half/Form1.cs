@@ -318,7 +318,7 @@ namespace Software_Engineering
 
             //File manipulation to change the Active order to Placed
             string FileText = File.ReadAllText(Directory + "\\Arturo's Half\\Order.txt");
-            FileText = FileText.Replace("Active", "Placed");
+            FileText = FileText.Replace("Active", "Pending");
             File.WriteAllText(OpenFile, FileText);
 
             Directory = Path.GetDirectoryName(Application.ExecutablePath);

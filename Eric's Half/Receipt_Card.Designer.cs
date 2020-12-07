@@ -60,20 +60,20 @@ namespace Software_Engineering
             this.PrintButton = new System.Windows.Forms.Button();
             this.SignatureText = new System.Windows.Forms.TextBox();
             this.Item8Price = new System.Windows.Forms.Panel();
-            this.Item4 = new System.Windows.Forms.Label();
-            this.Item5 = new System.Windows.Forms.Label();
-            this.Item6 = new System.Windows.Forms.Label();
-            this.Item7 = new System.Windows.Forms.Label();
-            this.Item8 = new System.Windows.Forms.Label();
-            this.Item9 = new System.Windows.Forms.Label();
-            this.Item10 = new System.Windows.Forms.Label();
-            this.Item4Price = new System.Windows.Forms.Label();
-            this.Item6Price = new System.Windows.Forms.Label();
-            this.Item5Price = new System.Windows.Forms.Label();
-            this.Item7Price = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.Item9Price = new System.Windows.Forms.Label();
             this.Item10Price = new System.Windows.Forms.Label();
+            this.Item9Price = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.Item7Price = new System.Windows.Forms.Label();
+            this.Item5Price = new System.Windows.Forms.Label();
+            this.Item6Price = new System.Windows.Forms.Label();
+            this.Item4Price = new System.Windows.Forms.Label();
+            this.Item10 = new System.Windows.Forms.Label();
+            this.Item9 = new System.Windows.Forms.Label();
+            this.Item8 = new System.Windows.Forms.Label();
+            this.Item7 = new System.Windows.Forms.Label();
+            this.Item6 = new System.Windows.Forms.Label();
+            this.Item5 = new System.Windows.Forms.Label();
+            this.Item4 = new System.Windows.Forms.Label();
             this.Item4Quantity = new System.Windows.Forms.TextBox();
             this.Item5Quantity = new System.Windows.Forms.TextBox();
             this.Item6Quantity = new System.Windows.Forms.TextBox();
@@ -139,7 +139,6 @@ namespace Software_Engineering
             this.TotalText.Size = new System.Drawing.Size(43, 19);
             this.TotalText.TabIndex = 25;
             this.TotalText.Text = "Total";
-            this.TotalText.Click += new System.EventHandler(this.TotalText_Click);
             // 
             // TaxText
             // 
@@ -201,7 +200,7 @@ namespace Software_Engineering
             this.TotalAmount.AutoSize = true;
             this.TotalAmount.BackColor = System.Drawing.Color.White;
             this.TotalAmount.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalAmount.Location = new System.Drawing.Point(153, 387);
+            this.TotalAmount.Location = new System.Drawing.Point(161, 387);
             this.TotalAmount.Name = "TotalAmount";
             this.TotalAmount.Size = new System.Drawing.Size(45, 19);
             this.TotalAmount.TabIndex = 31;
@@ -291,7 +290,6 @@ namespace Software_Engineering
             this.Item1Quantity.TabIndex = 33;
             this.Item1Quantity.Text = "0";
             this.Item1Quantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Item1Quantity.TextChanged += new System.EventHandler(this.Item1Quantity_TextChanged);
             // 
             // Label14
             // 
@@ -378,137 +376,16 @@ namespace Software_Engineering
             this.Item8Price.Size = new System.Drawing.Size(224, 422);
             this.Item8Price.TabIndex = 40;
             // 
-            // Item4
+            // Item10Price
             // 
-            this.Item4.AutoSize = true;
-            this.Item4.BackColor = System.Drawing.Color.White;
-            this.Item4.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Item4.Location = new System.Drawing.Point(3, 135);
-            this.Item4.Name = "Item4";
-            this.Item4.Size = new System.Drawing.Size(86, 19);
-            this.Item4.TabIndex = 41;
-            this.Item4.Text = "Place Holder";
-            // 
-            // Item5
-            // 
-            this.Item5.AutoSize = true;
-            this.Item5.BackColor = System.Drawing.Color.White;
-            this.Item5.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Item5.Location = new System.Drawing.Point(5, 169);
-            this.Item5.Name = "Item5";
-            this.Item5.Size = new System.Drawing.Size(86, 19);
-            this.Item5.TabIndex = 42;
-            this.Item5.Text = "Place Holder";
-            // 
-            // Item6
-            // 
-            this.Item6.AutoSize = true;
-            this.Item6.BackColor = System.Drawing.Color.White;
-            this.Item6.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Item6.Location = new System.Drawing.Point(5, 197);
-            this.Item6.Name = "Item6";
-            this.Item6.Size = new System.Drawing.Size(86, 19);
-            this.Item6.TabIndex = 43;
-            this.Item6.Text = "Place Holder";
-            // 
-            // Item7
-            // 
-            this.Item7.AutoSize = true;
-            this.Item7.BackColor = System.Drawing.Color.White;
-            this.Item7.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Item7.Location = new System.Drawing.Point(5, 230);
-            this.Item7.Name = "Item7";
-            this.Item7.Size = new System.Drawing.Size(86, 19);
-            this.Item7.TabIndex = 44;
-            this.Item7.Text = "Place Holder";
-            // 
-            // Item8
-            // 
-            this.Item8.AutoSize = true;
-            this.Item8.BackColor = System.Drawing.Color.White;
-            this.Item8.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Item8.Location = new System.Drawing.Point(5, 261);
-            this.Item8.Name = "Item8";
-            this.Item8.Size = new System.Drawing.Size(86, 19);
-            this.Item8.TabIndex = 45;
-            this.Item8.Text = "Place Holder";
-            // 
-            // Item9
-            // 
-            this.Item9.AutoSize = true;
-            this.Item9.BackColor = System.Drawing.Color.White;
-            this.Item9.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Item9.Location = new System.Drawing.Point(3, 292);
-            this.Item9.Name = "Item9";
-            this.Item9.Size = new System.Drawing.Size(86, 19);
-            this.Item9.TabIndex = 46;
-            this.Item9.Text = "Place Holder";
-            // 
-            // Item10
-            // 
-            this.Item10.AutoSize = true;
-            this.Item10.BackColor = System.Drawing.Color.White;
-            this.Item10.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Item10.Location = new System.Drawing.Point(5, 326);
-            this.Item10.Name = "Item10";
-            this.Item10.Size = new System.Drawing.Size(86, 19);
-            this.Item10.TabIndex = 47;
-            this.Item10.Text = "Place Holder";
-            // 
-            // Item4Price
-            // 
-            this.Item4Price.AutoSize = true;
-            this.Item4Price.BackColor = System.Drawing.Color.White;
-            this.Item4Price.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Item4Price.Location = new System.Drawing.Point(161, 135);
-            this.Item4Price.Name = "Item4Price";
-            this.Item4Price.Size = new System.Drawing.Size(45, 19);
-            this.Item4Price.TabIndex = 41;
-            this.Item4Price.Text = "$0.00";
-            // 
-            // Item6Price
-            // 
-            this.Item6Price.AutoSize = true;
-            this.Item6Price.BackColor = System.Drawing.Color.White;
-            this.Item6Price.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Item6Price.Location = new System.Drawing.Point(161, 197);
-            this.Item6Price.Name = "Item6Price";
-            this.Item6Price.Size = new System.Drawing.Size(45, 19);
-            this.Item6Price.TabIndex = 48;
-            this.Item6Price.Text = "$0.00";
-            // 
-            // Item5Price
-            // 
-            this.Item5Price.AutoSize = true;
-            this.Item5Price.BackColor = System.Drawing.Color.White;
-            this.Item5Price.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Item5Price.Location = new System.Drawing.Point(161, 166);
-            this.Item5Price.Name = "Item5Price";
-            this.Item5Price.Size = new System.Drawing.Size(45, 19);
-            this.Item5Price.TabIndex = 49;
-            this.Item5Price.Text = "$0.00";
-            // 
-            // Item7Price
-            // 
-            this.Item7Price.AutoSize = true;
-            this.Item7Price.BackColor = System.Drawing.Color.White;
-            this.Item7Price.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Item7Price.Location = new System.Drawing.Point(161, 230);
-            this.Item7Price.Name = "Item7Price";
-            this.Item7Price.Size = new System.Drawing.Size(45, 19);
-            this.Item7Price.TabIndex = 50;
-            this.Item7Price.Text = "$0.00";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.White;
-            this.label15.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(161, 261);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(45, 19);
-            this.label15.TabIndex = 51;
-            this.label15.Text = "$0.00";
+            this.Item10Price.AutoSize = true;
+            this.Item10Price.BackColor = System.Drawing.Color.White;
+            this.Item10Price.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Item10Price.Location = new System.Drawing.Point(161, 326);
+            this.Item10Price.Name = "Item10Price";
+            this.Item10Price.Size = new System.Drawing.Size(45, 19);
+            this.Item10Price.TabIndex = 53;
+            this.Item10Price.Text = "$0.00";
             // 
             // Item9Price
             // 
@@ -521,16 +398,137 @@ namespace Software_Engineering
             this.Item9Price.TabIndex = 52;
             this.Item9Price.Text = "$0.00";
             // 
-            // Item10Price
+            // label15
             // 
-            this.Item10Price.AutoSize = true;
-            this.Item10Price.BackColor = System.Drawing.Color.White;
-            this.Item10Price.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Item10Price.Location = new System.Drawing.Point(161, 326);
-            this.Item10Price.Name = "Item10Price";
-            this.Item10Price.Size = new System.Drawing.Size(45, 19);
-            this.Item10Price.TabIndex = 53;
-            this.Item10Price.Text = "$0.00";
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.White;
+            this.label15.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(161, 261);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(45, 19);
+            this.label15.TabIndex = 51;
+            this.label15.Text = "$0.00";
+            // 
+            // Item7Price
+            // 
+            this.Item7Price.AutoSize = true;
+            this.Item7Price.BackColor = System.Drawing.Color.White;
+            this.Item7Price.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Item7Price.Location = new System.Drawing.Point(161, 230);
+            this.Item7Price.Name = "Item7Price";
+            this.Item7Price.Size = new System.Drawing.Size(45, 19);
+            this.Item7Price.TabIndex = 50;
+            this.Item7Price.Text = "$0.00";
+            // 
+            // Item5Price
+            // 
+            this.Item5Price.AutoSize = true;
+            this.Item5Price.BackColor = System.Drawing.Color.White;
+            this.Item5Price.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Item5Price.Location = new System.Drawing.Point(161, 166);
+            this.Item5Price.Name = "Item5Price";
+            this.Item5Price.Size = new System.Drawing.Size(45, 19);
+            this.Item5Price.TabIndex = 49;
+            this.Item5Price.Text = "$0.00";
+            // 
+            // Item6Price
+            // 
+            this.Item6Price.AutoSize = true;
+            this.Item6Price.BackColor = System.Drawing.Color.White;
+            this.Item6Price.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Item6Price.Location = new System.Drawing.Point(161, 197);
+            this.Item6Price.Name = "Item6Price";
+            this.Item6Price.Size = new System.Drawing.Size(45, 19);
+            this.Item6Price.TabIndex = 48;
+            this.Item6Price.Text = "$0.00";
+            // 
+            // Item4Price
+            // 
+            this.Item4Price.AutoSize = true;
+            this.Item4Price.BackColor = System.Drawing.Color.White;
+            this.Item4Price.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Item4Price.Location = new System.Drawing.Point(161, 135);
+            this.Item4Price.Name = "Item4Price";
+            this.Item4Price.Size = new System.Drawing.Size(45, 19);
+            this.Item4Price.TabIndex = 41;
+            this.Item4Price.Text = "$0.00";
+            // 
+            // Item10
+            // 
+            this.Item10.AutoSize = true;
+            this.Item10.BackColor = System.Drawing.Color.White;
+            this.Item10.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Item10.Location = new System.Drawing.Point(5, 326);
+            this.Item10.Name = "Item10";
+            this.Item10.Size = new System.Drawing.Size(86, 19);
+            this.Item10.TabIndex = 47;
+            this.Item10.Text = "Place Holder";
+            // 
+            // Item9
+            // 
+            this.Item9.AutoSize = true;
+            this.Item9.BackColor = System.Drawing.Color.White;
+            this.Item9.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Item9.Location = new System.Drawing.Point(3, 292);
+            this.Item9.Name = "Item9";
+            this.Item9.Size = new System.Drawing.Size(86, 19);
+            this.Item9.TabIndex = 46;
+            this.Item9.Text = "Place Holder";
+            // 
+            // Item8
+            // 
+            this.Item8.AutoSize = true;
+            this.Item8.BackColor = System.Drawing.Color.White;
+            this.Item8.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Item8.Location = new System.Drawing.Point(5, 261);
+            this.Item8.Name = "Item8";
+            this.Item8.Size = new System.Drawing.Size(86, 19);
+            this.Item8.TabIndex = 45;
+            this.Item8.Text = "Place Holder";
+            // 
+            // Item7
+            // 
+            this.Item7.AutoSize = true;
+            this.Item7.BackColor = System.Drawing.Color.White;
+            this.Item7.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Item7.Location = new System.Drawing.Point(5, 230);
+            this.Item7.Name = "Item7";
+            this.Item7.Size = new System.Drawing.Size(86, 19);
+            this.Item7.TabIndex = 44;
+            this.Item7.Text = "Place Holder";
+            // 
+            // Item6
+            // 
+            this.Item6.AutoSize = true;
+            this.Item6.BackColor = System.Drawing.Color.White;
+            this.Item6.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Item6.Location = new System.Drawing.Point(5, 197);
+            this.Item6.Name = "Item6";
+            this.Item6.Size = new System.Drawing.Size(86, 19);
+            this.Item6.TabIndex = 43;
+            this.Item6.Text = "Place Holder";
+            // 
+            // Item5
+            // 
+            this.Item5.AutoSize = true;
+            this.Item5.BackColor = System.Drawing.Color.White;
+            this.Item5.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Item5.Location = new System.Drawing.Point(5, 169);
+            this.Item5.Name = "Item5";
+            this.Item5.Size = new System.Drawing.Size(86, 19);
+            this.Item5.TabIndex = 42;
+            this.Item5.Text = "Place Holder";
+            // 
+            // Item4
+            // 
+            this.Item4.AutoSize = true;
+            this.Item4.BackColor = System.Drawing.Color.White;
+            this.Item4.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Item4.Location = new System.Drawing.Point(3, 135);
+            this.Item4.Name = "Item4";
+            this.Item4.Size = new System.Drawing.Size(86, 19);
+            this.Item4.TabIndex = 41;
+            this.Item4.Text = "Place Holder";
             // 
             // Item4Quantity
             // 
