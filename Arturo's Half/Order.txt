@@ -1,12 +1,12 @@
 \
-/test@gmail.com-Closed
+/test@gmail.com-Active
 As Plain or Toasted and Buttered,3-4.17
 With Egg and Cheese,2-5.58
 Pancake with Eggs,3-14.37
 \
 /23031-Closed
 \
-/Guest-Active
+/Guest-Closed
 As Plain or Toasted and Buttered,3-4.17
 With Egg and Cheese,2-5.58
 Pancake with Eggs,3-14.37

@@ -46,6 +46,9 @@ namespace Software_Engineering
             this.CardPinText = new System.Windows.Forms.TextBox();
             this.NextButton = new System.Windows.Forms.Button();
             this.MaskedCardNo = new System.Windows.Forms.MaskedTextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // BackButton
@@ -130,29 +133,26 @@ namespace Software_Engineering
             // 
             // CardNumText
             // 
-            this.CardNumText.Location = new System.Drawing.Point(89, 202);
+            this.CardNumText.Location = new System.Drawing.Point(89, 222);
             this.CardNumText.Name = "CardNumText";
             this.CardNumText.Size = new System.Drawing.Size(150, 20);
             this.CardNumText.TabIndex = 7;
-            this.CardNumText.Text = "Card Number";
             this.CardNumText.TextChanged += new System.EventHandler(this.CardNumText_TextChanged);
             // 
             // CardExpText
             // 
-            this.CardExpText.Location = new System.Drawing.Point(89, 228);
+            this.CardExpText.Location = new System.Drawing.Point(89, 261);
             this.CardExpText.Name = "CardExpText";
             this.CardExpText.Size = new System.Drawing.Size(77, 20);
             this.CardExpText.TabIndex = 8;
-            this.CardExpText.Text = "Exp Date";
             this.CardExpText.TextChanged += new System.EventHandler(this.CardExpText_TextChanged);
             // 
             // CardPinText
             // 
-            this.CardPinText.Location = new System.Drawing.Point(181, 228);
+            this.CardPinText.Location = new System.Drawing.Point(181, 261);
             this.CardPinText.Name = "CardPinText";
             this.CardPinText.Size = new System.Drawing.Size(58, 20);
             this.CardPinText.TabIndex = 9;
-            this.CardPinText.Text = "CVV";
             this.CardPinText.TextChanged += new System.EventHandler(this.CardPinText_TextChanged);
             // 
             // NextButton
@@ -175,12 +175,45 @@ namespace Software_Engineering
             this.MaskedCardNo.Size = new System.Drawing.Size(100, 20);
             this.MaskedCardNo.TabIndex = 11;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label3.Location = new System.Drawing.Point(86, 206);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(69, 13);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Card Number";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(86, 245);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(51, 13);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Exp Date";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label4.Location = new System.Drawing.Point(178, 245);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(28, 13);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "CVV";
+            // 
             // Payment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Brown;
             this.ClientSize = new System.Drawing.Size(552, 310);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.MaskedCardNo);
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.CardPinText);
@@ -211,5 +244,8 @@ namespace Software_Engineering
         internal TextBox CardPinText;
         internal Button NextButton;
         private MaskedTextBox MaskedCardNo;
+        private Label label3;
+        private Label label2;
+        private Label label4;
     }
 }

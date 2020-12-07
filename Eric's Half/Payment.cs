@@ -25,7 +25,7 @@ namespace Software_Engineering
             Directory = Path.GetDirectoryName(Application.ExecutablePath);
             string OpenFile = Directory.Substring(0, Directory.IndexOf("Eric's Half")) + "Arturo's Half\\Michael_Cafe.txt";
             StreamReader sr = new StreamReader(OpenFile);
-            string CurrLine = sr.ReadLine();
+            string CurrLine = sr.ReadLine(), PaymentLine = CurrLine;
             while (!CurrLine.Contains("#End Of File#"))
             {
                 if (CurrLine.Contains("LoggedIn"))
@@ -41,10 +41,11 @@ namespace Software_Engineering
             }
             while (!CurrLine.Contains("/"))
             {
+                PaymentLine = CurrLine;
                 AccountInfo += "\n" + CurrLine;
                 CurrLine = sr.ReadLine();
             }
-            if (CurrLine.EndsWith("$"))
+            if (PaymentLine.Length < 5)
             {
                 MaskedCardNo.Text = "No card in our system";
             }
