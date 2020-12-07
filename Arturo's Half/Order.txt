@@ -11,9 +11,21 @@ As Plain or Toasted and Buttered,3-4.17
 With Egg and Cheese,2-5.58
 Pancake with Eggs,3-14.37
 \
-/Guest-Active
+/Guest-Cancelled
 Sprite,2-5.00
 As Plain or Toasted and Buttered,4-5.56
 Pancake Platter,4-23.96
+\
+/test@gmail.com-Cancelled
+Coffee,1-2.50
+As Plain or Toasted and Buttered,4-5.56
+Pancake Platter,3-17.97
+Pancake with Eggs,1-4.79
+\
+/test@gmail.com-Active
+Lemonade,1-2.50
+Coffee,2-5.00
+As Plain or Toasted and Buttered,4-5.56
+Pancake Platter,2-11.98
 \
 #End Of File#

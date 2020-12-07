@@ -146,20 +146,18 @@ namespace WindowsFormsApp1
             string line3 = phoneNumber;
             string line4 = address + " " + infoAddress + "," + city + " - " + state + "." + zipCode;
 
-
-            using (StreamWriter ab = new StreamWriter(@"" + Directory + "\\Michael_Cafe.txt", true))
-            {
-                ab.WriteLine("\n/" + line1 + "-LoggedIn" + "\n" + line2 + "\n" + line3 + "\n" + line4 + "\n$");
-                ab.Close();
-            }
             Directory = Path.GetDirectoryName(Application.ExecutablePath);
             Directory = Directory.Substring(0, Directory.IndexOf("bin"));
             string OpenFile = Directory + "\\Order.txt";
 
             //File manipulation to change the Active order to Placed
-            string FileText = File.ReadAllText(Directory + "\\Order.txt");
+            string FileText = File.ReadAllText(OpenFile);
             FileText = FileText.Replace("#End Of File#", "/"+ this.email + "-Pending\n\\\n" + "#End Of File#");
             File.WriteAllText(OpenFile, FileText);
+
+            OpenFile = Directory + "\\Michael_Cafe.txt";
+            FileText = File.ReadAllText(OpenFile);
+            FileText = FileText.Replace("#End Of File#", "/" + line1 + "-LoggedIn" + "\n" + line2 + "\n" + line3 + "\n" + line4 + "\n$\n" + "#End Of File#");
             this.Hide();
             new Menu_Screen().Show();
         }
