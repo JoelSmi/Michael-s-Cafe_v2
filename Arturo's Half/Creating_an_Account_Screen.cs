@@ -17,11 +17,18 @@ namespace WindowsFormsApp1
         private String Directory = Path.GetDirectoryName(Application.ExecutablePath).Substring(0, Path.GetDirectoryName(Application.ExecutablePath).IndexOf("bin"));
 
         string firstName{ get; set; }
-        string lastName;
-        string DOB;
-        string gender;
+        string lastName { get; set; }
+        string DOB { get; set; }
+        string gender { get; set; }
 
-
+        public Creating_an_Account_Screen(string firstName, string lastName, string DOB, string gender)
+        {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.DOB = DOB;
+            this.gender = gender;
+            return;
+        }
 
 
 

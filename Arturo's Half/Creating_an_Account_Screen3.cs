@@ -15,8 +15,7 @@ namespace WindowsFormsApp1
     {
         private String Directory = Path.GetDirectoryName(Application.ExecutablePath).Substring(0, Path.GetDirectoryName(Application.ExecutablePath).IndexOf("bin"));
 
-        Creating_an_Account_Screen pass1 = new Creating_an_Account_Screen();
-        string firstName;
+
 
         string address;
         string infoAddress;
