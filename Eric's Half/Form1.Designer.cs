@@ -130,10 +130,12 @@ namespace Software_Engineering
             // 
             // Item1
             // 
+            this.Item1.AutoEllipsis = true;
             this.Item1.AutoSize = true;
             this.Item1.BackColor = System.Drawing.Color.White;
             this.Item1.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Item1.Location = new System.Drawing.Point(5, 42);
+            this.Item1.MaximumSize = new System.Drawing.Size(180, 19);
             this.Item1.Name = "Item1";
             this.Item1.Size = new System.Drawing.Size(86, 19);
             this.Item1.TabIndex = 3;
@@ -167,6 +169,7 @@ namespace Software_Engineering
             this.Item2.BackColor = System.Drawing.Color.White;
             this.Item2.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Item2.Location = new System.Drawing.Point(3, 69);
+            this.Item2.MaximumSize = new System.Drawing.Size(180, 19);
             this.Item2.Name = "Item2";
             this.Item2.Size = new System.Drawing.Size(86, 19);
             this.Item2.TabIndex = 6;
@@ -180,6 +183,7 @@ namespace Software_Engineering
             this.Item3.Enabled = false;
             this.Item3.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Item3.Location = new System.Drawing.Point(5, 98);
+            this.Item3.MaximumSize = new System.Drawing.Size(180, 19);
             this.Item3.Name = "Item3";
             this.Item3.Size = new System.Drawing.Size(86, 19);
             this.Item3.TabIndex = 7;
@@ -487,6 +491,7 @@ namespace Software_Engineering
             this.Item10.BackColor = System.Drawing.Color.White;
             this.Item10.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Item10.Location = new System.Drawing.Point(5, 294);
+            this.Item10.MaximumSize = new System.Drawing.Size(180, 19);
             this.Item10.Name = "Item10";
             this.Item10.Size = new System.Drawing.Size(86, 19);
             this.Item10.TabIndex = 27;
@@ -499,6 +504,7 @@ namespace Software_Engineering
             this.Item9.BackColor = System.Drawing.Color.White;
             this.Item9.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Item9.Location = new System.Drawing.Point(5, 266);
+            this.Item9.MaximumSize = new System.Drawing.Size(180, 19);
             this.Item9.Name = "Item9";
             this.Item9.Size = new System.Drawing.Size(86, 19);
             this.Item9.TabIndex = 26;
@@ -511,6 +517,7 @@ namespace Software_Engineering
             this.Item8.BackColor = System.Drawing.Color.White;
             this.Item8.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Item8.Location = new System.Drawing.Point(5, 238);
+            this.Item8.MaximumSize = new System.Drawing.Size(180, 19);
             this.Item8.Name = "Item8";
             this.Item8.Size = new System.Drawing.Size(86, 19);
             this.Item8.TabIndex = 25;
@@ -523,6 +530,7 @@ namespace Software_Engineering
             this.Item7.BackColor = System.Drawing.Color.White;
             this.Item7.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Item7.Location = new System.Drawing.Point(5, 210);
+            this.Item7.MaximumSize = new System.Drawing.Size(180, 19);
             this.Item7.Name = "Item7";
             this.Item7.Size = new System.Drawing.Size(86, 19);
             this.Item7.TabIndex = 24;
@@ -535,6 +543,7 @@ namespace Software_Engineering
             this.Item6.BackColor = System.Drawing.Color.White;
             this.Item6.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Item6.Location = new System.Drawing.Point(3, 182);
+            this.Item6.MaximumSize = new System.Drawing.Size(180, 19);
             this.Item6.Name = "Item6";
             this.Item6.Size = new System.Drawing.Size(86, 19);
             this.Item6.TabIndex = 23;
@@ -547,6 +556,7 @@ namespace Software_Engineering
             this.Item5.BackColor = System.Drawing.Color.White;
             this.Item5.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Item5.Location = new System.Drawing.Point(5, 154);
+            this.Item5.MaximumSize = new System.Drawing.Size(180, 19);
             this.Item5.Name = "Item5";
             this.Item5.Size = new System.Drawing.Size(86, 19);
             this.Item5.TabIndex = 22;
@@ -559,6 +569,7 @@ namespace Software_Engineering
             this.Item4.BackColor = System.Drawing.Color.White;
             this.Item4.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Item4.Location = new System.Drawing.Point(5, 126);
+            this.Item4.MaximumSize = new System.Drawing.Size(180, 19);
             this.Item4.Name = "Item4";
             this.Item4.Size = new System.Drawing.Size(86, 19);
             this.Item4.TabIndex = 21;

@@ -1,6 +1,12 @@
-23030 
-As Plain or Toasted and Buttered,2-2.78
-With Egg and Cheese,1-2.79
-Turkey and Cheese Sandwich,1-4.89
-Grilled Chicken Breat Sandwich,1-5.49
+\
+/23030-Placed
+Grits with Butter,9-20.90
+\
+/23031-Closed
+\
+#End of File#
+
+
+
+
 
