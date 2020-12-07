@@ -144,7 +144,7 @@ namespace WindowsFormsApp1
             string line1 = email + "," + password;
             string line2 = firstName + "," + lastName;
             string line3 = phoneNumber;
-            string line4 = address + " " + infoAddress + "," + city + " - " + state + "." + zipCode;
+            string line4 ="*" +  address + " " + infoAddress + "," + city + " - " + state + "." + zipCode;
 
             Directory = Path.GetDirectoryName(Application.ExecutablePath);
             Directory = Directory.Substring(0, Directory.IndexOf("bin"));
