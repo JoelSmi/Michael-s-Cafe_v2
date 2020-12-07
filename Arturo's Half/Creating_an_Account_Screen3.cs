@@ -98,6 +98,10 @@ namespace WindowsFormsApp1
             new Creating_an_Account_Screen2().Show();
         }
 
+
+
+
+
         private void button2_Click(object sender, EventArgs e)
         {
 
@@ -137,30 +141,17 @@ namespace WindowsFormsApp1
 
             }
 
-            /*using (StreamWriter ab = new StreamWriter(@"" + Directory + "\\Michael_Cafe.txt", true))
-            {
-                ab.WriteLine("\nCustomer address information:\n" + address + " " + infoAddress + "\n" + city + " " + state + " " + zipCode + "\nPhone Number: " + phoneNumber);
-                ab.Close();
-            }*/
-
-            ///firstName, lastName, DOB, gender, email, password, address, infoAddress, city, state, zipcode, phonenumber
-            ///
-            ////////////////          / Person 1 -
-            //////////////// Email,Password
-            //////////////// FirstName, LastName
-            ////////////////PhoneNumber
-            ////////////////Street,City - State.Zip
-
             string line1 = email + "," + password;
             string line2 = firstName + "," + lastName;
             string line3 = phoneNumber;
-            string line4 = address + "," + city + "-" + state + "." + zipCode;
+            string line4 = address + " " + infoAddress + "," + city + " - " + state + "." + zipCode;
+
 
             using (StreamWriter ab = new StreamWriter(@"" + Directory + "\\Michael_Cafe.txt", true))
             {
-                ab.WriteLine("/Person 1-\n" + line1 + "\n" + line2 + "\n" + line3 + "\n" + line4 + "\n");
+                ab.WriteLine("\nCustomer information:\n" + line1 + "\n" + line2 + "\n" + line3 + "\n" + line4);
                 ab.Close();
-            }
+            }*/
 
             this.Hide();
             new Form1().Show();
