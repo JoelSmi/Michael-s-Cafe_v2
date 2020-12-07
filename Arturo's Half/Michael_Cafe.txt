@@ -1,3 +1,15 @@
 abcd
 1234
 
+
+Customer Information: Mincheol || Choi || 052394 || Male
+
+Email address and password:
+Mincheol@yahoo.com
+1234
+
+Customer address information:
+1234 Kennesaw Rd APT #114
+West Point GA 31122
+Phone Number: 7701236598
+====================================
