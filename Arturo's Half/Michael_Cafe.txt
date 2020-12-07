@@ -1,6 +1,10 @@
-/test@gmail.com,Password-LoggedOut
+/test@gmail.com,Password-LoggedIn
 Joel,Smith
 7701234567
 1234 Test St ,Marietta - GA.30060
+$
+
 /Guest-LoggedOut
+*
+$
 #End Of File#

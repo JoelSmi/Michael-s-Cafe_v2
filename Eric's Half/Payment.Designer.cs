@@ -41,11 +41,11 @@ namespace Software_Engineering
             this.DiffCardButton = new System.Windows.Forms.RadioButton();
             this.CashButton = new System.Windows.Forms.RadioButton();
             this.CheckButton = new System.Windows.Forms.RadioButton();
-            this.DefaultCardText = new System.Windows.Forms.Label();
             this.CardNumText = new System.Windows.Forms.TextBox();
             this.CardExpText = new System.Windows.Forms.TextBox();
             this.CardPinText = new System.Windows.Forms.TextBox();
             this.NextButton = new System.Windows.Forms.Button();
+            this.MaskedCardNo = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // BackButton
@@ -128,16 +128,6 @@ namespace Software_Engineering
             this.CheckButton.UseVisualStyleBackColor = true;
             this.CheckButton.CheckedChanged += new System.EventHandler(this.CheckButton_CheckedChanged);
             // 
-            // DefaultCardText
-            // 
-            this.DefaultCardText.AutoSize = true;
-            this.DefaultCardText.ForeColor = System.Drawing.Color.White;
-            this.DefaultCardText.Location = new System.Drawing.Point(110, 128);
-            this.DefaultCardText.Name = "DefaultCardText";
-            this.DefaultCardText.Size = new System.Drawing.Size(79, 13);
-            this.DefaultCardText.TabIndex = 6;
-            this.DefaultCardText.Text = "************1234";
-            // 
             // CardNumText
             // 
             this.CardNumText.Location = new System.Drawing.Point(89, 202);
@@ -178,17 +168,24 @@ namespace Software_Engineering
             this.NextButton.UseVisualStyleBackColor = false;
             this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
             // 
+            // MaskedCardNo
+            // 
+            this.MaskedCardNo.Location = new System.Drawing.Point(105, 134);
+            this.MaskedCardNo.Name = "MaskedCardNo";
+            this.MaskedCardNo.Size = new System.Drawing.Size(100, 20);
+            this.MaskedCardNo.TabIndex = 11;
+            // 
             // Payment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Brown;
             this.ClientSize = new System.Drawing.Size(552, 310);
+            this.Controls.Add(this.MaskedCardNo);
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.CardPinText);
             this.Controls.Add(this.CardExpText);
             this.Controls.Add(this.CardNumText);
-            this.Controls.Add(this.DefaultCardText);
             this.Controls.Add(this.CheckButton);
             this.Controls.Add(this.CashButton);
             this.Controls.Add(this.DiffCardButton);
@@ -197,6 +194,7 @@ namespace Software_Engineering
             this.Controls.Add(this.BackButton);
             this.Name = "Payment";
             this.Text = "Payment";
+            this.Load += new System.EventHandler(this.Payment_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -208,10 +206,10 @@ namespace Software_Engineering
         internal RadioButton DiffCardButton;
         internal RadioButton CashButton;
         internal RadioButton CheckButton;
-        internal Label DefaultCardText;
         internal TextBox CardNumText;
         internal TextBox CardExpText;
         internal TextBox CardPinText;
         internal Button NextButton;
+        private MaskedTextBox MaskedCardNo;
     }
 }

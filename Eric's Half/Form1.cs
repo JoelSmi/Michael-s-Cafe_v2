@@ -22,8 +22,8 @@ namespace Software_Engineering
             {
                 this.Total += this.Prices[i];
             }
-            this.Tax = this.Total * SalesTaxCnst;
-            this.Total = this.Total + this.Tax;
+            this.Tax = Math.Round(this.Total * SalesTaxCnst, 2);
+            this.Total = Math.Round(this.Total + this.Tax,2);
             SalesTax.Text = "$" + this.Tax.ToString();
             TotalCost.Text = "$" + this.Total.ToString();
         }
@@ -346,12 +346,28 @@ namespace Software_Engineering
             Directory = Directory.Substring(0, Directory.IndexOf("Eric's Half"));
             string OpenFile = Directory + "\\Arturo's Half\\Order.txt";
 
-            //File manipulation to change the Active order to Placed
-            string FileText = File.ReadAllText(Directory + "\\Arturo's Half\\Order.txt");
-            FileText = FileText.Replace("Active", "Placed");
-            File.WriteAllText(OpenFile, FileText);
-            Hide();
-            new Payment_Guest().Show();
+            OpenFile = Directory + "\\Arturo's Half\\Michael_Cafe.txt";
+            StreamReader FindCustomer = new StreamReader(OpenFile);
+            string Customer = FindCustomer.ReadLine();
+            while (!Customer.Contains("#End Of File#"))
+            {
+                if (Customer.Contains("LoggedIn") && !Customer.Contains("Guest"))
+                {
+                    this.Hide();
+                    new Payment().Show();
+                    break;
+                }
+                else if(Customer.Contains("LoggedIn") && Customer.Contains("Guest"))
+                {
+                    this.Hide();
+                    new Payment_Guest().Show();
+                    break;
+                }
+                else
+                {
+                    Customer = FindCustomer.ReadLine();
+                }
+            }
         }
 
         private void BackBtn_Click(object sender, EventArgs e)

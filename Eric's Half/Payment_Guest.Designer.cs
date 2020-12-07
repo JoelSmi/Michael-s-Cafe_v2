@@ -44,6 +44,9 @@ namespace Software_Engineering
             this.CardExpText = new System.Windows.Forms.TextBox();
             this.CardPinText = new System.Windows.Forms.TextBox();
             this.NextButton = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // BackButton
@@ -115,31 +118,28 @@ namespace Software_Engineering
             // CardNumText
             // 
             this.CardNumText.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CardNumText.Location = new System.Drawing.Point(80, 139);
+            this.CardNumText.Location = new System.Drawing.Point(80, 163);
             this.CardNumText.Name = "CardNumText";
             this.CardNumText.Size = new System.Drawing.Size(150, 22);
             this.CardNumText.TabIndex = 8;
-            this.CardNumText.Text = "Card Number";
             this.CardNumText.TextChanged += new System.EventHandler(this.CardNumText_TextChanged);
             // 
             // CardExpText
             // 
             this.CardExpText.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CardExpText.Location = new System.Drawing.Point(80, 165);
+            this.CardExpText.Location = new System.Drawing.Point(80, 202);
             this.CardExpText.Name = "CardExpText";
             this.CardExpText.Size = new System.Drawing.Size(77, 22);
             this.CardExpText.TabIndex = 9;
-            this.CardExpText.Text = "Exp Date";
             this.CardExpText.TextChanged += new System.EventHandler(this.CardExpText_TextChanged);
             // 
             // CardPinText
             // 
             this.CardPinText.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CardPinText.Location = new System.Drawing.Point(172, 165);
+            this.CardPinText.Location = new System.Drawing.Point(172, 202);
             this.CardPinText.Name = "CardPinText";
             this.CardPinText.Size = new System.Drawing.Size(58, 22);
             this.CardPinText.TabIndex = 10;
-            this.CardPinText.Text = "CVV";
             this.CardPinText.TextChanged += new System.EventHandler(this.CardPinText_TextChanged);
             // 
             // NextButton
@@ -155,12 +155,45 @@ namespace Software_Engineering
             this.NextButton.UseVisualStyleBackColor = false;
             this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(77, 188);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(51, 13);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Exp Date";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label3.Location = new System.Drawing.Point(77, 147);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(69, 13);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Card Number";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label4.Location = new System.Drawing.Point(169, 188);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(28, 13);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "CVV";
+            // 
             // Payment_Guest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Brown;
             this.ClientSize = new System.Drawing.Size(546, 313);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.CardPinText);
             this.Controls.Add(this.CardExpText);
@@ -172,6 +205,7 @@ namespace Software_Engineering
             this.Controls.Add(this.BackButton);
             this.Name = "Payment_Guest";
             this.Text = "Payment_Guest";
+            this.Load += new System.EventHandler(this.Payment_Guest_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,5 +220,8 @@ namespace Software_Engineering
         internal TextBox CardExpText;
         internal TextBox CardPinText;
         internal Button NextButton;
+        private Label label2;
+        private Label label3;
+        private Label label4;
     }
 }

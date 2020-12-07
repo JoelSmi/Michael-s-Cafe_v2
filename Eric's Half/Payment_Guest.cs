@@ -6,41 +6,87 @@ namespace Software_Engineering
 {
     public partial class Payment_Guest
     {
-        private bool WithCashCheck;
-        private bool WithCard;
-        private String Directory = Path.GetDirectoryName(Application.ExecutablePath);
+        private bool isCashCheck;
+        private bool isCard;
+        private string Directory = Path.GetDirectoryName(Application.ExecutablePath);
+        string AccountInfo = "", ChangedAccounInfo;
+        string CardInfo;
+        string CurrLine = "";
+        string[] NewCardInfo = { "", "", "" };
 
         public Payment_Guest()
         {
             InitializeComponent();
         }
+        private void Payment_Guest_Load_1(object sender, EventArgs e)
+        {
+            Directory = Path.GetDirectoryName(Application.ExecutablePath);
+            string OpenFile = Directory.Substring(0, Directory.IndexOf("Eric's Half")) + "Arturo's Half\\Michael_Cafe.txt";
+            StreamReader sr = new StreamReader(OpenFile);
+            CurrLine = sr.ReadLine();
+            while (!CurrLine.Contains("#End Of File#"))
+            {
+                if (CurrLine.Contains("LoggedIn"))
+                {
+                    AccountInfo += CurrLine;
+                    CurrLine = sr.ReadLine();
 
-        private void CashButton_CheckedChanged(object sender, System.EventArgs e)
-        {
-            WithCashCheck = true;
-            WithCard = false;
-        }
-        private void CheckButton_CheckedChanged(object sender, System.EventArgs e)
-        {
-            WithCashCheck = true;
-            WithCard = false;
+                    //NullException that needs to be fixed
+                    while (!CurrLine.Contains("/"))
+                    {
+                        AccountInfo += "\n" + CurrLine;
+                        CurrLine = sr.ReadLine();
+                    }
+                    break;
+                }
+                else
+                {
+                    CurrLine = sr.ReadLine();
+                }
+            }
+            
         }
 
-        private void CardButton_CheckedChanged(object sender, System.EventArgs e)
+        private void CashButton_CheckedChanged(object sender, EventArgs e)
         {
-            WithCashCheck = false;
-            WithCard = true;
+            isCashCheck = true;
+            isCard = false;
         }
-        private void NextButton_Click(object sender, System.EventArgs e)
+        private void CheckButton_CheckedChanged(object sender, EventArgs e)
+        {
+            isCashCheck = true;
+            isCard = false;
+        }
+
+        private void CardButton_CheckedChanged(object sender, EventArgs e)
+        {
+            isCashCheck = false;
+            isCard = true;
+        }
+        private void NextButton_Click(object sender, EventArgs e)
         {
             this.Hide();
 
-            if (WithCard)
+            if (isCard.Equals(true))
             {
-                //Would love to change the spelling error but I don't think we'll have time lol
+                if (!NewCardInfo[0].Equals("") && !NewCardInfo[1].Equals("") && !NewCardInfo[2].Equals(""))
+                {
+                    CardInfo = NewCardInfo[0] + "," + NewCardInfo[1] + "-" + NewCardInfo[2];
+                    ChangedAccounInfo = AccountInfo;
+                    ChangedAccounInfo = ChangedAccounInfo.Replace(ChangedAccounInfo.Substring(ChangedAccounInfo.IndexOf("$")), "$" + CardInfo);
+
+                    Directory = Path.GetDirectoryName(Application.ExecutablePath);
+                    Directory = Directory.Substring(0, Directory.IndexOf("Eric's Half"));
+                    string OpenFile = Directory + "\\Arturo's Half\\Michael_Cafe.txt";
+
+                    //File manipulation to change the Active order to Placed
+                    string FileText = File.ReadAllText(OpenFile);
+                    FileText = FileText.Replace(AccountInfo, ChangedAccounInfo);
+                    File.WriteAllText(OpenFile, FileText);
+                }
                 new Reciept_Card().Show();
             }
-            else if (WithCashCheck)
+            else if (isCashCheck.Equals(true))
             {
                 new Reciept_Cash().Show();
             }
@@ -50,39 +96,26 @@ namespace Software_Engineering
             }
         }
 
-        private void BackButton_Click(object sender, System.EventArgs e)
+        private void BackButton_Click(object sender, EventArgs e)
         {
             this.Hide();
             new OrderSummary().Show();
         }
-        /*
-         * Appends card info to file
-         */
-        private void CardNumText_TextChanged(object sender, System.EventArgs e)
+        private void CardNumText_TextChanged(object sender, EventArgs e)
         {
-            //ERROR - System.ArgumentOutOfRangeException: 'Length cannot be less than zero.
-            //Parameter name: length' - occurs when backspacing Customer Name more than once
-
-            //Potential Issue - Customer doesn't put card info in correct order
-            //Can probably remove \n when actual customer info is added through Console.WriteLine
-            Directory = Directory.Substring(0, Directory.IndexOf("Eric's Half"));
-            StreamWriter sw = new StreamWriter(Directory + "\\Arturo's Half\\CustomerInfo.txt", true);
-            sw.WriteLine("\n" + CardNumText.Text + ",");
-            sw.Close();
+            NewCardInfo[0] = CardNumText.Text;
         }
 
-        private void CardExpText_TextChanged(object sender, System.EventArgs e)
+
+        private void CardExpText_TextChanged(object sender, EventArgs e)
         {
-            StreamWriter sw = new StreamWriter(Directory + "\\Arturo's Half\\CustomerInfo.txt", true);
-            sw.WriteLine("\n" + CardExpText.Text + ",");
-            sw.Close();
+            NewCardInfo[1] = CardExpText.Text;
         }
+
 
         private void CardPinText_TextChanged(object sender, System.EventArgs e)
         {
-            StreamWriter sw = new StreamWriter(Directory + "\\Arturo's Half\\CustomerInfo.txt", true);
-            sw.WriteLine("\n" + CardExpText.Text + ",");
-            sw.Close();
+            NewCardInfo[2] = CardPinText.Text;
         }
 
     }

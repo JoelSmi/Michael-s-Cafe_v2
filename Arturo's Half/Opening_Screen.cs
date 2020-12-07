@@ -50,7 +50,7 @@ namespace WindowsFormsApp1
             //Adding a gues to the Michael_Cafe.txt and setting their logged in status to LoggedIn
             OpenFile = Directory + "\\Michael_Cafe.txt";
             FileText = File.ReadAllText(OpenFile);
-            FileText = FileText.Replace("#End Of File#", "/Guest-LoggedIn\n" + "#End Of File#");
+            FileText = FileText.Replace("#End Of File#", "/Guest-LoggedIn\n*\n$\n" + "#End Of File#");
             File.WriteAllText(OpenFile, FileText);
 
             this.Hide();

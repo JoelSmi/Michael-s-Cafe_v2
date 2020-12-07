@@ -397,7 +397,7 @@ namespace WindowsFormsApp1
                 MessageBox.Show("In order to ensure we can complete all orders in a timely manner we will not accept orders over 10 Items.", "Transaction Failed",
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
                 new Menu_Screen().Show();
-                Close();
+                this.Close();
             }
             else
             {
@@ -413,7 +413,7 @@ namespace WindowsFormsApp1
 
                 Directory = Directory.Substring(0, Directory.IndexOf("Arturo's Half"));
                 Process.Start(Directory + "\\Eric's Half\\bin\\Debug\\Software_Engineering.exe");
-                Close();
+                this.Close();
             }
         }
     }

@@ -149,7 +149,7 @@ namespace WindowsFormsApp1
 
             using (StreamWriter ab = new StreamWriter(@"" + Directory + "\\Michael_Cafe.txt", true))
             {
-                ab.WriteLine("\n/" + line1 + "-LoggedIn" + "\n" + line2 + "\n" + line3 + "\n" + line4);
+                ab.WriteLine("\n/" + line1 + "-LoggedIn" + "\n" + line2 + "\n" + line3 + "\n" + line4 + "\n$");
                 ab.Close();
             }
             Directory = Path.GetDirectoryName(Application.ExecutablePath);

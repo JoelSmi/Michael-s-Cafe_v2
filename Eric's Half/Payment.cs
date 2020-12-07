@@ -9,13 +9,50 @@ namespace Software_Engineering
     {
         private bool WithCashCheck;
         private bool WithCard;
-        private String Directory = Path.GetDirectoryName(Application.ExecutablePath);
+        private string Directory = Path.GetDirectoryName(Application.ExecutablePath);
+        string AccountInfo = "",ChangedAccounInfo;
+        string CardInfo;
+        string[] NewCardInfo = {"","",""};
 
         public Payment()
         {
             WithCashCheck = false;
             WithCard = false;
             InitializeComponent();
+        }
+        private void Payment_Load_1(object sender, EventArgs e)
+        {
+            Directory = Path.GetDirectoryName(Application.ExecutablePath);
+            string OpenFile = Directory.Substring(0, Directory.IndexOf("Eric's Half")) + "Arturo's Half\\Michael_Cafe.txt";
+            StreamReader sr = new StreamReader(OpenFile);
+            string CurrLine = sr.ReadLine();
+            while (!CurrLine.Contains("#End Of File#"))
+            {
+                if (CurrLine.Contains("LoggedIn"))
+                {
+                    AccountInfo += CurrLine;
+                    CurrLine = sr.ReadLine();
+                    break;
+                }
+                else
+                {
+                    CurrLine = sr.ReadLine();
+                }
+            }
+            while (!CurrLine.Contains("/"))
+            {
+                AccountInfo += "\n" + CurrLine;
+                CurrLine = sr.ReadLine();
+            }
+            if (CurrLine.EndsWith("$"))
+            {
+                MaskedCardNo.Text = "No card in our system";
+            }
+            else
+            {
+                CardInfo = AccountInfo.Substring(AccountInfo.IndexOf("$") + 1);
+                MaskedCardNo.Text = CardInfo.Substring(0, CardInfo.IndexOf(","));
+            }
         }
 
         private void CashButton_CheckedChanged(object sender, System.EventArgs e)
@@ -48,7 +85,21 @@ namespace Software_Engineering
 
             if(WithCard)
             {
-                //Would love to change the spelling error but I don't think we'll have time lol
+                if (!NewCardInfo[0].Equals("") && !NewCardInfo[1].Equals("") && !NewCardInfo[2].Equals(""))
+                {
+                    CardInfo = NewCardInfo[0] + "," + NewCardInfo[1] + "-" + NewCardInfo[2];
+                    ChangedAccounInfo = AccountInfo;
+                    ChangedAccounInfo = ChangedAccounInfo.Replace(ChangedAccounInfo.Substring(ChangedAccounInfo.IndexOf("$")), "$" + CardInfo);
+
+                    Directory = Path.GetDirectoryName(Application.ExecutablePath);
+                    Directory = Directory.Substring(0, Directory.IndexOf("Eric's Half"));
+                    string OpenFile = Directory + "\\Arturo's Half\\Michael_Cafe.txt";
+
+                    //File manipulation to change the Active order to Placed
+                    string FileText = File.ReadAllText(OpenFile);
+                    FileText = FileText.Replace(AccountInfo,ChangedAccounInfo);
+                    File.WriteAllText(OpenFile, FileText);
+                }
                 new Reciept_Card().Show();
             }
             else if(WithCashCheck)
@@ -66,32 +117,19 @@ namespace Software_Engineering
             WithCashCheck = false;
             WithCard = true;
         }
-
-        /*
-        * Appends card info to file
-        */
         private void CardNumText_TextChanged(object sender, System.EventArgs e)
         {
-            //ERROR - Can't seem to access the proper path to get to CustomerInfo file
-            //Potential Issue - Customer doesn't put card info in correct order
-            //Can probably remove \n when actual customer info is added through Console.WriteLine
-            StreamWriter sw = new StreamWriter(Directory + "\\Arturo's Half\\CustomerInfo.txt", true);
-            sw.WriteLine("\n" + CardNumText.Text + ",");
-            sw.Close();
+            NewCardInfo[0] = CardNumText.Text;
         }
 
         private void CardExpText_TextChanged(object sender, System.EventArgs e)
         {
-            StreamWriter sw = new StreamWriter(Directory + "\\Arturo's Half\\CustomerInfo.txt", true);
-            sw.WriteLine("\n" + CardExpText.Text + ",");
-            sw.Close();
+            NewCardInfo[1] = CardExpText.Text;
         }
 
         private void CardPinText_TextChanged(object sender, System.EventArgs e)
         {
-            StreamWriter sw = new StreamWriter(Directory + "\\Arturo's Half\\CustomerInfo.txt", true);
-            sw.WriteLine("\n" + CardExpText.Text + ",");
-            sw.Close();
+            NewCardInfo[2] = CardPinText.Text;
         }
 
     }
