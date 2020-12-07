@@ -9,6 +9,7 @@ namespace Software_Engineering
     {
         //Array storing the prices for the order that is being placed
         double[] Prices = { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 };
+        string Itemline1, Itemline2, Itemline3, Itemline4, Itemline5, Itemline6, Itemline7, Itemline8, Itemline9, Itemline10;
         const double SalesTaxCnst = .06;
         double Total = 0.0, Tax = 0.0;
         private String Directory = Path.GetDirectoryName(Application.ExecutablePath);
@@ -102,6 +103,7 @@ namespace Software_Engineering
 
                     //Setting the Text values for the textboxs for Item 10
                     str = sr.ReadLine();
+                    Itemline10 = str;
                     Prices[9] = double.Parse(str.Substring(str.IndexOf('-') + 1));
                     Item10.Text = str.Substring(0, str.IndexOf(','));
                     ItemCost10.Text = "$" + str.Substring(str.IndexOf('-') + 1);
@@ -115,6 +117,7 @@ namespace Software_Engineering
 
                     //Setting the Text values for the textboxs for Item 9
                     str = sr.ReadLine();
+                    Itemline9 = str;
                     Prices[8] = double.Parse(str.Substring(str.IndexOf('-') + 1));
                     Item9.Text = str.Substring(0, str.IndexOf(','));
                     ItemCost9.Text = "$" + str.Substring(str.IndexOf('-') + 1);
@@ -128,6 +131,7 @@ namespace Software_Engineering
 
                     //Setting the Text values for the textboxs for Item 8
                     str = sr.ReadLine();
+                    Itemline8 = str;
                     Prices[7] = double.Parse(str.Substring(str.IndexOf('-') + 1));
                     Item8.Text = str.Substring(0, str.IndexOf(','));
                     ItemCost8.Text = "$" + str.Substring(str.IndexOf('-') + 1);
@@ -141,6 +145,7 @@ namespace Software_Engineering
 
                     //Setting the Text values for the textboxs for Item 7
                     str = sr.ReadLine();
+                    Itemline7 = str;
                     Prices[6] = double.Parse(str.Substring(str.IndexOf('-') + 1));
                     Item7.Text = str.Substring(0, str.IndexOf(','));
                     ItemCost7.Text = "$" + str.Substring(str.IndexOf('-') + 1);
@@ -154,6 +159,7 @@ namespace Software_Engineering
 
                     //Setting the Text values for the textboxs for Item 6
                     str = sr.ReadLine();
+                    Itemline6 = str;
                     Prices[5] = double.Parse(str.Substring(str.IndexOf('-') + 1));
                     Item6.Text = str.Substring(0, str.IndexOf(','));
                     ItemCost6.Text = "$" + str.Substring(str.IndexOf('-') + 1);
@@ -167,6 +173,7 @@ namespace Software_Engineering
 
                     //Setting the Text values for the textboxs for Item 5
                     str = sr.ReadLine();
+                    Itemline5 = str;
                     Prices[4] = double.Parse(str.Substring(str.IndexOf('-') + 1));
                     Item5.Text = str.Substring(0, str.IndexOf(','));
                     ItemCost5.Text = "$" + str.Substring(str.IndexOf('-') + 1);
@@ -180,6 +187,7 @@ namespace Software_Engineering
 
                     //Setting the Text values for the textboxs for Item 4
                     str = sr.ReadLine();
+                    Itemline4 = str;
                     Prices[3] = double.Parse(str.Substring(str.IndexOf('-') + 1));
                     Item4.Text = str.Substring(0, str.IndexOf(','));
                     ItemCost4.Text = "$" + str.Substring(str.IndexOf('-') + 1);
@@ -193,6 +201,7 @@ namespace Software_Engineering
 
                     //Setting the Text values for the textboxs for Item 3
                     str = sr.ReadLine();
+                    Itemline3 = str;
                     Prices[2] = double.Parse(str.Substring(str.IndexOf('-') + 1));
                     Item3.Text = str.Substring(0, str.IndexOf(','));
                     ItemCost3.Text = "$" + str.Substring(str.IndexOf('-') + 1);
@@ -207,6 +216,7 @@ namespace Software_Engineering
 
                     //Setting the Text values for the textboxs for Item 2
                     str = sr.ReadLine();
+                    Itemline2 = str;
                     Prices[1] = double.Parse(str.Substring(str.IndexOf('-') + 1));
                     Item2.Text = str.Substring(0, str.IndexOf(','));
                     ItemCost2.Text = "$" + str.Substring(str.IndexOf('-') + 1);
@@ -215,6 +225,7 @@ namespace Software_Engineering
                 case 1:
                     //Setting the Text values for the textboxs for Item 1
                     str = sr.ReadLine();
+                    Itemline1 = str;
                     Prices[0] = double.Parse(str.Substring(str.IndexOf('-') + 1));
                     Item1.Text = str.Substring(0, str.IndexOf(','));
                     ItemCost1.Text = "$" + str.Substring(str.IndexOf('-') + 1);
@@ -237,6 +248,7 @@ namespace Software_Engineering
             ItemCost1.Text = "$0.00";
             Prices[0] = 0.0;
             ItemQ1.Text = "";
+            RemoveItem(Itemline1);
             CalculateTotal();
         }
         private void ItemRemove2_Click(object sender, EventArgs e)
@@ -245,6 +257,7 @@ namespace Software_Engineering
             ItemCost2.Text = "$0.00";
             Prices[1] = 0.0;
             ItemQ2.Text = "";
+            RemoveItem(Itemline2);
             CalculateTotal();
         }
         private void ItemRemove3_Click(object sender, EventArgs e)
@@ -253,6 +266,7 @@ namespace Software_Engineering
             ItemCost3.Text = "$0.00";
             Prices[2] = 0.0;
             ItemQ3.Text = "";
+            RemoveItem(Itemline3);
             CalculateTotal();
         }
         private void ItemRemove4_Click(object sender, EventArgs e)
@@ -261,6 +275,7 @@ namespace Software_Engineering
             ItemCost4.Text = "$0.00";
             Prices[3] = 0.0;
             ItemQ4.Text = "";
+            RemoveItem(Itemline2);
             CalculateTotal();
         }
         private void ItemRemove5_Click(object sender, EventArgs e)
@@ -269,6 +284,7 @@ namespace Software_Engineering
             ItemCost5.Text = "$0.00";
             Prices[4] = 0.0;
             ItemQ5.Text = "";
+            RemoveItem(Itemline5);
             CalculateTotal();
         }
         private void ItemRemove6_Click(object sender, EventArgs e)
@@ -277,6 +293,7 @@ namespace Software_Engineering
             ItemCost6.Text = "$0.00";
             Prices[5] = 0.0;
             ItemQ6.Text = "";
+            RemoveItem(Itemline6);
             CalculateTotal();
         }
         private void ItemRemove7_Click(object sender, EventArgs e)
@@ -285,6 +302,7 @@ namespace Software_Engineering
             ItemCost7.Text = "$0.00";
             Prices[6] = 0.0;
             ItemQ7.Text = "";
+            RemoveItem(Itemline7);
             CalculateTotal();
         }
         private void ItemRemove8_Click(object sender, EventArgs e)
@@ -293,6 +311,7 @@ namespace Software_Engineering
             ItemCost8.Text = "$0.00";
             Prices[7] = 0.0;
             ItemQ8.Text = "";
+            RemoveItem(Itemline8);
             CalculateTotal();
         }
         private void ItemRemove9_Click(object sender, EventArgs e)
@@ -301,6 +320,7 @@ namespace Software_Engineering
             ItemCost9.Text = "$0.00";
             Prices[8] = 0.0;
             ItemQ9.Text = "";
+            RemoveItem(Itemline9);
             CalculateTotal();
         }
         private void ItemRemove10_Click(object sender, EventArgs e)
@@ -309,10 +329,19 @@ namespace Software_Engineering
             ItemCost10.Text = "$0.00";
             Prices[9] = 0.0;
             ItemQ10.Text = "";
+            RemoveItem(Itemline10);
             CalculateTotal();
         }
         private void RemoveItem(string CurrItem)
         {
+            Directory = Path.GetDirectoryName(Application.ExecutablePath);
+            Directory = Directory.Substring(0, Directory.IndexOf("Eric's Half"));
+            string OpenFile = Directory + "\\Arturo's Half\\Order.txt";
+
+            //File manipulation to change the Active order to Placed
+            string FileText = File.ReadAllText(Directory + "\\Arturo's Half\\Order.txt");
+            FileText = FileText.Replace( CurrItem+"\n", "");
+            File.WriteAllText(OpenFile, FileText);
         }
         //To move on to the next screen for the ordering process, 
         //the next once will be the Payment -- or the Payment_Guest if 
