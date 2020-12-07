@@ -337,6 +337,7 @@ namespace Software_Engineering
             FileText = FileText.Replace( CurrItem+"\n", "");
             File.WriteAllText(OpenFile, FileText);
         }
+
         //To move on to the next screen for the ordering process, 
         //the next once will be the Payment -- or the Payment_Guest if 
         //they chose to continue as guest

@@ -180,7 +180,6 @@ namespace Software_Engineering
             // 
             this.Item3.AutoSize = true;
             this.Item3.BackColor = System.Drawing.Color.White;
-            this.Item3.Enabled = false;
             this.Item3.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Item3.Location = new System.Drawing.Point(5, 98);
             this.Item3.MaximumSize = new System.Drawing.Size(180, 19);

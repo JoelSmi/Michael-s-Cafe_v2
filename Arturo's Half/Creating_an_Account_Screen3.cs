@@ -158,6 +158,7 @@ namespace WindowsFormsApp1
             OpenFile = Directory + "\\Michael_Cafe.txt";
             FileText = File.ReadAllText(OpenFile);
             FileText = FileText.Replace("#End Of File#", "/" + line1 + "-LoggedIn" + "\n" + line2 + "\n" + line3 + "\n" + line4 + "\n$\n" + "#End Of File#");
+            File.WriteAllText(OpenFile, FileText);
             this.Hide();
             new Menu_Screen().Show();
         }
