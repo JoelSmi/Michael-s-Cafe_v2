@@ -55,15 +55,17 @@ namespace Software_Engineering
             this.Hide();
             new OrderSummary().Show();
         }
-
         /*
          * Appends card info to file
          */
         private void CardNumText_TextChanged(object sender, System.EventArgs e)
         {
-            //ERROR - Can't seem to access the proper path to get to CustomerInfo file
+            //ERROR - System.ArgumentOutOfRangeException: 'Length cannot be less than zero.
+            //Parameter name: length' - occurs when backspacing Customer Name more than once
+
             //Potential Issue - Customer doesn't put card info in correct order
             //Can probably remove \n when actual customer info is added through Console.WriteLine
+            Directory = Directory.Substring(0, Directory.IndexOf("Eric's Half"));
             StreamWriter sw = new StreamWriter(Directory + "\\Arturo's Half\\CustomerInfo.txt", true);
             sw.WriteLine("\n" + CardNumText.Text + ",");
             sw.Close();
