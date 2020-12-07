@@ -53,7 +53,6 @@
             this.accountlbl.Size = new System.Drawing.Size(102, 13);
             this.accountlbl.TabIndex = 1;
             this.accountlbl.Text = "Account Information";
-            this.accountlbl.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel1
             // 

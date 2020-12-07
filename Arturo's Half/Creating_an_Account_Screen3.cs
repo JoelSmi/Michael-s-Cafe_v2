@@ -149,17 +149,24 @@ namespace WindowsFormsApp1
 
             using (StreamWriter ab = new StreamWriter(@"" + Directory + "\\Michael_Cafe.txt", true))
             {
-                ab.WriteLine("\nCustomer information:\n" + line1 + "\n" + line2 + "\n" + line3 + "\n" + line4);
+                ab.WriteLine("\n/" + line1 + "-LoggedIn" + "\n" + line2 + "\n" + line3 + "\n" + line4);
                 ab.Close();
-            }*/
+            }
+            Directory = Path.GetDirectoryName(Application.ExecutablePath);
+            Directory = Directory.Substring(0, Directory.IndexOf("bin"));
+            string OpenFile = Directory + "\\Order.txt";
 
+            //File manipulation to change the Active order to Placed
+            string FileText = File.ReadAllText(Directory + "\\Order.txt");
+            FileText = FileText.Replace("#End Of File#", "/"+ this.email + "-Pending\n\\\n" + "#End Of File#");
+            File.WriteAllText(OpenFile, FileText);
             this.Hide();
-            new Form1().Show();
+            new Menu_Screen().Show();
         }
 
         private void BackBtn_Click(object sender, EventArgs e)
         {
-            new Creating_an_Account_Screen2().Show();
+            new Creating_an_Account_Screen2(this.firstName,this.lastName,this.DOB,this.gender).Show();
             Close();
         }
     }
