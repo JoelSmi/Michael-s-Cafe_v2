@@ -11,6 +11,7 @@ namespace Software_Engineering
         double[] Prices = { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 };
         private String Directory = Path.GetDirectoryName(Application.ExecutablePath);
         int Lines = 0;
+        bool isError = false;
 
         private void CalculateTotal()
         {
@@ -45,6 +46,7 @@ namespace Software_Engineering
                 Directory = Directory.Substring(0, Directory.IndexOf("Eric's Half"));
                 Process.Start(@"" + Directory + "\\Arturo's Half\\bin\\Debug\\WindowsFormsApp1.exe");
                 Close();
+                isError = true;
             }
         }
         private void Form1_Load(object sender, EventArgs e)
@@ -58,6 +60,10 @@ namespace Software_Engineering
             {
                 str = sr.ReadLine();
                 LoadError(str);
+                if (isError == true)
+                {
+                    Close();
+                }
             }
 
             while (!str.Equals("\\"))
@@ -77,6 +83,10 @@ namespace Software_Engineering
             {
                 str = sr.ReadLine();
                 LoadError(str);
+                if(isError == true)
+                {
+                    break;
+                }
             }
 
             switch (Lines)
