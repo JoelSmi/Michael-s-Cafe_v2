@@ -16,7 +16,9 @@ namespace WindowsFormsApp1
     {
         private String Directory = Path.GetDirectoryName(Application.ExecutablePath).Substring(0, Path.GetDirectoryName(Application.ExecutablePath).IndexOf("bin"));
         string username;
+        string fileUsername;
         string password;
+        string filePassword;
 
         public Log_In_Screen()
         {
@@ -46,8 +48,6 @@ namespace WindowsFormsApp1
         {
             using (StreamReader ab = new StreamReader(@"" + Directory + "\\Michael_Cafe.txt"))
             {
-                string line1 = null;
-                string line2 = null;
                 username = usernameTextBox1.Text;
                 password = textBox1.Text;
 
@@ -64,26 +64,15 @@ namespace WindowsFormsApp1
                     return;
                 }
 
-                while ((line1 = ab.ReadLine()) != null)
+                if ((fileUsername.Equals(username)) && (fileUsername.Equals(password)))
                 {
-                    if (line1.Contains(username))
-                    {
-                        line2 = ab.ReadLine();
-                        break;
-                    }
-                }
-
-
-
-
-
-                if ((line1.Equals(username)) && (line2.Equals(password)))
-                {
-                    Console.WriteLine("Welcome");
+                    string OpenFile = Directory + "\\Michael_Cafe.txt";
+                    string FileText = File.ReadAllText(OpenFile);
+                    FileText = FileText.Replace("LoggedOut", "LoggedIn");
+                    File.WriteAllText(OpenFile, FileText);
                     this.Hide();
                     new Menu_Screen().Show();
                 }
-
                 else
                 {
                     MessageBox.Show("Your login credentials don't match an account in our system.", "Error",

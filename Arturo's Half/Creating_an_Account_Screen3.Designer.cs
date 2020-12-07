@@ -56,7 +56,6 @@
             this.ContactInfoLabel.Size = new System.Drawing.Size(294, 36);
             this.ContactInfoLabel.TabIndex = 2;
             this.ContactInfoLabel.Text = "Contact Information";
-
             // 
             // label1
             // 
@@ -84,9 +83,9 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(265, 153);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(332, 21);
+            this.label2.Size = new System.Drawing.Size(320, 21);
             this.label2.TabIndex = 8;
-            this.label2.Text = "Additional Information in locating address";
+            this.label2.Text = "Additional Info. (Apt. #, Subdivision, etc.)";
             // 
             // CitytextBox
             // 
@@ -95,7 +94,6 @@
             this.CitytextBox.Name = "CitytextBox";
             this.CitytextBox.Size = new System.Drawing.Size(300, 22);
             this.CitytextBox.TabIndex = 9;
-            this.CitytextBox.Text = "subdivision name, apartment number, etc.";
             this.CitytextBox.TextChanged += new System.EventHandler(this.CitytextBox_TextChanged);
             // 
             // label5
@@ -116,7 +114,6 @@
             this.textBox2.Size = new System.Drawing.Size(144, 20);
             this.textBox2.TabIndex = 18;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-
             // 
             // statelabel
             // 
@@ -155,7 +152,6 @@
             this.zipCodetextBox.Size = new System.Drawing.Size(105, 20);
             this.zipCodetextBox.TabIndex = 22;
             this.zipCodetextBox.TextChanged += new System.EventHandler(this.zipCodetextBox_TextChanged);
-
             // 
             // label4
             // 
@@ -212,7 +208,6 @@
             this.button2.Text = "Done";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-
             // 
             // Creating_an_Account_Screen3
             // 

@@ -1,27 +1,6 @@
-abcd
-1234
-Customer Information: abcd || asdf || 1234 || ma
-
-Email address and password:
-1232@1222
-1234
-
-First Name Test:
-
-
-Customer address information:
-1234 Test St. 
-Marietta GA 30060
-Phone Number: 7701234567
-/Person 1-
-,
-,
-7701234567
-1234 Test St.,Marietta-GA.30060
-
-/Person 1-
-test@gmail.com,Password
+/test@gmail.com,Password-LoggedOut
 Joel,Smith
 7701234567
-1234 Test St,Marietta-GA.30060
-
+1234 Test St ,Marietta - GA.30060
+/Guest-LoggedOut
+#End Of File#

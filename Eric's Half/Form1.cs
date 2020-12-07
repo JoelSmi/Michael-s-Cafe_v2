@@ -314,14 +314,6 @@ namespace Software_Engineering
         //they chose to continue as guest
         private void PlaceOrder_Click(object sender, EventArgs e)
         {
-            Directory = Path.GetDirectoryName(Application.ExecutablePath);
-            Directory = Directory.Substring(0, Directory.IndexOf("Eric's Half"));
-            string OpenFile = Directory + "\\Arturo's Half\\Order.txt";
-
-            //File manipulation to change the Active order to Placed
-            string FileText = File.ReadAllText(Directory + "\\Arturo's Half\\Order.txt");
-            FileText = FileText.Replace("Active", "Placed");
-            File.WriteAllText(OpenFile, FileText);
             Hide();
             new Payment_Guest().Show();
         }
@@ -334,7 +326,7 @@ namespace Software_Engineering
 
             //File manipulation to change the Active order to Placed
             string FileText = File.ReadAllText(Directory + "\\Arturo's Half\\Order.txt");
-            FileText = FileText.Replace("Active", "Placed");
+            FileText = FileText.Replace("Active", "Pending");
             File.WriteAllText(OpenFile, FileText);
 
             Directory = Path.GetDirectoryName(Application.ExecutablePath);
@@ -345,13 +337,14 @@ namespace Software_Engineering
 
         private void Cancel_Click(object sender, EventArgs e)
         {
-            //Clean up code
-            String Directory = Path.GetDirectoryName(Application.ExecutablePath);
+            Directory = Path.GetDirectoryName(Application.ExecutablePath);
             Directory = Directory.Substring(0, Directory.IndexOf("Eric's Half"));
-            String OpenFile = Directory +"\\Arturo's Half\\Order.txt";
-            string text = File.ReadAllText(Directory + "\\Arturo's Half\\Order.txt");
-            text = text.Replace("Active", "Pending");
-            File.WriteAllText(OpenFile, text);
+            string OpenFile = Directory + "\\Arturo's Half\\Order.txt";
+
+            //File manipulation to change the Active order to Cancelled and returning the customer to the opening screen
+            string FileText = File.ReadAllText(Directory + "\\Arturo's Half\\Order.txt");
+            FileText = FileText.Replace("Active", "Cancelled");
+            File.WriteAllText(OpenFile, FileText);
             Process.Start(@"" + Directory + "\\Arturo's Half\\bin\\Debug\\WindowsFormsApp1.exe");
             Close();
         }

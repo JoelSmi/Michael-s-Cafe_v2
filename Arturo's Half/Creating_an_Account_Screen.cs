@@ -28,28 +28,7 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
-
-        private void splitter1_SplitterMoved(object sender, SplitterEventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Creating_an_Account_Screen_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click_1(object sender, EventArgs e)
         {
 
         }
@@ -141,16 +120,6 @@ namespace WindowsFormsApp1
                 new Creating_an_Account_Screen2(firstName, lastName, DOB, gender).Show();
             }
 
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
 
         }
 

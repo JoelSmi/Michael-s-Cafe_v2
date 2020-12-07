@@ -38,7 +38,7 @@
             this.createAccountButton = new System.Windows.Forms.Button();
             this.loginbutton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.GuestBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.titleBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -115,18 +115,18 @@
             this.panel1.Size = new System.Drawing.Size(906, 10);
             this.panel1.TabIndex = 7;
             // 
-            // button1
+            // GuestBtn
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(332, 344);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(210, 34);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Continue as Guest";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.GuestBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.GuestBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.GuestBtn.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GuestBtn.Location = new System.Drawing.Point(332, 344);
+            this.GuestBtn.Name = "GuestBtn";
+            this.GuestBtn.Size = new System.Drawing.Size(210, 34);
+            this.GuestBtn.TabIndex = 8;
+            this.GuestBtn.Text = "Continue as Guest";
+            this.GuestBtn.UseVisualStyleBackColor = false;
+            this.GuestBtn.Click += new System.EventHandler(this.GuestBtn_Click);
             // 
             // Form1
             // 
@@ -134,7 +134,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Brown;
             this.ClientSize = new System.Drawing.Size(906, 571);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.GuestBtn);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.loginbutton);
             this.Controls.Add(this.createAccountButton);
@@ -160,7 +160,7 @@
         private System.Windows.Forms.Button createAccountButton;
         private System.Windows.Forms.Button loginbutton;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button GuestBtn;
     }
 }
 
