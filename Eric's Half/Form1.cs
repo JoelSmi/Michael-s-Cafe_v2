@@ -9,6 +9,9 @@ namespace Software_Engineering
     {
         //Array storing the prices for the order that is being placed
         double[] Prices = { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 };
+        private String Directory = Path.GetDirectoryName(Application.ExecutablePath);
+        int Lines = 0;
+
         private void CalculateTotal()
         {
             Double Total = 0.50;
@@ -30,11 +33,52 @@ namespace Software_Engineering
             Item3.Name = "Label7";
             _Label11.Name = "Label11";
         }
+
+        //Checking to see if the Line str is the end of the file and returning the customer to the Opening screen if it is.
+        private void LoadError(String str)
+        {
+            if (str == null)
+            {
+                MessageBox.Show("The system has encountered an error, we are returning you to the Opening screen", "Loading Failed",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                String Directory = Path.GetDirectoryName(Application.ExecutablePath);
+                Directory = Directory.Substring(0, Directory.IndexOf("Eric's Half"));
+                Process.Start(@"" + Directory + "\\Arturo's Half\\bin\\Debug\\WindowsFormsApp1.exe");
+                Close();
+            }
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
-            int Lines = File.ReadAllLines("C:\\Users\\fchsb\\Desktop\\Micheal's Cafe\\Arturo's Half\\Order.txt").Length - 2;
-            StreamReader sr = new StreamReader("C:\\Users\\fchsb\\Desktop\\Micheal's Cafe\\Arturo's Half\\Order.txt");
+            Directory = Directory.Substring(0, Directory.IndexOf("Eric's Half"));
+            StreamReader sr = new StreamReader(Directory + "\\Arturo's Half\\Order.txt");
             string str = sr.ReadLine();
+
+            //Finding the currently active Order that is on file. If none is found it will return the customer to the Opening Screen
+            while (!str.Contains("Active"))
+            {
+                str = sr.ReadLine();
+                LoadError(str);
+            }
+
+            while (!str.Equals("\\"))
+            {
+                str = sr.ReadLine();
+                Lines++;
+            }
+            Lines--;
+            sr.Close();
+
+            //Reopening the file once the order is found
+            sr = new StreamReader(Directory + "\\Arturo's Half\\Order.txt");
+            str = sr.ReadLine();
+
+            //Finding the currently active Order that is on file. If none is found it will return the customer to the Opening Screen
+            while (!str.Contains("Active"))
+            {
+                str = sr.ReadLine();
+                LoadError(str);
+            }
+
             switch (Lines)
             {
                 case 10:
@@ -164,6 +208,7 @@ namespace Software_Engineering
                     ItemQ1.Text = str.Substring(str.IndexOf(',') + 1, (str.IndexOf('-') - str.IndexOf(','))-1);
                     goto default;
                 default:
+                    sr.Close();
                     CalculateTotal();
                     break;
             }
@@ -259,13 +304,30 @@ namespace Software_Engineering
         //they chose to continue as guest
         private void PlaceOrder_Click(object sender, EventArgs e)
         {
+            Directory = Path.GetDirectoryName(Application.ExecutablePath);
+            Directory = Directory.Substring(0, Directory.IndexOf("Eric's Half"));
+            string OpenFile = Directory + "\\Arturo's Half\\Order.txt";
+
+            //File manipulation to change the Active order to Placed
+            string FileText = File.ReadAllText(Directory + "\\Arturo's Half\\Order.txt");
+            FileText = FileText.Replace("Active", "Placed");
+            File.WriteAllText(OpenFile, FileText);
             Hide();
             new Payment_Guest().Show();
         }
 
         private void BackBtn_Click(object sender, EventArgs e)
         {
-            String Directory = Path.GetDirectoryName(Application.ExecutablePath);
+            Directory = Path.GetDirectoryName(Application.ExecutablePath);
+            Directory = Directory.Substring(0, Directory.IndexOf("Eric's Half"));
+            string OpenFile = Directory + "\\Arturo's Half\\Order.txt";
+
+            //File manipulation to change the Active order to Placed
+            string FileText = File.ReadAllText(Directory + "\\Arturo's Half\\Order.txt");
+            FileText = FileText.Replace("Active", "Placed");
+            File.WriteAllText(OpenFile, FileText);
+
+            Directory = Path.GetDirectoryName(Application.ExecutablePath);
             Directory = Directory.Substring(0, Directory.IndexOf("Eric's Half"));
             Process.Start(@"" + Directory + "\\Arturo's Half\\bin\\Debug\\WindowsFormsApp1.exe");
             Close();
@@ -273,8 +335,13 @@ namespace Software_Engineering
 
         private void Cancel_Click(object sender, EventArgs e)
         {
+            //Clean up code
             String Directory = Path.GetDirectoryName(Application.ExecutablePath);
             Directory = Directory.Substring(0, Directory.IndexOf("Eric's Half"));
+            String OpenFile = Directory +"\\Arturo's Half\\Order.txt";
+            string text = File.ReadAllText(Directory + "\\Arturo's Half\\Order.txt");
+            text = text.Replace("Active", "Pending");
+            File.WriteAllText(OpenFile, text);
             Process.Start(@"" + Directory + "\\Arturo's Half\\bin\\Debug\\WindowsFormsApp1.exe");
             Close();
         }
