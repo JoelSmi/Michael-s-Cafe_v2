@@ -353,12 +353,14 @@ namespace Software_Engineering
             {
                 if (Customer.Contains("LoggedIn") && !Customer.Contains("Guest"))
                 {
+                    FindCustomer.Close();
                     this.Hide();
                     new Payment().Show();
                     break;
                 }
                 else if(Customer.Contains("LoggedIn") && Customer.Contains("Guest"))
                 {
+                    FindCustomer.Close();
                     this.Hide();
                     new Payment_Guest().Show();
                     break;

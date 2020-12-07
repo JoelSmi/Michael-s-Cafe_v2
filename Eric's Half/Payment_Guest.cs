@@ -11,7 +11,6 @@ namespace Software_Engineering
         private string Directory = Path.GetDirectoryName(Application.ExecutablePath);
         string AccountInfo = "", ChangedAccounInfo;
         string CardInfo;
-        string CurrLine = "";
         string[] NewCardInfo = { "", "", "" };
 
         public Payment_Guest()
@@ -23,20 +22,19 @@ namespace Software_Engineering
             Directory = Path.GetDirectoryName(Application.ExecutablePath);
             string OpenFile = Directory.Substring(0, Directory.IndexOf("Eric's Half")) + "Arturo's Half\\Michael_Cafe.txt";
             StreamReader sr = new StreamReader(OpenFile);
-            CurrLine = sr.ReadLine();
+            string CurrLine = sr.ReadLine();
             while (!CurrLine.Contains("#End Of File#"))
             {
                 if (CurrLine.Contains("LoggedIn"))
                 {
                     AccountInfo += CurrLine;
                     CurrLine = sr.ReadLine();
-
-                    //NullException that needs to be fixed
-                    while (!CurrLine.Contains("/"))
+                    while (!CurrLine.Contains("#End Of File#"))
                     {
                         AccountInfo += "\n" + CurrLine;
                         CurrLine = sr.ReadLine();
                     }
+                    sr.Close();
                     break;
                 }
                 else
@@ -44,7 +42,7 @@ namespace Software_Engineering
                     CurrLine = sr.ReadLine();
                 }
             }
-            
+            sr.Close();
         }
 
         private void CashButton_CheckedChanged(object sender, EventArgs e)
