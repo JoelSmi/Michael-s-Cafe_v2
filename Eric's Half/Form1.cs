@@ -9,19 +9,22 @@ namespace Software_Engineering
     {
         //Array storing the prices for the order that is being placed
         double[] Prices = { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 };
+        const double SalesTaxCnst = .06;
+        double Total = 0.0, Tax = 0.0;
         private String Directory = Path.GetDirectoryName(Application.ExecutablePath);
         int Lines = 0;
         bool isError = false;
 
         private void CalculateTotal()
         {
-            double Total = 0.50;
-            for (int i = 0; i < Prices.Length; i++)
+            for (int i = 0; i < this.Prices.Length; i++)
             {
-                Total += Prices[i];
+                this.Total += this.Prices[i];
             }
-
-            TotalCost.Text = "$" + Total.ToString();
+            this.Tax = this.Total * SalesTaxCnst;
+            this.Total = this.Total + this.Tax;
+            SalesTax.Text = "$" + this.Tax.ToString();
+            TotalCost.Text = "$" + this.Total.ToString();
         }
 
         public OrderSummary()
@@ -308,7 +311,9 @@ namespace Software_Engineering
             ItemQ10.Text = "";
             CalculateTotal();
         }
-
+        private void RemoveItem(string CurrItem)
+        {
+        }
         //To move on to the next screen for the ordering process, 
         //the next once will be the Payment -- or the Payment_Guest if 
         //they chose to continue as guest
