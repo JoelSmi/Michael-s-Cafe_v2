@@ -35,200 +35,204 @@ namespace Software_Engineering
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            Label1 = new Label();
-            Button1 = new Button();
-            RadioButton1 = new RadioButton();
-            TextBox1 = new TextBox();
-            TextBox2 = new TextBox();
-            RadioButton2 = new RadioButton();
-            Label2 = new Label();
-            TextBox3 = new TextBox();
-            TextBox4 = new TextBox();
-            TextBox5 = new TextBox();
-            TextBox6 = new TextBox();
-            TextBox7 = new TextBox();
-            Button2 = new Button();
-            SuspendLayout();
+            this.Label1 = new System.Windows.Forms.Label();
+            this.BackButton = new System.Windows.Forms.Button();
+            this.DefaultAddButton = new System.Windows.Forms.RadioButton();
+            this.CustomerNameText = new System.Windows.Forms.TextBox();
+            this.PhoneNumberText = new System.Windows.Forms.TextBox();
+            this.DiffAddButton = new System.Windows.Forms.RadioButton();
+            this.CustomerAddressText = new System.Windows.Forms.Label();
+            this.StreetNameText = new System.Windows.Forms.TextBox();
+            this.AptNumText = new System.Windows.Forms.TextBox();
+            this.CityText = new System.Windows.Forms.TextBox();
+            this.StateText = new System.Windows.Forms.TextBox();
+            this.ZipText = new System.Windows.Forms.TextBox();
+            this.NextButton = new System.Windows.Forms.Button();
+            this.SuspendLayout();
             // 
             // Label1
             // 
-            Label1.AutoSize = true;
-            Label1.Font = new Font("Microsoft YaHei", 20.25f, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            Label1.ForeColor = SystemColors.ControlLightLight;
-            Label1.Location = new Point(223, 30);
-            Label1.Name = "Label1";
-            Label1.Size = new Size(127, 36);
-            Label1.TabIndex = 6;
-            Label1.Text = "Delivery";
+            this.Label1.AutoSize = true;
+            this.Label1.Font = new System.Drawing.Font("Microsoft YaHei", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Label1.Location = new System.Drawing.Point(223, 30);
+            this.Label1.Name = "Label1";
+            this.Label1.Size = new System.Drawing.Size(127, 36);
+            this.Label1.TabIndex = 6;
+            this.Label1.Text = "Delivery";
             // 
-            // Button1
+            // BackButton
             // 
-            Button1.BackColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(255)), Conversions.ToInteger(Conversions.ToByte(255)), Conversions.ToInteger(Conversions.ToByte(192)));
-            Button1.FlatStyle = FlatStyle.Popup;
-            Button1.Font = new Font("Microsoft YaHei", 8.25f, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            Button1.ForeColor = SystemColors.ControlText;
-            Button1.Location = new Point(42, 44);
-            Button1.Name = "Button1";
-            Button1.Size = new Size(75, 25);
-            Button1.TabIndex = 5;
-            Button1.Text = "< Back";
-            Button1.UseVisualStyleBackColor = false;
+            this.BackButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BackButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BackButton.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BackButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.BackButton.Location = new System.Drawing.Point(42, 44);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.Size = new System.Drawing.Size(75, 25);
+            this.BackButton.TabIndex = 5;
+            this.BackButton.Text = "< Back";
+            this.BackButton.UseVisualStyleBackColor = false;
             // 
-            // RadioButton1
+            // DefaultAddButton
             // 
-            RadioButton1.AutoSize = true;
-            RadioButton1.Font = new Font("Microsoft YaHei", 9.75f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            RadioButton1.ForeColor = Color.White;
-            RadioButton1.Location = new Point(42, 137);
-            RadioButton1.Name = "RadioButton1";
-            RadioButton1.Size = new Size(150, 23);
-            RadioButton1.TabIndex = 7;
-            RadioButton1.TabStop = true;
-            RadioButton1.Text = "Use default Address";
-            RadioButton1.UseVisualStyleBackColor = true;
+            this.DefaultAddButton.AutoSize = true;
+            this.DefaultAddButton.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DefaultAddButton.ForeColor = System.Drawing.Color.White;
+            this.DefaultAddButton.Location = new System.Drawing.Point(42, 137);
+            this.DefaultAddButton.Name = "DefaultAddButton";
+            this.DefaultAddButton.Size = new System.Drawing.Size(150, 23);
+            this.DefaultAddButton.TabIndex = 7;
+            this.DefaultAddButton.TabStop = true;
+            this.DefaultAddButton.Text = "Use default Address";
+            this.DefaultAddButton.UseVisualStyleBackColor = true;
+            this.DefaultAddButton.CheckedChanged += new System.EventHandler(this.DefaultAddButton_CheckedChanged);
             // 
-            // TextBox1
+            // CustomerNameText
             // 
-            TextBox1.Font = new Font("Microsoft YaHei", 8.25f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            TextBox1.Location = new Point(42, 88);
-            TextBox1.Name = "TextBox1";
-            TextBox1.Size = new Size(100, 22);
-            TextBox1.TabIndex = 8;
-            TextBox1.Text = "Customer Name";
-            TextBox1.TextAlign = HorizontalAlignment.Center;
+            this.CustomerNameText.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CustomerNameText.Location = new System.Drawing.Point(42, 88);
+            this.CustomerNameText.Name = "CustomerNameText";
+            this.CustomerNameText.Size = new System.Drawing.Size(100, 22);
+            this.CustomerNameText.TabIndex = 8;
+            this.CustomerNameText.Text = "Customer Name";
+            this.CustomerNameText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // TextBox2
+            // PhoneNumberText
             // 
-            TextBox2.Font = new Font("Microsoft YaHei", 8.25f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            TextBox2.Location = new Point(213, 88);
-            TextBox2.Name = "TextBox2";
-            TextBox2.Size = new Size(100, 22);
-            TextBox2.TabIndex = 9;
-            TextBox2.Text = "Phone Number";
-            TextBox2.TextAlign = HorizontalAlignment.Center;
+            this.PhoneNumberText.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PhoneNumberText.Location = new System.Drawing.Point(213, 88);
+            this.PhoneNumberText.Name = "PhoneNumberText";
+            this.PhoneNumberText.Size = new System.Drawing.Size(100, 22);
+            this.PhoneNumberText.TabIndex = 9;
+            this.PhoneNumberText.Text = "Phone Number";
+            this.PhoneNumberText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.PhoneNumberText.TextChanged += new System.EventHandler(this.PhoneNumberText_TextChanged_1);
             // 
-            // RadioButton2
+            // DiffAddButton
             // 
-            RadioButton2.AutoSize = true;
-            RadioButton2.Font = new Font("Microsoft YaHei", 9.75f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            RadioButton2.ForeColor = Color.White;
-            RadioButton2.Location = new Point(287, 137);
-            RadioButton2.Name = "RadioButton2";
-            RadioButton2.Size = new Size(160, 23);
-            RadioButton2.TabIndex = 10;
-            RadioButton2.TabStop = true;
-            RadioButton2.Text = "Use different Address";
-            RadioButton2.UseVisualStyleBackColor = true;
+            this.DiffAddButton.AutoSize = true;
+            this.DiffAddButton.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DiffAddButton.ForeColor = System.Drawing.Color.White;
+            this.DiffAddButton.Location = new System.Drawing.Point(287, 137);
+            this.DiffAddButton.Name = "DiffAddButton";
+            this.DiffAddButton.Size = new System.Drawing.Size(160, 23);
+            this.DiffAddButton.TabIndex = 10;
+            this.DiffAddButton.TabStop = true;
+            this.DiffAddButton.Text = "Use different Address";
+            this.DiffAddButton.UseVisualStyleBackColor = true;
+            this.DiffAddButton.CheckedChanged += new System.EventHandler(this.DiffAddButton_CheckedChanged);
             // 
-            // Label2
+            // CustomerAddressText
             // 
-            Label2.AutoSize = true;
-            Label2.Font = new Font("Microsoft YaHei", 8.25f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            Label2.ForeColor = Color.White;
-            Label2.Location = new Point(78, 160);
-            Label2.Name = "Label2";
-            Label2.Size = new Size(129, 16);
-            Label2.TabIndex = 11;
-            Label2.Text = "* Address confirmation";
+            this.CustomerAddressText.AutoSize = true;
+            this.CustomerAddressText.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CustomerAddressText.ForeColor = System.Drawing.Color.White;
+            this.CustomerAddressText.Location = new System.Drawing.Point(78, 160);
+            this.CustomerAddressText.Name = "CustomerAddressText";
+            this.CustomerAddressText.Size = new System.Drawing.Size(129, 16);
+            this.CustomerAddressText.TabIndex = 11;
+            this.CustomerAddressText.Text = "* Address confirmation";
             // 
-            // TextBox3
+            // StreetNameText
             // 
-            TextBox3.Font = new Font("Microsoft YaHei", 8.25f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            TextBox3.Location = new Point(273, 163);
-            TextBox3.Name = "TextBox3";
-            TextBox3.Size = new Size(213, 22);
-            TextBox3.TabIndex = 12;
-            TextBox3.Text = "Street Name";
-            TextBox3.TextAlign = HorizontalAlignment.Center;
+            this.StreetNameText.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StreetNameText.Location = new System.Drawing.Point(273, 163);
+            this.StreetNameText.Name = "StreetNameText";
+            this.StreetNameText.Size = new System.Drawing.Size(213, 22);
+            this.StreetNameText.TabIndex = 12;
+            this.StreetNameText.Text = "Street Name";
+            this.StreetNameText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // TextBox4
+            // AptNumText
             // 
-            TextBox4.Font = new Font("Microsoft YaHei", 8.25f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            TextBox4.Location = new Point(492, 163);
-            TextBox4.Name = "TextBox4";
-            TextBox4.Size = new Size(65, 22);
-            TextBox4.TabIndex = 13;
-            TextBox4.Text = "Apt #";
+            this.AptNumText.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AptNumText.Location = new System.Drawing.Point(492, 163);
+            this.AptNumText.Name = "AptNumText";
+            this.AptNumText.Size = new System.Drawing.Size(65, 22);
+            this.AptNumText.TabIndex = 13;
+            this.AptNumText.Text = "Apt #";
             // 
-            // TextBox5
+            // CityText
             // 
-            TextBox5.Font = new Font("Microsoft YaHei", 8.25f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            TextBox5.Location = new Point(273, 189);
-            TextBox5.Name = "TextBox5";
-            TextBox5.Size = new Size(106, 22);
-            TextBox5.TabIndex = 14;
-            TextBox5.Text = "City";
-            TextBox5.TextAlign = HorizontalAlignment.Center;
+            this.CityText.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CityText.Location = new System.Drawing.Point(273, 189);
+            this.CityText.Name = "CityText";
+            this.CityText.Size = new System.Drawing.Size(106, 22);
+            this.CityText.TabIndex = 14;
+            this.CityText.Text = "City";
+            this.CityText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // TextBox6
+            // StateText
             // 
-            TextBox6.Font = new Font("Microsoft YaHei", 8.25f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            TextBox6.Location = new Point(397, 189);
-            TextBox6.Name = "TextBox6";
-            TextBox6.Size = new Size(65, 22);
-            TextBox6.TabIndex = 15;
-            TextBox6.Text = "State";
-            TextBox6.TextAlign = HorizontalAlignment.Center;
+            this.StateText.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StateText.Location = new System.Drawing.Point(397, 189);
+            this.StateText.Name = "StateText";
+            this.StateText.Size = new System.Drawing.Size(65, 22);
+            this.StateText.TabIndex = 15;
+            this.StateText.Text = "State";
+            this.StateText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // TextBox7
+            // ZipText
             // 
-            TextBox7.Font = new Font("Microsoft YaHei", 8.25f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            TextBox7.Location = new Point(478, 189);
-            TextBox7.Name = "TextBox7";
-            TextBox7.Size = new Size(79, 22);
-            TextBox7.TabIndex = 16;
-            TextBox7.Text = "Zipcode";
-            TextBox7.TextAlign = HorizontalAlignment.Center;
+            this.ZipText.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ZipText.Location = new System.Drawing.Point(478, 189);
+            this.ZipText.Name = "ZipText";
+            this.ZipText.Size = new System.Drawing.Size(79, 22);
+            this.ZipText.TabIndex = 16;
+            this.ZipText.Text = "Zipcode";
+            this.ZipText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // Button2
+            // NextButton
             // 
-            Button2.BackColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(255)), Conversions.ToInteger(Conversions.ToByte(255)), Conversions.ToInteger(Conversions.ToByte(192)));
-            Button2.FlatStyle = FlatStyle.Popup;
-            Button2.Font = new Font("Microsoft YaHei", 8.25f, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            Button2.Location = new Point(238, 265);
-            Button2.Name = "Button2";
-            Button2.Size = new Size(75, 23);
-            Button2.TabIndex = 17;
-            Button2.Text = "Next";
-            Button2.UseVisualStyleBackColor = false;
+            this.NextButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.NextButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.NextButton.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NextButton.Location = new System.Drawing.Point(238, 265);
+            this.NextButton.Name = "NextButton";
+            this.NextButton.Size = new System.Drawing.Size(75, 23);
+            this.NextButton.TabIndex = 17;
+            this.NextButton.Text = "Next";
+            this.NextButton.UseVisualStyleBackColor = false;
             // 
             // Delivery
             // 
-            AutoScaleDimensions = new SizeF(6.0f, 13.0f);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Brown;
-            ClientSize = new Size(569, 298);
-            Controls.Add(Button2);
-            Controls.Add(TextBox7);
-            Controls.Add(TextBox6);
-            Controls.Add(TextBox5);
-            Controls.Add(TextBox4);
-            Controls.Add(TextBox3);
-            Controls.Add(Label2);
-            Controls.Add(RadioButton2);
-            Controls.Add(TextBox2);
-            Controls.Add(TextBox1);
-            Controls.Add(RadioButton1);
-            Controls.Add(Label1);
-            Controls.Add(Button1);
-            Name = "Delivery";
-            Text = "Delivery";
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Brown;
+            this.ClientSize = new System.Drawing.Size(569, 298);
+            this.Controls.Add(this.NextButton);
+            this.Controls.Add(this.ZipText);
+            this.Controls.Add(this.StateText);
+            this.Controls.Add(this.CityText);
+            this.Controls.Add(this.AptNumText);
+            this.Controls.Add(this.StreetNameText);
+            this.Controls.Add(this.CustomerAddressText);
+            this.Controls.Add(this.DiffAddButton);
+            this.Controls.Add(this.PhoneNumberText);
+            this.Controls.Add(this.CustomerNameText);
+            this.Controls.Add(this.DefaultAddButton);
+            this.Controls.Add(this.Label1);
+            this.Controls.Add(this.BackButton);
+            this.Name = "Delivery";
+            this.Text = "Delivery";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         internal Label Label1;
-        internal Button Button1;
-        internal RadioButton RadioButton1;
-        internal TextBox TextBox1;
-        internal TextBox TextBox2;
-        internal RadioButton RadioButton2;
-        internal Label Label2;
-        internal TextBox TextBox3;
-        internal TextBox TextBox4;
-        internal TextBox TextBox5;
-        internal TextBox TextBox6;
-        internal TextBox TextBox7;
-        internal Button Button2;
+        internal Button BackButton;
+        internal RadioButton DefaultAddButton;
+        internal TextBox CustomerNameText;
+        internal TextBox PhoneNumberText;
+        internal RadioButton DiffAddButton;
+        internal Label CustomerAddressText;
+        internal TextBox StreetNameText;
+        internal TextBox AptNumText;
+        internal TextBox CityText;
+        internal TextBox StateText;
+        internal TextBox ZipText;
+        internal Button NextButton;
     }
 }

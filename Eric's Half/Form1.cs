@@ -31,12 +31,6 @@ namespace Software_Engineering
         public OrderSummary()
         {
             InitializeComponent();
-            BackBtn.Name = "Button1";
-            _Label2.Name = "Label2";
-            Item1.Name = "Label3";
-            Item2.Name = "Label6";
-            Item3.Name = "Label7";
-            _Label11.Name = "Label11";
         }
 
         //Checking to see if the Line str is the end of the file and returning the customer to the Opening screen if it is.
@@ -107,7 +101,7 @@ namespace Software_Engineering
                     Prices[9] = double.Parse(str.Substring(str.IndexOf('-') + 1));
                     Item10.Text = str.Substring(0, str.IndexOf(','));
                     ItemCost10.Text = "$" + str.Substring(str.IndexOf('-') + 1);
-                    ItemQ10.Text = str.Substring(str.IndexOf(',') + 1, (str.IndexOf('-') - str.IndexOf(','))-1);
+                    ItemQ10.Text = str.Substring(str.IndexOf(',') + 1, (str.IndexOf('-') - str.IndexOf(',')) - 1);
                     goto case 9;
                 case 9:
                     Item9.Visible = true;
@@ -121,7 +115,7 @@ namespace Software_Engineering
                     Prices[8] = double.Parse(str.Substring(str.IndexOf('-') + 1));
                     Item9.Text = str.Substring(0, str.IndexOf(','));
                     ItemCost9.Text = "$" + str.Substring(str.IndexOf('-') + 1);
-                    ItemQ9.Text = str.Substring(str.IndexOf(',') + 1, (str.IndexOf('-')-str.IndexOf(','))-1);
+                    ItemQ9.Text = str.Substring(str.IndexOf(',') + 1, (str.IndexOf('-') - str.IndexOf(',')) - 1);
                     goto case 8;
                 case 8:
                     Item8.Visible = true;
@@ -135,7 +129,7 @@ namespace Software_Engineering
                     Prices[7] = double.Parse(str.Substring(str.IndexOf('-') + 1));
                     Item8.Text = str.Substring(0, str.IndexOf(','));
                     ItemCost8.Text = "$" + str.Substring(str.IndexOf('-') + 1);
-                    ItemQ8.Text = str.Substring(str.IndexOf(',') + 1, (str.IndexOf('-') - str.IndexOf(','))-1);
+                    ItemQ8.Text = str.Substring(str.IndexOf(',') + 1, (str.IndexOf('-') - str.IndexOf(',')) - 1);
                     goto case 7;
                 case 7:
                     Item7.Visible = true;
@@ -149,7 +143,7 @@ namespace Software_Engineering
                     Prices[6] = double.Parse(str.Substring(str.IndexOf('-') + 1));
                     Item7.Text = str.Substring(0, str.IndexOf(','));
                     ItemCost7.Text = "$" + str.Substring(str.IndexOf('-') + 1);
-                    ItemQ7.Text = str.Substring(str.IndexOf(',') + 1, (str.IndexOf('-') - str.IndexOf(','))-1);
+                    ItemQ7.Text = str.Substring(str.IndexOf(',') + 1, (str.IndexOf('-') - str.IndexOf(',')) - 1);
                     goto case 6;
                 case 6:
                     Item6.Visible = true;
@@ -163,7 +157,7 @@ namespace Software_Engineering
                     Prices[5] = double.Parse(str.Substring(str.IndexOf('-') + 1));
                     Item6.Text = str.Substring(0, str.IndexOf(','));
                     ItemCost6.Text = "$" + str.Substring(str.IndexOf('-') + 1);
-                    ItemQ6.Text = str.Substring(str.IndexOf(',') + 1, (str.IndexOf('-') - str.IndexOf(','))-1);
+                    ItemQ6.Text = str.Substring(str.IndexOf(',') + 1, (str.IndexOf('-') - str.IndexOf(',')) - 1);
                     goto case 5;
                 case 5:
                     Item5.Visible = true;
@@ -177,7 +171,7 @@ namespace Software_Engineering
                     Prices[4] = double.Parse(str.Substring(str.IndexOf('-') + 1));
                     Item5.Text = str.Substring(0, str.IndexOf(','));
                     ItemCost5.Text = "$" + str.Substring(str.IndexOf('-') + 1);
-                    ItemQ5.Text = str.Substring(str.IndexOf(',') + 1, (str.IndexOf('-') - str.IndexOf(','))-1);
+                    ItemQ5.Text = str.Substring(str.IndexOf(',') + 1, (str.IndexOf('-') - str.IndexOf(',')) - 1);
                     goto case 4;
                 case 4:
                     Item4.Visible = true;
@@ -191,7 +185,7 @@ namespace Software_Engineering
                     Prices[3] = double.Parse(str.Substring(str.IndexOf('-') + 1));
                     Item4.Text = str.Substring(0, str.IndexOf(','));
                     ItemCost4.Text = "$" + str.Substring(str.IndexOf('-') + 1);
-                    ItemQ4.Text = str.Substring(str.IndexOf(',') + 1, (str.IndexOf('-') - str.IndexOf(','))-1);
+                    ItemQ4.Text = str.Substring(str.IndexOf(',') + 1, (str.IndexOf('-') - str.IndexOf(',')) - 1);
                     goto case 3;
                 case 3:
                     Item3.Visible = true;
@@ -206,7 +200,7 @@ namespace Software_Engineering
                     Item3.Text = str.Substring(0, str.IndexOf(','));
                     ItemCost3.Text = "$" + str.Substring(str.IndexOf('-') + 1);
                     //Currently not working
-                    ItemQ3.Text = str.Substring(str.IndexOf(',')+1, (str.IndexOf('-') - str.IndexOf(','))-1);
+                    ItemQ3.Text = str.Substring(str.IndexOf(',') + 1, (str.IndexOf('-') - str.IndexOf(',')) - 1);
                     goto case 2;
                 case 2:
                     Item2.Visible = true;
@@ -220,7 +214,7 @@ namespace Software_Engineering
                     Prices[1] = double.Parse(str.Substring(str.IndexOf('-') + 1));
                     Item2.Text = str.Substring(0, str.IndexOf(','));
                     ItemCost2.Text = "$" + str.Substring(str.IndexOf('-') + 1);
-                    ItemQ2.Text = str.Substring(str.IndexOf(',') + 1, (str.IndexOf('-') - str.IndexOf(',')-1));
+                    ItemQ2.Text = str.Substring(str.IndexOf(',') + 1, (str.IndexOf('-') - str.IndexOf(',') - 1));
                     goto case 1;
                 case 1:
                     //Setting the Text values for the textboxs for Item 1
@@ -229,7 +223,7 @@ namespace Software_Engineering
                     Prices[0] = double.Parse(str.Substring(str.IndexOf('-') + 1));
                     Item1.Text = str.Substring(0, str.IndexOf(','));
                     ItemCost1.Text = "$" + str.Substring(str.IndexOf('-') + 1);
-                    ItemQ1.Text = str.Substring(str.IndexOf(',') + 1, (str.IndexOf('-') - str.IndexOf(','))-1);
+                    ItemQ1.Text = str.Substring(str.IndexOf(',') + 1, (str.IndexOf('-') - str.IndexOf(',')) - 1);
                     goto default;
                 default:
                     sr.Close();
@@ -348,6 +342,14 @@ namespace Software_Engineering
         //they chose to continue as guest
         private void PlaceOrder_Click(object sender, EventArgs e)
         {
+            Directory = Path.GetDirectoryName(Application.ExecutablePath);
+            Directory = Directory.Substring(0, Directory.IndexOf("Eric's Half"));
+            string OpenFile = Directory + "\\Arturo's Half\\Order.txt";
+
+            //File manipulation to change the Active order to Placed
+            string FileText = File.ReadAllText(Directory + "\\Arturo's Half\\Order.txt");
+            FileText = FileText.Replace("Active", "Placed");
+            File.WriteAllText(OpenFile, FileText);
             Hide();
             new Payment_Guest().Show();
         }

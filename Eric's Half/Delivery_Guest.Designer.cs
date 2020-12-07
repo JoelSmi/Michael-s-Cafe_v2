@@ -35,181 +35,192 @@ namespace Software_Engineering
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            Label1 = new Label();
-            Button1 = new Button();
-            TextBox2 = new TextBox();
-            TextBox1 = new TextBox();
-            Label2 = new Label();
-            TextBox7 = new TextBox();
-            TextBox6 = new TextBox();
-            TextBox5 = new TextBox();
-            TextBox4 = new TextBox();
-            TextBox3 = new TextBox();
-            Button2 = new Button();
-            TextBox8 = new TextBox();
-            SuspendLayout();
+            this.Label1 = new System.Windows.Forms.Label();
+            this.BackButton = new System.Windows.Forms.Button();
+            this.PhoneNumberText = new System.Windows.Forms.TextBox();
+            this.FirstNameText = new System.Windows.Forms.TextBox();
+            this.Label2 = new System.Windows.Forms.Label();
+            this.ZipText = new System.Windows.Forms.TextBox();
+            this.StateText = new System.Windows.Forms.TextBox();
+            this.CityText = new System.Windows.Forms.TextBox();
+            this.AptNumText = new System.Windows.Forms.TextBox();
+            this.StreetNameText = new System.Windows.Forms.TextBox();
+            this.NextButton = new System.Windows.Forms.Button();
+            this.LastNameText = new System.Windows.Forms.TextBox();
+            this.SuspendLayout();
             // 
             // Label1
             // 
-            Label1.AutoSize = true;
-            Label1.Font = new Font("Microsoft YaHei", 20.25f, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            Label1.ForeColor = SystemColors.ControlLightLight;
-            Label1.Location = new Point(222, 37);
-            Label1.Name = "Label1";
-            Label1.Size = new Size(127, 36);
-            Label1.TabIndex = 8;
-            Label1.Text = "Delivery";
+            this.Label1.AutoSize = true;
+            this.Label1.Font = new System.Drawing.Font("Microsoft YaHei", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Label1.Location = new System.Drawing.Point(222, 37);
+            this.Label1.Name = "Label1";
+            this.Label1.Size = new System.Drawing.Size(127, 36);
+            this.Label1.TabIndex = 8;
+            this.Label1.Text = "Delivery";
             // 
-            // Button1
+            // BackButton
             // 
-            Button1.BackColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(255)), Conversions.ToInteger(Conversions.ToByte(255)), Conversions.ToInteger(Conversions.ToByte(192)));
-            Button1.FlatStyle = FlatStyle.Popup;
-            Button1.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            Button1.ForeColor = SystemColors.ControlText;
-            Button1.Location = new Point(41, 51);
-            Button1.Name = "Button1";
-            Button1.Size = new Size(75, 25);
-            Button1.TabIndex = 7;
-            Button1.Text = "< Back";
-            Button1.UseVisualStyleBackColor = false;
+            this.BackButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BackButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BackButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.BackButton.Location = new System.Drawing.Point(41, 51);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.Size = new System.Drawing.Size(75, 25);
+            this.BackButton.TabIndex = 7;
+            this.BackButton.Text = "< Back";
+            this.BackButton.UseVisualStyleBackColor = false;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
-            // TextBox2
+            // PhoneNumberText
             // 
-            TextBox2.Font = new Font("Microsoft YaHei", 8.25f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            TextBox2.Location = new Point(225, 97);
-            TextBox2.Name = "TextBox2";
-            TextBox2.Size = new Size(100, 22);
-            TextBox2.TabIndex = 11;
-            TextBox2.Text = "Phone Number";
-            TextBox2.TextAlign = HorizontalAlignment.Center;
+            this.PhoneNumberText.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PhoneNumberText.Location = new System.Drawing.Point(225, 97);
+            this.PhoneNumberText.Name = "PhoneNumberText";
+            this.PhoneNumberText.Size = new System.Drawing.Size(100, 22);
+            this.PhoneNumberText.TabIndex = 11;
+            this.PhoneNumberText.Text = "Phone Number";
+            this.PhoneNumberText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.PhoneNumberText.TextChanged += new System.EventHandler(this.PhoneNumberText_TextChanged);
             // 
-            // TextBox1
+            // FirstNameText
             // 
-            TextBox1.Font = new Font("Microsoft YaHei", 8.25f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            TextBox1.Location = new Point(41, 97);
-            TextBox1.Name = "TextBox1";
-            TextBox1.Size = new Size(100, 22);
-            TextBox1.TabIndex = 10;
-            TextBox1.Text = "First Name";
-            TextBox1.TextAlign = HorizontalAlignment.Center;
+            this.FirstNameText.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FirstNameText.Location = new System.Drawing.Point(41, 97);
+            this.FirstNameText.Name = "FirstNameText";
+            this.FirstNameText.Size = new System.Drawing.Size(100, 22);
+            this.FirstNameText.TabIndex = 10;
+            this.FirstNameText.Text = "First Name";
+            this.FirstNameText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.FirstNameText.TextChanged += new System.EventHandler(this.FirstNameText_TextChanged);
             // 
             // Label2
             // 
-            Label2.AutoSize = true;
-            Label2.Font = new Font("Microsoft YaHei", 9.75f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            Label2.ForeColor = Color.White;
-            Label2.Location = new Point(38, 153);
-            Label2.Name = "Label2";
-            Label2.Size = new Size(94, 19);
-            Label2.TabIndex = 12;
-            Label2.Text = "Enter Address";
+            this.Label2.AutoSize = true;
+            this.Label2.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label2.ForeColor = System.Drawing.Color.White;
+            this.Label2.Location = new System.Drawing.Point(38, 153);
+            this.Label2.Name = "Label2";
+            this.Label2.Size = new System.Drawing.Size(94, 19);
+            this.Label2.TabIndex = 12;
+            this.Label2.Text = "Enter Address";
             // 
-            // TextBox7
+            // ZipText
             // 
-            TextBox7.Font = new Font("Microsoft YaHei", 8.25f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            TextBox7.Location = new Point(246, 198);
-            TextBox7.Name = "TextBox7";
-            TextBox7.Size = new Size(79, 22);
-            TextBox7.TabIndex = 21;
-            TextBox7.Text = "Zipcode";
-            TextBox7.TextAlign = HorizontalAlignment.Center;
+            this.ZipText.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ZipText.Location = new System.Drawing.Point(246, 198);
+            this.ZipText.Name = "ZipText";
+            this.ZipText.Size = new System.Drawing.Size(79, 22);
+            this.ZipText.TabIndex = 21;
+            this.ZipText.Text = "Zipcode";
+            this.ZipText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ZipText.TextChanged += new System.EventHandler(this.ZipText_TextChanged);
             // 
-            // TextBox6
+            // StateText
             // 
-            TextBox6.Font = new Font("Microsoft YaHei", 8.25f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            TextBox6.Location = new Point(165, 198);
-            TextBox6.Name = "TextBox6";
-            TextBox6.Size = new Size(65, 22);
-            TextBox6.TabIndex = 20;
-            TextBox6.Text = "State";
-            TextBox6.TextAlign = HorizontalAlignment.Center;
+            this.StateText.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StateText.Location = new System.Drawing.Point(165, 198);
+            this.StateText.Name = "StateText";
+            this.StateText.Size = new System.Drawing.Size(65, 22);
+            this.StateText.TabIndex = 20;
+            this.StateText.Text = "State";
+            this.StateText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.StateText.TextChanged += new System.EventHandler(this.StateText_TextChanged);
             // 
-            // TextBox5
+            // CityText
             // 
-            TextBox5.Font = new Font("Microsoft YaHei", 8.25f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            TextBox5.Location = new Point(41, 198);
-            TextBox5.Name = "TextBox5";
-            TextBox5.Size = new Size(106, 22);
-            TextBox5.TabIndex = 19;
-            TextBox5.Text = "City";
-            TextBox5.TextAlign = HorizontalAlignment.Center;
+            this.CityText.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CityText.Location = new System.Drawing.Point(41, 198);
+            this.CityText.Name = "CityText";
+            this.CityText.Size = new System.Drawing.Size(106, 22);
+            this.CityText.TabIndex = 19;
+            this.CityText.Text = "City";
+            this.CityText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.CityText.TextChanged += new System.EventHandler(this.CityText_TextChanged);
             // 
-            // TextBox4
+            // AptNumText
             // 
-            TextBox4.Font = new Font("Microsoft YaHei", 8.25f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            TextBox4.Location = new Point(260, 172);
-            TextBox4.Name = "TextBox4";
-            TextBox4.Size = new Size(65, 22);
-            TextBox4.TabIndex = 18;
-            TextBox4.Text = "Apt #";
+            this.AptNumText.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AptNumText.Location = new System.Drawing.Point(260, 172);
+            this.AptNumText.Name = "AptNumText";
+            this.AptNumText.Size = new System.Drawing.Size(65, 22);
+            this.AptNumText.TabIndex = 18;
+            this.AptNumText.Text = "Apt #";
+            this.AptNumText.TextChanged += new System.EventHandler(this.AptNumText_TextChanged);
             // 
-            // TextBox3
+            // StreetNameText
             // 
-            TextBox3.Font = new Font("Microsoft YaHei", 8.25f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            TextBox3.Location = new Point(41, 172);
-            TextBox3.Name = "TextBox3";
-            TextBox3.Size = new Size(213, 22);
-            TextBox3.TabIndex = 17;
-            TextBox3.Text = "Street Name";
-            TextBox3.TextAlign = HorizontalAlignment.Center;
+            this.StreetNameText.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StreetNameText.Location = new System.Drawing.Point(41, 172);
+            this.StreetNameText.Name = "StreetNameText";
+            this.StreetNameText.Size = new System.Drawing.Size(213, 22);
+            this.StreetNameText.TabIndex = 17;
+            this.StreetNameText.Text = "Street Name";
+            this.StreetNameText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.StreetNameText.TextChanged += new System.EventHandler(this.StreetNameText_TextChanged);
             // 
-            // Button2
+            // NextButton
             // 
-            Button2.BackColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(255)), Conversions.ToInteger(Conversions.ToByte(255)), Conversions.ToInteger(Conversions.ToByte(192)));
-            Button2.FlatStyle = FlatStyle.Popup;
-            Button2.Font = new Font("Microsoft YaHei", 8.25f, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            Button2.Location = new Point(277, 285);
-            Button2.Name = "Button2";
-            Button2.Size = new Size(75, 23);
-            Button2.TabIndex = 22;
-            Button2.Text = "Next";
-            Button2.UseVisualStyleBackColor = false;
+            this.NextButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.NextButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.NextButton.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NextButton.Location = new System.Drawing.Point(277, 285);
+            this.NextButton.Name = "NextButton";
+            this.NextButton.Size = new System.Drawing.Size(75, 23);
+            this.NextButton.TabIndex = 22;
+            this.NextButton.Text = "Next";
+            this.NextButton.UseVisualStyleBackColor = false;
+            this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
             // 
-            // TextBox8
+            // LastNameText
             // 
-            TextBox8.Font = new Font("Microsoft YaHei", 8.25f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            TextBox8.Location = new Point(41, 123);
-            TextBox8.Name = "TextBox8";
-            TextBox8.Size = new Size(100, 22);
-            TextBox8.TabIndex = 23;
-            TextBox8.Text = "Last Name";
-            TextBox8.TextAlign = HorizontalAlignment.Center;
+            this.LastNameText.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LastNameText.Location = new System.Drawing.Point(41, 123);
+            this.LastNameText.Name = "LastNameText";
+            this.LastNameText.Size = new System.Drawing.Size(100, 22);
+            this.LastNameText.TabIndex = 23;
+            this.LastNameText.Text = "Last Name";
+            this.LastNameText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.LastNameText.TextChanged += new System.EventHandler(this.LastNameText_TextChanged);
             // 
             // Delivery_Guest
             // 
-            AutoScaleDimensions = new SizeF(6.0f, 13.0f);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Brown;
-            ClientSize = new Size(545, 335);
-            Controls.Add(TextBox8);
-            Controls.Add(Button2);
-            Controls.Add(TextBox7);
-            Controls.Add(TextBox6);
-            Controls.Add(TextBox5);
-            Controls.Add(TextBox4);
-            Controls.Add(TextBox3);
-            Controls.Add(Label2);
-            Controls.Add(TextBox2);
-            Controls.Add(TextBox1);
-            Controls.Add(Label1);
-            Controls.Add(Button1);
-            Name = "Delivery_Guest";
-            Text = "Delivery_Guest";
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Brown;
+            this.ClientSize = new System.Drawing.Size(545, 335);
+            this.Controls.Add(this.LastNameText);
+            this.Controls.Add(this.NextButton);
+            this.Controls.Add(this.ZipText);
+            this.Controls.Add(this.StateText);
+            this.Controls.Add(this.CityText);
+            this.Controls.Add(this.AptNumText);
+            this.Controls.Add(this.StreetNameText);
+            this.Controls.Add(this.Label2);
+            this.Controls.Add(this.PhoneNumberText);
+            this.Controls.Add(this.FirstNameText);
+            this.Controls.Add(this.Label1);
+            this.Controls.Add(this.BackButton);
+            this.Name = "Delivery_Guest";
+            this.Text = "Delivery_Guest";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         internal Label Label1;
-        internal Button Button1;
-        internal TextBox TextBox2;
-        internal TextBox TextBox1;
+        internal Button BackButton;
+        internal TextBox PhoneNumberText;
+        internal TextBox FirstNameText;
         internal Label Label2;
-        internal TextBox TextBox7;
-        internal TextBox TextBox6;
-        internal TextBox TextBox5;
-        internal TextBox TextBox4;
-        internal TextBox TextBox3;
-        internal Button Button2;
-        internal TextBox TextBox8;
+        internal TextBox ZipText;
+        internal TextBox StateText;
+        internal TextBox CityText;
+        internal TextBox AptNumText;
+        internal TextBox StreetNameText;
+        internal Button NextButton;
+        internal TextBox LastNameText;
     }
 }
