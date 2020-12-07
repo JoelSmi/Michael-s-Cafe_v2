@@ -1,4 +1,7 @@
-﻿
+﻿using System;
+using System.IO;
+using System.Windows.Forms;
+using System.Diagnostics;
 namespace Software_Engineering
 {
     public partial class Delivery_Final
@@ -32,11 +35,6 @@ namespace Software_Engineering
         private void PhoneNumberText_TextChanged(object sender, System.EventArgs e)
         {
             //Retrieve customer phone number from file or object
-        }
-
-        private void OrderNumberText_TextChanged(object sender, System.EventArgs e)
-        {
-            //Retrieve customer order number from file or object
         }
 
         private void DeliverNameText_TextChanged(object sender, System.EventArgs e)

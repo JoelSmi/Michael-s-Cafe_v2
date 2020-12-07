@@ -86,7 +86,6 @@ namespace Software_Engineering
             this.DefaultAddButton.TabStop = true;
             this.DefaultAddButton.Text = "Use default Address";
             this.DefaultAddButton.UseVisualStyleBackColor = true;
-            this.DefaultAddButton.CheckedChanged += new System.EventHandler(this.DefaultAddButton_CheckedChanged);
             // 
             // CustomerNameText
             // 
@@ -107,7 +106,6 @@ namespace Software_Engineering
             this.PhoneNumberText.TabIndex = 9;
             this.PhoneNumberText.Text = "Phone Number";
             this.PhoneNumberText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.PhoneNumberText.TextChanged += new System.EventHandler(this.PhoneNumberText_TextChanged_1);
             // 
             // DiffAddButton
             // 
@@ -121,7 +119,6 @@ namespace Software_Engineering
             this.DiffAddButton.TabStop = true;
             this.DiffAddButton.Text = "Use different Address";
             this.DiffAddButton.UseVisualStyleBackColor = true;
-            this.DiffAddButton.CheckedChanged += new System.EventHandler(this.DiffAddButton_CheckedChanged);
             // 
             // CustomerAddressText
             // 
