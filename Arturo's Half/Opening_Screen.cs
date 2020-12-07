@@ -24,6 +24,16 @@ namespace WindowsFormsApp1
             string FileText = File.ReadAllText(OpenFile);
             FileText = FileText.Replace("LoggedIn", "LoggedOut");
             File.WriteAllText(OpenFile, FileText);
+
+            OpenFile = Directory + "\\Order.txt";
+            FileText = File.ReadAllText(OpenFile);
+            FileText = FileText.Replace("Active", "Cancelled");
+            File.WriteAllText(OpenFile, FileText);
+
+            OpenFile = Directory + "\\Order.txt";
+            FileText = File.ReadAllText(OpenFile);
+            FileText = FileText.Replace("Pending", "Cancelled");
+            File.WriteAllText(OpenFile, FileText);
         }
         private void loginbutton_Click(object sender, EventArgs e)
         {
