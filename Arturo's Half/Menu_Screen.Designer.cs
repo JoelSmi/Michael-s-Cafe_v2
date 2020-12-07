@@ -155,7 +155,7 @@
             this.label53 = new System.Windows.Forms.Label();
             this.topPanel = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.UpdateAccount = new System.Windows.Forms.Button();
             this.CheckOut = new System.Windows.Forms.Button();
             this.label79 = new System.Windows.Forms.Label();
             this.menuLabel = new System.Windows.Forms.Label();
@@ -1469,7 +1469,7 @@
             this.topPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.topPanel.Controls.Add(this.Back);
             this.topPanel.Controls.Add(this.button3);
-            this.topPanel.Controls.Add(this.button2);
+            this.topPanel.Controls.Add(this.UpdateAccount);
             this.topPanel.Controls.Add(this.CheckOut);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(200, 0);
@@ -1489,17 +1489,18 @@
             this.button3.Text = "Go to Previous Page";
             this.button3.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // UpdateAccount
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(774, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(112, 23);
-            this.button2.TabIndex = 39;
-            this.button2.Text = "Update Account";
-            this.button2.UseVisualStyleBackColor = false;
+            this.UpdateAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.UpdateAccount.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.UpdateAccount.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdateAccount.Location = new System.Drawing.Point(774, 12);
+            this.UpdateAccount.Name = "UpdateAccount";
+            this.UpdateAccount.Size = new System.Drawing.Size(112, 23);
+            this.UpdateAccount.TabIndex = 39;
+            this.UpdateAccount.Text = "Update Account";
+            this.UpdateAccount.UseVisualStyleBackColor = false;
+            this.UpdateAccount.Visible = false;
             // 
             // CheckOut
             // 
@@ -1724,7 +1725,7 @@
         private System.Windows.Forms.Label SidePrice6;
         private System.Windows.Forms.Label SidePrice5;
         private System.Windows.Forms.Label SidePrice4;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button UpdateAccount;
         private System.Windows.Forms.Button CheckOut;
         private System.Windows.Forms.Label label79;
         private System.Windows.Forms.Label menuLabel;
