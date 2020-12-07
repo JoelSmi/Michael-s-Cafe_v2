@@ -23,16 +23,18 @@ namespace WindowsFormsApp1
         string password;
         string retypePassword;
 
-        
 
         public Creating_an_Account_Screen2(string firstName, string lastName, string DOB, string gender)
         {
+            InitializeComponent();
+
             firstName = this.firstName;
             lastName = this.lastName;
             DOB = this.DOB;
             gender = this.gender;
-            
+
         }
+        
 
 
         public Creating_an_Account_Screen2()
@@ -92,14 +94,8 @@ namespace WindowsFormsApp1
 
             }
             this.Hide();
-            new Creating_an_Account_Screen3().Show();
+            new Creating_an_Account_Screen3(firstName, lastName, DOB, gender, email, password).Show();
 
-            using (StreamWriter ab = new StreamWriter(@"" + Directory + "\\Michael_Cafe.txt", true))
-            {
-                ab.WriteLine("\nEmail address and password:\n" + email + "\n" + password);
-                ab.WriteLine("\nFirst Name Test:\n" + firstName);
-                ab.Close();
-            }
         }
 
         private void button3_Click(object sender, EventArgs e)
