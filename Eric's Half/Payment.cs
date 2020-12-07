@@ -48,11 +48,13 @@ namespace Software_Engineering
             if (PaymentLine.Length < 5)
             {
                 MaskedCardNo.Text = "No card in our system";
+                sr.Close();
             }
             else
             {
                 CardInfo = AccountInfo.Substring(AccountInfo.IndexOf("$") + 1);
                 MaskedCardNo.Text = CardInfo.Substring(0, CardInfo.IndexOf(","));
+                sr.Close();
             }
         }
 
