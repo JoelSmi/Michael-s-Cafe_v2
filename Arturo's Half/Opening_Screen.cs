@@ -1,5 +1,7 @@
 ﻿using System;
+using System.IO;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace WindowsFormsApp1
 {
@@ -14,7 +16,14 @@ namespace WindowsFormsApp1
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            string Directory = Path.GetDirectoryName(Application.ExecutablePath);
+            Directory = Directory.Substring(0, Directory.IndexOf("bin"));
+            string OpenFile = Directory + "\\Michael_Cafe.txt";
 
+            //File manipulation to change the Active order to Placed
+            string FileText = File.ReadAllText(OpenFile);
+            FileText = FileText.Replace("LoggedIn", "LoggedOut");
+            File.WriteAllText(OpenFile, FileText);
         }
         private void loginbutton_Click(object sender, EventArgs e)
         {
@@ -27,9 +36,23 @@ namespace WindowsFormsApp1
             this.Hide();
             new Creating_an_Account_Screen().Show();
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void GuestBtn_Click(object sender, EventArgs e)
         {
+            string Directory = Path.GetDirectoryName(Application.ExecutablePath);
+            Directory = Directory.Substring(0, Directory.IndexOf("bin"));
+            string OpenFile = Directory + "\\Order.txt";
+
+            //Adding a guest to the Order.txt and setting the order status to Pending
+            string FileText = File.ReadAllText(OpenFile);
+            FileText = FileText.Replace("#End Of File#", "/Guest-Pending\n\\\n" + "#End Of File#");
+            File.WriteAllText(OpenFile, FileText);
+
+            //Adding a gues to the Michael_Cafe.txt and setting their logged in status to LoggedIn
+            OpenFile = Directory + "\\Michael_Cafe.txt";
+            FileText = File.ReadAllText(OpenFile);
+            FileText = FileText.Replace("#End Of File#", "/Guest-LoggedIn\n" + "#End Of File#");
+            File.WriteAllText(OpenFile, FileText);
+
             this.Hide();
             new Menu_Screen().Show();
         }

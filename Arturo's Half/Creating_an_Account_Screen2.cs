@@ -13,9 +13,30 @@ namespace WindowsFormsApp1
 {
     public partial class Creating_an_Account_Screen2 : Form
     {
+
+        private String Directory = Path.GetDirectoryName(Application.ExecutablePath).Substring(0, Path.GetDirectoryName(Application.ExecutablePath).IndexOf("bin"));
+        string firstName;
+        string lastName;
+        string DOB;
+        string gender;
         string email;
         string password;
         string retypePassword;
+
+
+        public Creating_an_Account_Screen2(string firstName, string lastName, string DOB, string gender)
+        {
+            InitializeComponent();
+
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.DOB = DOB;
+            this.gender = gender;
+
+        }
+        
+
+
         public Creating_an_Account_Screen2()
         {
             InitializeComponent();
@@ -44,45 +65,58 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (email == null)
-            {
-                MessageBox.Show("Email address is not entered.", "Error",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+            Directory = Path.GetDirectoryName(Application.ExecutablePath);
+            Directory = Directory.Substring(0, Directory.IndexOf("bin"));
+            string OpenFile = Directory + "\\Michael_Cafe.txt";
 
-            }
-            else if (password == null)
+            //File manipulation to change the Active order to Placed
+            string FileText = File.ReadAllText(OpenFile);
+            if (!FileText.Contains(this.email))
             {
-                MessageBox.Show("Password is not entered.", "Error",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                if (email == null)
+                {
+                    MessageBox.Show("Email address is not entered.", "Error",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
 
+                }
+                else if (password == null)
+                {
+                    MessageBox.Show("Password is not entered.", "Error",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+
+                }
+                else if (retypePassword == null)
+                {
+                    MessageBox.Show("Re-type your password to verify your password.", "Error",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+
+                }
+                else if (password != retypePassword)
+                {
+                    MessageBox.Show("The password you typed is not matched with the re-type password.", "Error",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+
+                }
+                this.Close();
+                new Creating_an_Account_Screen3(firstName, lastName, DOB, gender, email, password).Show();
             }
-            else if (retypePassword == null)
+            else
             {
-                MessageBox.Show("Re-type your password to verify your password.", "Error",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-
+                MessageBox.Show("The email you gave is already connected to another account in our system, we are returning you to the main screen.\nYou may want to try logging in instead.", "Error",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Close();
+                new Form1().Show() ;
             }
-            else if (password != retypePassword)
-            {
-                MessageBox.Show("The password you typed is not matched with the re-type password.", "Error",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-
-            }
-            this.Hide();
-            new Creating_an_Account_Screen3().Show();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void BackBtn_Click(object sender, EventArgs e)
         {
-            
-            this.Hide();
             new Creating_an_Account_Screen().Show();
+            Close();
         }
-
-        
     }
 }

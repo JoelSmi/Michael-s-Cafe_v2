@@ -13,38 +13,22 @@ namespace WindowsFormsApp1
 {
     public partial class Creating_an_Account_Screen : Form
     {
-        string firstName;
-        string lastName;
-        string DOB;
-        string gender;
+
+        private String Directory = Path.GetDirectoryName(Application.ExecutablePath).Substring(0, Path.GetDirectoryName(Application.ExecutablePath).IndexOf("bin"));
+
+        string firstName{ get; set; }
+        string lastName { get; set; }
+        string DOB { get; set; }
+        string gender { get; set; }
+
+
 
 
         public Creating_an_Account_Screen()
         {
             InitializeComponent();
         }
-
-        private void splitter1_SplitterMoved(object sender, SplitterEventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Creating_an_Account_Screen_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click_1(object sender, EventArgs e)
         {
 
         }
@@ -130,20 +114,21 @@ namespace WindowsFormsApp1
 
             if ((firstName != null) && (lastName != null) && (DOB != null) && (gender != null))
             {
+
+
                 this.Hide();
-                new Creating_an_Account_Screen2().Show();
+                new Creating_an_Account_Screen2(firstName, lastName, DOB, gender).Show();
             }
 
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
 
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void BackBtn_Click(object sender, EventArgs e)
         {
-
+            new Form1().Show();
+            Close();
         }
     }
+
+
 }

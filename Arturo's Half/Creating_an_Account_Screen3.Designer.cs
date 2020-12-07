@@ -42,7 +42,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.phoneNumbertextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.BackBtn = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -74,6 +74,7 @@
             this.AddresstextBox.Name = "AddresstextBox";
             this.AddresstextBox.Size = new System.Drawing.Size(300, 20);
             this.AddresstextBox.TabIndex = 7;
+            this.AddresstextBox.TextChanged += new System.EventHandler(this.AddresstextBox_TextChanged);
             // 
             // label2
             // 
@@ -82,9 +83,9 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(265, 153);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(332, 21);
+            this.label2.Size = new System.Drawing.Size(320, 21);
             this.label2.TabIndex = 8;
-            this.label2.Text = "Additional Information in locating address";
+            this.label2.Text = "Additional Info. (Apt. #, Subdivision, etc.)";
             // 
             // CitytextBox
             // 
@@ -93,7 +94,7 @@
             this.CitytextBox.Name = "CitytextBox";
             this.CitytextBox.Size = new System.Drawing.Size(300, 22);
             this.CitytextBox.TabIndex = 9;
-            this.CitytextBox.Text = "subdivision name, apartment number, etc.";
+            this.CitytextBox.TextChanged += new System.EventHandler(this.CitytextBox_TextChanged);
             // 
             // label5
             // 
@@ -112,6 +113,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(144, 20);
             this.textBox2.TabIndex = 18;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // statelabel
             // 
@@ -130,6 +132,7 @@
             this.statetextBox.Name = "statetextBox";
             this.statetextBox.Size = new System.Drawing.Size(105, 20);
             this.statetextBox.TabIndex = 20;
+            this.statetextBox.TextChanged += new System.EventHandler(this.statetextBox_TextChanged);
             // 
             // label3
             // 
@@ -148,6 +151,7 @@
             this.zipCodetextBox.Name = "zipCodetextBox";
             this.zipCodetextBox.Size = new System.Drawing.Size(105, 20);
             this.zipCodetextBox.TabIndex = 22;
+            this.zipCodetextBox.TextChanged += new System.EventHandler(this.zipCodetextBox_TextChanged);
             // 
             // label4
             // 
@@ -166,6 +170,7 @@
             this.phoneNumbertextBox.Name = "phoneNumbertextBox";
             this.phoneNumbertextBox.Size = new System.Drawing.Size(300, 20);
             this.phoneNumbertextBox.TabIndex = 24;
+            this.phoneNumbertextBox.TextChanged += new System.EventHandler(this.phoneNumbertextBox_TextChanged);
             // 
             // label6
             // 
@@ -178,17 +183,18 @@
             this.label6.TabIndex = 43;
             this.label6.Text = "Part 3 of Creating an Account (Part 3 out of 3)";
             // 
-            // button3
+            // BackBtn
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(12, 451);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(104, 33);
-            this.button3.TabIndex = 44;
-            this.button3.Text = "< Back";
-            this.button3.UseVisualStyleBackColor = false;
+            this.BackBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BackBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BackBtn.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BackBtn.Location = new System.Drawing.Point(12, 451);
+            this.BackBtn.Name = "BackBtn";
+            this.BackBtn.Size = new System.Drawing.Size(104, 33);
+            this.BackBtn.TabIndex = 44;
+            this.BackBtn.Text = "< Back";
+            this.BackBtn.UseVisualStyleBackColor = false;
+            this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
             // 
             // button2
             // 
@@ -201,6 +207,7 @@
             this.button2.TabIndex = 45;
             this.button2.Text = "Done";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Creating_an_Account_Screen3
             // 
@@ -209,7 +216,7 @@
             this.BackColor = System.Drawing.Color.Brown;
             this.ClientSize = new System.Drawing.Size(840, 496);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.phoneNumbertextBox);
             this.Controls.Add(this.label4);
@@ -247,7 +254,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox phoneNumbertextBox;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button BackBtn;
         private System.Windows.Forms.Button button2;
     }
 }
