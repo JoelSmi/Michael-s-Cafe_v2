@@ -15,7 +15,7 @@ namespace Software_Engineering
 
         private void CalculateTotal()
         {
-            Double Total = 0.50;
+            double Total = 0.50;
             for (int i = 0; i < Prices.Length; i++)
             {
                 Total += Prices[i];
