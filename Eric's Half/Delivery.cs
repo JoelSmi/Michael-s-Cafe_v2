@@ -37,49 +37,34 @@ namespace Software_Engineering
             new Delivery_Final().Show();
         }
 
-        private void PhoneNumberText_TextChanged(object sender, System.EventArgs e)
-        {
-           //Retrieve customer phone number from file or object
-        }
-
-        private void CustomerNameText_TextChanged(object sender, System.EventArgs e)
-        {
-            //Retrieve customer name from file or object
-        }
-
-        private void CustomerAddressText_Click(object sender, System.EventArgs e)
-        {
-            //Display customer address from file or obejct
-        }
-
         private void PhoneNumberText_TextChanged_1(object sender, System.EventArgs e)
         {
-            PhoneNumber = PhoneNumberText.Text;
+
         }
 
         private void StreetNameText_TextChanged(object sender, System.EventArgs e)
         {
-            StreetName = StreetNameText.Text;
+           
         }
 
         private void AptNumText_TextChanged(object sender, System.EventArgs e)
         {
-            AptNum = AptNumText.Text;
+           
         }
 
         private void CityText_TextChanged(object sender, System.EventArgs e)
         {
-            City = CityText.Text;
+            
         }
 
         private void StateText_TextChanged(object sender, System.EventArgs e)
         {
-            State = StateText.Text;
+            
         }
 
         private void ZipText_TextChanged(object sender, System.EventArgs e)
         {
-            Zip = ZipText.Text;
+            
         }
     }
 }

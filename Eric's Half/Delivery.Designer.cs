@@ -97,7 +97,6 @@ namespace Software_Engineering
             this.CustomerNameText.TabIndex = 8;
             this.CustomerNameText.Text = "Customer Name";
             this.CustomerNameText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.CustomerNameText.TextChanged += new System.EventHandler(this.CustomerNameText_TextChanged);
             // 
             // PhoneNumberText
             // 
@@ -134,7 +133,6 @@ namespace Software_Engineering
             this.CustomerAddressText.Size = new System.Drawing.Size(129, 16);
             this.CustomerAddressText.TabIndex = 11;
             this.CustomerAddressText.Text = "* Address confirmation";
-            this.CustomerAddressText.Click += new System.EventHandler(this.CustomerAddressText_Click);
             // 
             // StreetNameText
             // 

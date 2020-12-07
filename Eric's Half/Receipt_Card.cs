@@ -229,16 +229,6 @@ namespace Software_Engineering
             //Return to beginning of program
         }
 
-        private void OrderNumberText_TextChanged(object sender, System.EventArgs e)
-        {
-            //Retrieve order number from file or customer object and display
-        }
-
-        private void CustomerNameText_TextChanged(object sender, System.EventArgs e)
-        {
-            //Retrieve customer name from file or customer object and display
-        }
-
         private void SignatureText_TextChanged(object sender, System.EventArgs e)
         {
             CustomerSignature = SignatureText.Text;

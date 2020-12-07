@@ -127,7 +127,6 @@ namespace Software_Engineering
             this.OrderNumberText.TabIndex = 5;
             this.OrderNumberText.Text = "Order Number: ";
             this.OrderNumberText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.OrderNumberText.TextChanged += new System.EventHandler(this.OrderNumberText_TextChanged);
             // 
             // TotalText
             // 

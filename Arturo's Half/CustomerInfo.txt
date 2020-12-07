@@ -1,0 +1,7 @@
+/Email,Password-Status
+ID,Password
+FirstName,LastName
+Email,PhoneNumber
+Street,City-State.Zip
+
+

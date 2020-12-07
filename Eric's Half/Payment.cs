@@ -1,4 +1,6 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.IO;
+using System.Windows.Forms;
 using System.Diagnostics;
 
 namespace Software_Engineering
@@ -7,15 +9,12 @@ namespace Software_Engineering
     {
         private bool WithCashCheck;
         private bool WithCard;
+        private String Directory = Path.GetDirectoryName(Application.ExecutablePath);
 
-        private string CardNum;
-        private string CardExp;
-        private string CardPin;
         public Payment()
         {
             WithCashCheck = false;
             WithCard = false;
-            //Read card number from file if existing customer
             InitializeComponent();
         }
 
@@ -40,8 +39,6 @@ namespace Software_Engineering
         private void BackButton_Click(object sender, System.EventArgs e)
         {
             this.Hide();
-
-            //Doesn't recognize Form1 for some reason
             new OrderSummary().Show();
         }
 
@@ -51,12 +48,11 @@ namespace Software_Engineering
 
             if(WithCard)
             {
-                //Would love to change the spelling error but I don't think we'll have time lol - send customer to Receipt_Card
+                //Would love to change the spelling error but I don't think we'll have time lol
                 new Reciept_Card().Show();
             }
             else if(WithCashCheck)
             {
-                //Send customer to Receipt_Cash
                 new Reciept_Cash().Show();
             }
             else
@@ -71,19 +67,31 @@ namespace Software_Engineering
             WithCard = true;
         }
 
+        /*
+        * Appends card info to file
+        */
         private void CardNumText_TextChanged(object sender, System.EventArgs e)
         {
-            CardNum = CardNumText.Text;
+            //ERROR - Can't seem to access the proper path to get to CustomerInfo file
+            //Potential Issue - Customer doesn't put card info in correct order
+            //Can probably remove \n when actual customer info is added through Console.WriteLine
+            StreamWriter sw = new StreamWriter(Directory + "\\Arturo's Half\\CustomerInfo.txt", true);
+            sw.WriteLine("\n" + CardNumText.Text + ",");
+            sw.Close();
         }
 
         private void CardExpText_TextChanged(object sender, System.EventArgs e)
         {
-            CardExp = CardExpText.Text;
+            StreamWriter sw = new StreamWriter(Directory + "\\Arturo's Half\\CustomerInfo.txt", true);
+            sw.WriteLine("\n" + CardExpText.Text + ",");
+            sw.Close();
         }
 
         private void CardPinText_TextChanged(object sender, System.EventArgs e)
         {
-            CardPin = CardPinText.Text;
+            StreamWriter sw = new StreamWriter(Directory + "\\Arturo's Half\\CustomerInfo.txt", true);
+            sw.WriteLine("\n" + CardExpText.Text + ",");
+            sw.Close();
         }
 
     }
