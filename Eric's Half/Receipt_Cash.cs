@@ -49,5 +49,10 @@ namespace Software_Engineering
         {
             //Retrieve customer name from file or customer object and display
         }
+
+        private void TotalText_Click(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }

@@ -55,5 +55,15 @@ namespace Software_Engineering
         {
             CustomerSignature = SignatureText.Text;
         }
+
+        private void TotalText_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void Item1Quantity_TextChanged(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }

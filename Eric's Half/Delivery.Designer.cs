@@ -108,6 +108,7 @@ namespace Software_Engineering
             this.PhoneNumberText.TabIndex = 9;
             this.PhoneNumberText.Text = "Phone Number";
             this.PhoneNumberText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.PhoneNumberText.TextChanged += new System.EventHandler(this.PhoneNumberText_TextChanged_1);
             // 
             // DiffAddButton
             // 

@@ -39,19 +39,22 @@ namespace Software_Engineering
 
         private void PhoneNumberText_TextChanged(object sender, System.EventArgs e)
         {
-           //NEEDS TO BE CHANGED TO LABEL
            //Retrieve customer phone number from file or object
         }
 
         private void CustomerNameText_TextChanged(object sender, System.EventArgs e)
         {
-            //NEEDS TO BE CHANGED TO LABEL
             //Retrieve customer name from file or object
         }
 
         private void CustomerAddressText_Click(object sender, System.EventArgs e)
         {
             //Display customer address from file or obejct
+        }
+
+        private void PhoneNumberText_TextChanged_1(object sender, System.EventArgs e)
+        {
+            PhoneNumber = PhoneNumberText.Text;
         }
 
         private void StreetNameText_TextChanged(object sender, System.EventArgs e)

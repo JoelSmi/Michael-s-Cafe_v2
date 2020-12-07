@@ -71,7 +71,7 @@ namespace Software_Engineering
             this.Hide();
 
             //Doesn't recognize Form1 for some reason
-            //new Form1().Show();
+            new OrderSummary().Show();
         }
     }
 }
