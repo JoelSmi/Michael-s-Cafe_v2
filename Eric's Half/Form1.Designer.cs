@@ -55,7 +55,7 @@ namespace Software_Engineering
             this.ItemRemove2 = new System.Windows.Forms.Button();
             this.ItemRemove3 = new System.Windows.Forms.Button();
             this._Label11 = new System.Windows.Forms.Label();
-            this.ServiceFee = new System.Windows.Forms.Label();
+            this.SalesTax = new System.Windows.Forms.Label();
             this.Label13 = new System.Windows.Forms.Label();
             this.TotalCost = new System.Windows.Forms.Label();
             this.PlaceOrder = new System.Windows.Forms.Button();
@@ -302,20 +302,20 @@ namespace Software_Engineering
             this._Label11.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._Label11.Location = new System.Drawing.Point(10, 324);
             this._Label11.Name = "_Label11";
-            this._Label11.Size = new System.Drawing.Size(81, 19);
+            this._Label11.Size = new System.Drawing.Size(65, 19);
             this._Label11.TabIndex = 17;
-            this._Label11.Text = "Service Fee:";
+            this._Label11.Text = "Sales Tax";
             // 
-            // ServiceFee
+            // SalesTax
             // 
-            this.ServiceFee.AutoSize = true;
-            this.ServiceFee.BackColor = System.Drawing.Color.White;
-            this.ServiceFee.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ServiceFee.Location = new System.Drawing.Point(178, 324);
-            this.ServiceFee.Name = "ServiceFee";
-            this.ServiceFee.Size = new System.Drawing.Size(45, 19);
-            this.ServiceFee.TabIndex = 18;
-            this.ServiceFee.Text = "$0.50";
+            this.SalesTax.AutoSize = true;
+            this.SalesTax.BackColor = System.Drawing.Color.White;
+            this.SalesTax.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SalesTax.Location = new System.Drawing.Point(178, 324);
+            this.SalesTax.Name = "SalesTax";
+            this.SalesTax.Size = new System.Drawing.Size(45, 19);
+            this.SalesTax.TabIndex = 18;
+            this.SalesTax.Text = "$0.00";
             // 
             // Label13
             // 
@@ -388,7 +388,7 @@ namespace Software_Engineering
             this.Panel1.Controls.Add(this._Label11);
             this.Panel1.Controls.Add(this.Label13);
             this.Panel1.Controls.Add(this.TotalCost);
-            this.Panel1.Controls.Add(this.ServiceFee);
+            this.Panel1.Controls.Add(this.SalesTax);
             this.Panel1.Controls.Add(this.Item2);
             this.Panel1.Controls.Add(this.Item1);
             this.Panel1.Controls.Add(this.ItemCost1);
@@ -810,7 +810,7 @@ namespace Software_Engineering
         internal Button ItemRemove3;
         private Label _Label11;
 
-        internal Label ServiceFee;
+        internal Label SalesTax;
         internal Label Label13;
         internal Label TotalCost;
         internal Button PlaceOrder;
