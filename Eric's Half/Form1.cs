@@ -345,9 +345,7 @@ namespace Software_Engineering
         {
             Directory = Path.GetDirectoryName(Application.ExecutablePath);
             Directory = Directory.Substring(0, Directory.IndexOf("Eric's Half"));
-            string OpenFile = Directory + "\\Arturo's Half\\Order.txt";
-
-            OpenFile = Directory + "\\Arturo's Half\\Michael_Cafe.txt";
+            string OpenFile = Directory + "\\Arturo's Half\\Michael_Cafe.txt";
             StreamReader FindCustomer = new StreamReader(OpenFile);
             string Customer = FindCustomer.ReadLine();
             while (!Customer.Contains("#End Of File#"))

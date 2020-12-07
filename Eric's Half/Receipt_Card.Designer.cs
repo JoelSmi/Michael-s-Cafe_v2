@@ -38,7 +38,6 @@ namespace Software_Engineering
             this.BackButton = new System.Windows.Forms.Button();
             this.Label1 = new System.Windows.Forms.Label();
             this.CustomerNameText = new System.Windows.Forms.TextBox();
-            this.OrderNumberText = new System.Windows.Forms.TextBox();
             this.TotalText = new System.Windows.Forms.Label();
             this.TaxText = new System.Windows.Forms.Label();
             this.Item3 = new System.Windows.Forms.Label();
@@ -81,6 +80,8 @@ namespace Software_Engineering
             this.Item8Quantity = new System.Windows.Forms.TextBox();
             this.Item9Quantity = new System.Windows.Forms.TextBox();
             this.Item10Quantity = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Cancel = new System.Windows.Forms.Button();
             this.Item8Price.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -96,6 +97,7 @@ namespace Software_Engineering
             this.BackButton.TabIndex = 2;
             this.BackButton.Text = "< Back";
             this.BackButton.UseVisualStyleBackColor = false;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click_1);
             // 
             // Label1
             // 
@@ -117,16 +119,6 @@ namespace Software_Engineering
             this.CustomerNameText.TabIndex = 4;
             this.CustomerNameText.Text = "Customer Name";
             this.CustomerNameText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // OrderNumberText
-            // 
-            this.OrderNumberText.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OrderNumberText.Location = new System.Drawing.Point(433, 70);
-            this.OrderNumberText.Name = "OrderNumberText";
-            this.OrderNumberText.Size = new System.Drawing.Size(104, 22);
-            this.OrderNumberText.TabIndex = 5;
-            this.OrderNumberText.Text = "Order Number: ";
-            this.OrderNumberText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TotalText
             // 
@@ -156,10 +148,12 @@ namespace Software_Engineering
             this.Item3.BackColor = System.Drawing.Color.White;
             this.Item3.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Item3.Location = new System.Drawing.Point(36, 204);
+            this.Item3.MaximumSize = new System.Drawing.Size(175, 19);
             this.Item3.Name = "Item3";
             this.Item3.Size = new System.Drawing.Size(86, 19);
             this.Item3.TabIndex = 23;
             this.Item3.Text = "Place Holder";
+            this.Item3.Visible = false;
             // 
             // Item2
             // 
@@ -167,10 +161,12 @@ namespace Software_Engineering
             this.Item2.BackColor = System.Drawing.Color.White;
             this.Item2.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Item2.Location = new System.Drawing.Point(36, 174);
+            this.Item2.MaximumSize = new System.Drawing.Size(175, 19);
             this.Item2.Name = "Item2";
             this.Item2.Size = new System.Drawing.Size(86, 19);
             this.Item2.TabIndex = 22;
             this.Item2.Text = "Place Holder";
+            this.Item2.Visible = false;
             // 
             // Item1
             // 
@@ -226,6 +222,7 @@ namespace Software_Engineering
             this.Item3Price.Size = new System.Drawing.Size(45, 19);
             this.Item3Price.TabIndex = 29;
             this.Item3Price.Text = "$0.00";
+            this.Item3Price.Visible = false;
             // 
             // Item2Price
             // 
@@ -237,6 +234,7 @@ namespace Software_Engineering
             this.Item2Price.Size = new System.Drawing.Size(45, 19);
             this.Item2Price.TabIndex = 28;
             this.Item2Price.Text = "$0.00";
+            this.Item2Price.Visible = false;
             // 
             // Item1Price
             // 
@@ -269,6 +267,7 @@ namespace Software_Engineering
             this.Item3Quantity.TabIndex = 35;
             this.Item3Quantity.Text = "0";
             this.Item3Quantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Item3Quantity.Visible = false;
             // 
             // Item2Quantity
             // 
@@ -279,6 +278,7 @@ namespace Software_Engineering
             this.Item2Quantity.TabIndex = 34;
             this.Item2Quantity.Text = "0";
             this.Item2Quantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Item2Quantity.Visible = false;
             // 
             // Item1Quantity
             // 
@@ -306,45 +306,47 @@ namespace Software_Engineering
             this.DeliveryButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.DeliveryButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.DeliveryButton.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeliveryButton.Location = new System.Drawing.Point(30, 564);
+            this.DeliveryButton.Location = new System.Drawing.Point(30, 581);
             this.DeliveryButton.Name = "DeliveryButton";
             this.DeliveryButton.Size = new System.Drawing.Size(75, 23);
             this.DeliveryButton.TabIndex = 36;
             this.DeliveryButton.Text = "Delivery";
             this.DeliveryButton.UseVisualStyleBackColor = false;
+            this.DeliveryButton.Click += new System.EventHandler(this.DeliveryButton_Click_1);
             // 
             // CarryoutButton
             // 
             this.CarryoutButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.CarryoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.CarryoutButton.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CarryoutButton.Location = new System.Drawing.Point(294, 564);
+            this.CarryoutButton.Location = new System.Drawing.Point(294, 581);
             this.CarryoutButton.Name = "CarryoutButton";
             this.CarryoutButton.Size = new System.Drawing.Size(75, 23);
             this.CarryoutButton.TabIndex = 37;
             this.CarryoutButton.Text = "Carryout";
             this.CarryoutButton.UseVisualStyleBackColor = false;
+            this.CarryoutButton.Click += new System.EventHandler(this.CarryoutButton_Click);
             // 
             // PrintButton
             // 
             this.PrintButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.PrintButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.PrintButton.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PrintButton.Location = new System.Drawing.Point(162, 564);
+            this.PrintButton.Location = new System.Drawing.Point(162, 581);
             this.PrintButton.Name = "PrintButton";
             this.PrintButton.Size = new System.Drawing.Size(75, 23);
             this.PrintButton.TabIndex = 38;
             this.PrintButton.Text = "Print";
             this.PrintButton.UseVisualStyleBackColor = false;
+            this.PrintButton.Click += new System.EventHandler(this.PrintButton_Click);
             // 
             // SignatureText
             // 
             this.SignatureText.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SignatureText.Location = new System.Drawing.Point(425, 565);
+            this.SignatureText.Location = new System.Drawing.Point(30, 553);
             this.SignatureText.Name = "SignatureText";
             this.SignatureText.Size = new System.Drawing.Size(166, 22);
             this.SignatureText.TabIndex = 39;
-            this.SignatureText.Text = "Signature";
             this.SignatureText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.SignatureText.TextChanged += new System.EventHandler(this.SignatureText_TextChanged);
             // 
@@ -385,6 +387,7 @@ namespace Software_Engineering
             this.Item10Price.Size = new System.Drawing.Size(45, 19);
             this.Item10Price.TabIndex = 53;
             this.Item10Price.Text = "$0.00";
+            this.Item10Price.Visible = false;
             // 
             // Item9Price
             // 
@@ -396,6 +399,7 @@ namespace Software_Engineering
             this.Item9Price.Size = new System.Drawing.Size(45, 19);
             this.Item9Price.TabIndex = 52;
             this.Item9Price.Text = "$0.00";
+            this.Item9Price.Visible = false;
             // 
             // label15
             // 
@@ -407,6 +411,7 @@ namespace Software_Engineering
             this.label15.Size = new System.Drawing.Size(45, 19);
             this.label15.TabIndex = 51;
             this.label15.Text = "$0.00";
+            this.label15.Visible = false;
             // 
             // Item7Price
             // 
@@ -418,6 +423,7 @@ namespace Software_Engineering
             this.Item7Price.Size = new System.Drawing.Size(45, 19);
             this.Item7Price.TabIndex = 50;
             this.Item7Price.Text = "$0.00";
+            this.Item7Price.Visible = false;
             // 
             // Item5Price
             // 
@@ -429,6 +435,7 @@ namespace Software_Engineering
             this.Item5Price.Size = new System.Drawing.Size(45, 19);
             this.Item5Price.TabIndex = 49;
             this.Item5Price.Text = "$0.00";
+            this.Item5Price.Visible = false;
             // 
             // Item6Price
             // 
@@ -440,6 +447,7 @@ namespace Software_Engineering
             this.Item6Price.Size = new System.Drawing.Size(45, 19);
             this.Item6Price.TabIndex = 48;
             this.Item6Price.Text = "$0.00";
+            this.Item6Price.Visible = false;
             // 
             // Item4Price
             // 
@@ -451,6 +459,7 @@ namespace Software_Engineering
             this.Item4Price.Size = new System.Drawing.Size(45, 19);
             this.Item4Price.TabIndex = 41;
             this.Item4Price.Text = "$0.00";
+            this.Item4Price.Visible = false;
             // 
             // Item10
             // 
@@ -458,10 +467,12 @@ namespace Software_Engineering
             this.Item10.BackColor = System.Drawing.Color.White;
             this.Item10.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Item10.Location = new System.Drawing.Point(5, 326);
+            this.Item10.MaximumSize = new System.Drawing.Size(175, 19);
             this.Item10.Name = "Item10";
             this.Item10.Size = new System.Drawing.Size(86, 19);
             this.Item10.TabIndex = 47;
             this.Item10.Text = "Place Holder";
+            this.Item10.Visible = false;
             // 
             // Item9
             // 
@@ -469,10 +480,12 @@ namespace Software_Engineering
             this.Item9.BackColor = System.Drawing.Color.White;
             this.Item9.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Item9.Location = new System.Drawing.Point(3, 292);
+            this.Item9.MaximumSize = new System.Drawing.Size(175, 19);
             this.Item9.Name = "Item9";
             this.Item9.Size = new System.Drawing.Size(86, 19);
             this.Item9.TabIndex = 46;
             this.Item9.Text = "Place Holder";
+            this.Item9.Visible = false;
             // 
             // Item8
             // 
@@ -480,10 +493,12 @@ namespace Software_Engineering
             this.Item8.BackColor = System.Drawing.Color.White;
             this.Item8.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Item8.Location = new System.Drawing.Point(5, 261);
+            this.Item8.MaximumSize = new System.Drawing.Size(175, 19);
             this.Item8.Name = "Item8";
             this.Item8.Size = new System.Drawing.Size(86, 19);
             this.Item8.TabIndex = 45;
             this.Item8.Text = "Place Holder";
+            this.Item8.Visible = false;
             // 
             // Item7
             // 
@@ -491,10 +506,12 @@ namespace Software_Engineering
             this.Item7.BackColor = System.Drawing.Color.White;
             this.Item7.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Item7.Location = new System.Drawing.Point(5, 230);
+            this.Item7.MaximumSize = new System.Drawing.Size(175, 19);
             this.Item7.Name = "Item7";
             this.Item7.Size = new System.Drawing.Size(86, 19);
             this.Item7.TabIndex = 44;
             this.Item7.Text = "Place Holder";
+            this.Item7.Visible = false;
             // 
             // Item6
             // 
@@ -502,10 +519,12 @@ namespace Software_Engineering
             this.Item6.BackColor = System.Drawing.Color.White;
             this.Item6.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Item6.Location = new System.Drawing.Point(5, 197);
+            this.Item6.MaximumSize = new System.Drawing.Size(175, 19);
             this.Item6.Name = "Item6";
             this.Item6.Size = new System.Drawing.Size(86, 19);
             this.Item6.TabIndex = 43;
             this.Item6.Text = "Place Holder";
+            this.Item6.Visible = false;
             // 
             // Item5
             // 
@@ -513,10 +532,12 @@ namespace Software_Engineering
             this.Item5.BackColor = System.Drawing.Color.White;
             this.Item5.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Item5.Location = new System.Drawing.Point(5, 169);
+            this.Item5.MaximumSize = new System.Drawing.Size(175, 19);
             this.Item5.Name = "Item5";
             this.Item5.Size = new System.Drawing.Size(86, 19);
             this.Item5.TabIndex = 42;
             this.Item5.Text = "Place Holder";
+            this.Item5.Visible = false;
             // 
             // Item4
             // 
@@ -524,10 +545,12 @@ namespace Software_Engineering
             this.Item4.BackColor = System.Drawing.Color.White;
             this.Item4.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Item4.Location = new System.Drawing.Point(3, 135);
+            this.Item4.MaximumSize = new System.Drawing.Size(175, 19);
             this.Item4.Name = "Item4";
             this.Item4.Size = new System.Drawing.Size(86, 19);
             this.Item4.TabIndex = 41;
             this.Item4.Text = "Place Holder";
+            this.Item4.Visible = false;
             // 
             // Item4Quantity
             // 
@@ -538,6 +561,7 @@ namespace Software_Engineering
             this.Item4Quantity.TabIndex = 41;
             this.Item4Quantity.Text = "0";
             this.Item4Quantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Item4Quantity.Visible = false;
             // 
             // Item5Quantity
             // 
@@ -548,6 +572,7 @@ namespace Software_Engineering
             this.Item5Quantity.TabIndex = 42;
             this.Item5Quantity.Text = "0";
             this.Item5Quantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Item5Quantity.Visible = false;
             // 
             // Item6Quantity
             // 
@@ -558,6 +583,7 @@ namespace Software_Engineering
             this.Item6Quantity.TabIndex = 43;
             this.Item6Quantity.Text = "0";
             this.Item6Quantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Item6Quantity.Visible = false;
             // 
             // Item7Quantity
             // 
@@ -568,6 +594,7 @@ namespace Software_Engineering
             this.Item7Quantity.TabIndex = 44;
             this.Item7Quantity.Text = "0";
             this.Item7Quantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Item7Quantity.Visible = false;
             // 
             // Item8Quantity
             // 
@@ -578,6 +605,7 @@ namespace Software_Engineering
             this.Item8Quantity.TabIndex = 45;
             this.Item8Quantity.Text = "0";
             this.Item8Quantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Item8Quantity.Visible = false;
             // 
             // Item9Quantity
             // 
@@ -588,6 +616,7 @@ namespace Software_Engineering
             this.Item9Quantity.TabIndex = 46;
             this.Item9Quantity.Text = "0";
             this.Item9Quantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Item9Quantity.Visible = false;
             // 
             // Item10Quantity
             // 
@@ -598,13 +627,41 @@ namespace Software_Engineering
             this.Item10Quantity.TabIndex = 47;
             this.Item10Quantity.Text = "0";
             this.Item10Quantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Item10Quantity.Visible = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label3.Location = new System.Drawing.Point(27, 533);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(69, 17);
+            this.label3.TabIndex = 48;
+            this.label3.Text = "Signature";
+            // 
+            // Cancel
+            // 
+            this.Cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Cancel.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cancel.Location = new System.Drawing.Point(294, 553);
+            this.Cancel.Name = "Cancel";
+            this.Cancel.Size = new System.Drawing.Size(75, 23);
+            this.Cancel.TabIndex = 49;
+            this.Cancel.Text = "Cancel";
+            this.Cancel.UseVisualStyleBackColor = false;
+            this.Cancel.Visible = false;
+            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
             // 
             // Reciept_Card
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Brown;
-            this.ClientSize = new System.Drawing.Size(603, 616);
+            this.ClientSize = new System.Drawing.Size(451, 616);
+            this.Controls.Add(this.Cancel);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.Item10Quantity);
             this.Controls.Add(this.Item9Quantity);
             this.Controls.Add(this.Item8Quantity);
@@ -628,13 +685,13 @@ namespace Software_Engineering
             this.Controls.Add(this.Item2);
             this.Controls.Add(this.Item1);
             this.Controls.Add(this.Label2);
-            this.Controls.Add(this.OrderNumberText);
             this.Controls.Add(this.CustomerNameText);
             this.Controls.Add(this.Label1);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.Item8Price);
             this.Name = "Reciept_Card";
             this.Text = "Reciept_Card";
+            this.Load += new System.EventHandler(this.Reciept_Card_Load);
             this.Item8Price.ResumeLayout(false);
             this.Item8Price.PerformLayout();
             this.ResumeLayout(false);
@@ -645,7 +702,6 @@ namespace Software_Engineering
         internal Button BackButton;
         internal Label Label1;
         internal TextBox CustomerNameText;
-        internal TextBox OrderNumberText;
         internal Label TotalText;
         internal Label TaxText;
         internal Label Item3;
@@ -688,5 +744,7 @@ namespace Software_Engineering
         internal TextBox Item8Quantity;
         internal TextBox Item9Quantity;
         internal TextBox Item10Quantity;
+        private Label label3;
+        internal Button Cancel;
     }
 }

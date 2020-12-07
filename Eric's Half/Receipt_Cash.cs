@@ -7,22 +7,27 @@ namespace Software_Engineering
     public partial class Reciept_Cash
     {
         double[] Prices = { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 };
+        const double SalesTaxCnst = .06;
+        double Total = 0.0, Tax = 0.0;
         private String Directory = Path.GetDirectoryName(Application.ExecutablePath);
         int Lines = 0;
+        
         public Reciept_Cash()
         {
+            isError = false;
             InitializeComponent();
         }
 
         private void CalculateTotal()
         {
-            Double Total = 0.50;
-            for (int i = 0; i < Prices.Length; i++)
+            for (int i = 0; i < this.Prices.Length; i++)
             {
-                Total += Prices[i];
+                this.Total += this.Prices[i];
             }
-
-            TotalAmount.Text = "$" + Total.ToString();
+            this.Tax = Math.Round(this.Total * SalesTaxCnst, 2);
+            this.Total = Math.Round(this.Total + this.Tax, 2);
+            TaxAmount.Text = "$" + this.Tax.ToString();
+            TotalAmount.Text = "$" + this.Total.ToString();
         }
 
         //Checking to see if the Line str is the end of the file and returning the customer to the Opening screen if it is.
@@ -35,13 +40,16 @@ namespace Software_Engineering
                 String Directory = Path.GetDirectoryName(Application.ExecutablePath);
                 Directory = Directory.Substring(0, Directory.IndexOf("Eric's Half"));
                 Process.Start(@"" + Directory + "\\Arturo's Half\\bin\\Debug\\WindowsFormsApp1.exe");
-                Close();
+                this.Close();
             }
         }
-
-        private void RecieptCash_Load(object sender, EventArgs e)
+        private void Reciept_Cash_Load(object sender, EventArgs e)
         {
             Directory = Directory.Substring(0, Directory.IndexOf("Eric's Half"));
+            string OpenFile = Directory + "\\Arturo's Half\\Order.txt";
+            string FileText = File.ReadAllText(OpenFile);
+            FileText = FileText.Replace("Active", "Placed");
+            File.WriteAllText(OpenFile, FileText);
             StreamReader sr = new StreamReader(Directory + "\\Arturo's Half\\Order.txt");
             string str = sr.ReadLine();
 
@@ -197,36 +205,100 @@ namespace Software_Engineering
             }
         }
 
-        private void BackButton_Click(object sender, System.EventArgs e)
+        private void Cancel_Click(object sender, EventArgs e)
         {
-            //If Customer is Guest
-            //this.Hide();
-            //new Payment_Guest().Show();
-
-            //If Customer is not Guest
-            //this.Hide();
-            //new Payment().Show();
+            PrintButton.Visible = true;
+            DeliveryButton.Visible = true;
+            BackButton.Visible = true;
+            CarryoutButton.Visible = true;
+            Cancel.Visible = false;
         }
 
-        private void DeliveryButton_Click(object sender, System.EventArgs e)
+        private void DeliveryButton_Click(object sender, EventArgs e)
         {
-            //If Customer is Guest
-            //this.Hide();
-            //new Delivery_Guest().Show();
-
-            //If Customer is not Guest
-            //this.Hide();
-            //new Delivery().Show();
+            Directory = Path.GetDirectoryName(Application.ExecutablePath);
+            Directory = Directory.Substring(0, Directory.IndexOf("Eric's Half"));
+            string OpenFile = Directory + "\\Arturo's Half\\Michael_Cafe.txt";
+            StreamReader FindCustomer = new StreamReader(OpenFile);
+            string Customer = FindCustomer.ReadLine();
+            while (!Customer.Contains("#End Of File#"))
+            {
+                if (Customer.Contains("LoggedIn") && !Customer.Contains("Guest"))
+                {
+                    FindCustomer.Close();
+                    this.Close();
+                    new Delivery().Show();
+                    break;
+                }
+                else if (Customer.Contains("LoggedIn") && Customer.Contains("Guest"))
+                {
+                    FindCustomer.Close();
+                    this.Close();
+                    new Delivery_Guest().Show();
+                    break;
+                }
+                else
+                {
+                    Customer = FindCustomer.ReadLine();
+                }
+            }
+        }
+        
+        private void CarryoutButton_Click(object sender, EventArgs e)
+        {
+            Directory = Path.GetDirectoryName(Application.ExecutablePath);
+            Directory = Directory.Substring(0, Directory.IndexOf("Eric's Half"));
+            string OpenFile = Directory + "\\Arturo's Half\\Order.txt";
+            string FileText = File.ReadAllText(OpenFile);
+            FileText = FileText.Replace("Placed", "Closed");
+            File.WriteAllText(OpenFile, FileText);
+            Directory = Path.GetDirectoryName(Application.ExecutablePath);
+            Directory = Directory.Substring(0, Directory.IndexOf("Eric's Half"));
+            this.Close();
+            OpenFile = Directory + "\\Arturo's Half\\bin\\debug\\WindowsFormsApp1.exe";
         }
 
-        private void PrintButton_Click(object sender, System.EventArgs e)
+        private void PrintButton_Click(object sender, EventArgs e)
         {
-            //Don't know what to put here. Maybe just remove print button?
+            PrintButton.Visible = false;
+            DeliveryButton.Visible = false;
+            BackButton.Visible = false;
+            CarryoutButton.Visible = false;
+            Cancel.Visible = true;
         }
 
-        private void CarryoutButton_Click(object sender, System.EventArgs e)
+        private void BackButton_Click(object sender, EventArgs e)
         {
-            //Return to beginning of program
+            Directory = Path.GetDirectoryName(Application.ExecutablePath);
+            Directory = Directory.Substring(0, Directory.IndexOf("Eric's Half"));
+            string OpenFile = Directory + "\\Arturo's Half\\Order.txt";
+            string FileText = File.ReadAllText(OpenFile);
+            FileText = FileText.Replace("Placed", "Active");
+            File.WriteAllText(OpenFile, FileText);
+            OpenFile = Directory + "\\Arturo's Half\\Michael_Cafe.txt";
+            StreamReader FindCustomer = new StreamReader(OpenFile);
+            string Customer = FindCustomer.ReadLine();
+            while (!Customer.Contains("#End Of File#"))
+            {
+                if (Customer.Contains("LoggedIn") && !Customer.Contains("Guest"))
+                {
+                    FindCustomer.Close();
+                    this.Close();
+                    new Payment().Show();
+                    break;
+                }
+                else if (Customer.Contains("LoggedIn") && Customer.Contains("Guest"))
+                {
+                    FindCustomer.Close();
+                    this.Close();
+                    new Payment_Guest().Show();
+                    break;
+                }
+                else
+                {
+                    Customer = FindCustomer.ReadLine();
+                }
+            }
         }
     }
 }

@@ -19,6 +19,7 @@ namespace Software_Engineering
         {
             isCashCheck = false;
             isCard = false;
+            isDiffCard = false;
             InitializeComponent();
         }
         private void Payment_Load_1(object sender, EventArgs e)
@@ -78,7 +79,7 @@ namespace Software_Engineering
         {
             isCashCheck = false;
             isCard = true;
-            isDiffCard = true;
+            isDiffCard = false;
         }
 
         private void BackButton_Click(object sender, EventArgs e)
@@ -135,7 +136,7 @@ namespace Software_Engineering
         private void DiffCardButton_CheckedChanged(object sender, EventArgs e)
         {
             isCashCheck = false;
-            isCard = true;
+            isCard = false;
             isDiffCard = true;
         }
         private void CardNumText_TextChanged(object sender, EventArgs e)
