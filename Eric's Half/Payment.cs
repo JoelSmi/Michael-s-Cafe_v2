@@ -7,17 +7,17 @@ namespace Software_Engineering
 {
     public partial class Payment
     {
-        private bool WithCashCheck;
-        private bool WithCard;
+        private bool isCashCheck;
+        private bool isCard;
         private string Directory = Path.GetDirectoryName(Application.ExecutablePath);
-        string AccountInfo = "",ChangedAccounInfo;
+        string AccountInfo,ChangedAccounInfo;
         string CardInfo;
-        string[] NewCardInfo = {"","",""};
+        string[] NewCardInfo = { "", "", "" };
 
         public Payment()
         {
-            WithCashCheck = false;
-            WithCard = false;
+            isCashCheck = false;
+            isCard = false;
             InitializeComponent();
         }
         private void Payment_Load_1(object sender, EventArgs e)
@@ -30,8 +30,15 @@ namespace Software_Engineering
             {
                 if (CurrLine.Contains("LoggedIn"))
                 {
-                    AccountInfo += CurrLine;
+                    AccountInfo = CurrLine;
                     CurrLine = sr.ReadLine();
+                    while (!CurrLine.Contains("/") && !CurrLine.Contains("#End Of File#"))
+                    {
+                        PaymentLine = CurrLine;
+                        AccountInfo += "\n" + CurrLine;
+                        CurrLine = sr.ReadLine();
+                    }
+                    sr.Close();
                     break;
                 }
                 else
@@ -39,73 +46,73 @@ namespace Software_Engineering
                     CurrLine = sr.ReadLine();
                 }
             }
-            while (!CurrLine.Contains("/"))
-            {
-                PaymentLine = CurrLine;
-                AccountInfo += "\n" + CurrLine;
-                CurrLine = sr.ReadLine();
-            }
-            if (PaymentLine.Length < 5)
+            sr.Close();
+            if (PaymentLine.EndsWith("$"))
             {
                 MaskedCardNo.Text = "No card in our system";
-                sr.Close();
+                
             }
             else
             {
                 CardInfo = AccountInfo.Substring(AccountInfo.IndexOf("$") + 1);
                 MaskedCardNo.Text = CardInfo.Substring(0, CardInfo.IndexOf(","));
-                sr.Close();
             }
         }
 
-        private void CashButton_CheckedChanged(object sender, System.EventArgs e)
+        private void CashButton_CheckedChanged(object sender, EventArgs e)
         {
-            WithCashCheck = true;
-            WithCard = false;
+            isCashCheck = true;
+            isCard = false;
         }
 
-        private void CheckButton_CheckedChanged(object sender, System.EventArgs e)
+        private void CheckButton_CheckedChanged(object sender, EventArgs e)
         {
-            WithCashCheck = true;
-            WithCard = false;
+            isCashCheck = true;
+            isCard = false;
         }
 
-        private void DefaultCardButton_CheckedChanged(object sender, System.EventArgs e)
+        private void DefaultCardButton_CheckedChanged(object sender, EventArgs e)
         {
-            WithCashCheck = false;
-            WithCard = true;
+            isCashCheck = false;
+            isCard = true;
         }
 
-        private void BackButton_Click(object sender, System.EventArgs e)
+        private void BackButton_Click(object sender, EventArgs e)
         {
             this.Hide();
             new OrderSummary().Show();
         }
 
-        private void NextButton_Click(object sender, System.EventArgs e)
+        private void NextButton_Click(object sender, EventArgs e)
         {
             this.Hide();
 
-            if(WithCard)
+            if(isCard.Equals(true))
             {
                 if (!NewCardInfo[0].Equals("") && !NewCardInfo[1].Equals("") && !NewCardInfo[2].Equals(""))
                 {
                     CardInfo = NewCardInfo[0] + "," + NewCardInfo[1] + "-" + NewCardInfo[2];
                     ChangedAccounInfo = AccountInfo;
                     ChangedAccounInfo = ChangedAccounInfo.Replace(ChangedAccounInfo.Substring(ChangedAccounInfo.IndexOf("$")), "$" + CardInfo);
-
+                    
                     Directory = Path.GetDirectoryName(Application.ExecutablePath);
                     Directory = Directory.Substring(0, Directory.IndexOf("Eric's Half"));
                     string OpenFile = Directory + "\\Arturo's Half\\Michael_Cafe.txt";
 
-                    //File manipulation to change the Active order to Placed
+                    //File manipulation to update the account information
                     string FileText = File.ReadAllText(OpenFile);
-                    FileText = FileText.Replace(AccountInfo,ChangedAccounInfo);
+                    FileText = FileText.Replace(AccountInfo, ChangedAccounInfo);
                     File.WriteAllText(OpenFile, FileText);
+                    new Reciept_Card().Show();
                 }
-                new Reciept_Card().Show();
+                else
+                {
+                    MessageBox.Show("Please fill out all fields when adding a new card", "Card Failed",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
             }
-            else if(WithCashCheck)
+            else if(isCashCheck.Equals(true))
             {
                 new Reciept_Cash().Show();
             }
@@ -115,22 +122,22 @@ namespace Software_Engineering
             }
         }
 
-        private void DiffCardButton_CheckedChanged(object sender, System.EventArgs e)
+        private void DiffCardButton_CheckedChanged(object sender, EventArgs e)
         {
-            WithCashCheck = false;
-            WithCard = true;
+            isCashCheck = false;
+            isCard = true;
         }
-        private void CardNumText_TextChanged(object sender, System.EventArgs e)
+        private void CardNumText_TextChanged(object sender, EventArgs e)
         {
             NewCardInfo[0] = CardNumText.Text;
         }
 
-        private void CardExpText_TextChanged(object sender, System.EventArgs e)
+        private void CardExpText_TextChanged(object sender, EventArgs e)
         {
             NewCardInfo[1] = CardExpText.Text;
         }
 
-        private void CardPinText_TextChanged(object sender, System.EventArgs e)
+        private void CardPinText_TextChanged(object sender, EventArgs e)
         {
             NewCardInfo[2] = CardPinText.Text;
         }

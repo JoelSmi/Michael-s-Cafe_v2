@@ -15,6 +15,8 @@ namespace Software_Engineering
 
         public Payment_Guest()
         {
+            isCashCheck = false;
+            isCard = false;
             InitializeComponent();
         }
         private void Payment_Guest_Load_1(object sender, EventArgs e)
@@ -77,12 +79,17 @@ namespace Software_Engineering
                     Directory = Directory.Substring(0, Directory.IndexOf("Eric's Half"));
                     string OpenFile = Directory + "\\Arturo's Half\\Michael_Cafe.txt";
 
-                    //File manipulation to change the Active order to Placed
+                    //File manipulation to update the account information
                     string FileText = File.ReadAllText(OpenFile);
                     FileText = FileText.Replace(AccountInfo, ChangedAccounInfo);
                     File.WriteAllText(OpenFile, FileText);
+                    new Reciept_Card().Show();
                 }
-                new Reciept_Card().Show();
+                else
+                {
+                    MessageBox.Show("Please fill out all fields when adding a new card", "Card Failed",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }                
             }
             else if (isCashCheck.Equals(true))
             {
@@ -111,7 +118,7 @@ namespace Software_Engineering
         }
 
 
-        private void CardPinText_TextChanged(object sender, System.EventArgs e)
+        private void CardPinText_TextChanged(object sender, EventArgs e)
         {
             NewCardInfo[2] = CardPinText.Text;
         }
