@@ -1,9 +1,10 @@
 abcd
 1234
-Customer Information: Mincheol || Choi || 123121 || Male
+Customer Information: abcd || asdf || 1234 || ma
 
 Email address and password:
-asldkf@123123
-5351
+1232@1222
+1234
 
 First Name Test:
+

@@ -21,16 +21,6 @@ namespace WindowsFormsApp1
         string DOB { get; set; }
         string gender { get; set; }
 
-        public Creating_an_Account_Screen(string firstName, string lastName, string DOB, string gender)
-        {
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.DOB = DOB;
-            this.gender = gender;
-            return;
-        }
-
-
 
 
 
@@ -148,14 +138,9 @@ namespace WindowsFormsApp1
 
 
                 this.Hide();
-                new Creating_an_Account_Screen2().Show();
+                new Creating_an_Account_Screen2(firstName, lastName, DOB, gender).Show();
             }
 
-            using (StreamWriter ab = new StreamWriter(@"" + Directory + "\\Michael_Cafe.txt", true))
-            {
-                ab.WriteLine("\nCustomer Information: " + firstName + " || " + lastName + " || " + DOB + " || " + gender);
-                ab.Close();
-            }
 
         }
 

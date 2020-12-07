@@ -15,8 +15,12 @@ namespace WindowsFormsApp1
     {
         private String Directory = Path.GetDirectoryName(Application.ExecutablePath).Substring(0, Path.GetDirectoryName(Application.ExecutablePath).IndexOf("bin"));
 
-
-
+        string firstName;
+        string lastName;
+        string DOB;
+        string gender;
+        string email;
+        string password;
         string address;
         string infoAddress;
         string city;
@@ -24,8 +28,21 @@ namespace WindowsFormsApp1
         string zipCode;
         string phoneNumber;
 
+        public Creating_an_Account_Screen3(string firstName, string lastName, string DOB, string gender, string email, string password)
+        {
+            InitializeComponent();
 
-        
+            firstName = this.firstName;
+            lastName = this.lastName;
+            DOB = this.DOB;
+            gender = this.gender;
+            email = this.email;
+            password = this.password;
+
+        }
+
+
+
         public Creating_an_Account_Screen3()
         {
             InitializeComponent();
@@ -72,6 +89,8 @@ namespace WindowsFormsApp1
             string userText = objTextBox.Text;
             phoneNumber = userText;
         }
+
+
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -121,10 +140,18 @@ namespace WindowsFormsApp1
             using (StreamWriter ab = new StreamWriter(@"" + Directory + "\\Michael_Cafe.txt", true))
             {
                 ab.WriteLine("\nCustomer address information:\n" + address + " " + infoAddress + "\n" + city + " " + state + " " + zipCode + "\nPhone Number: " + phoneNumber);
-                ab.WriteLine("====================================");
                 ab.Close();
             }
 
+            ///firstName, lastName, DOB, gender, email, password, address, infoAddress, city, state, zipcode, phonenumber
+            ///
+            ////////////////          / Person 1 -
+            //////////////// Email,Password
+            //////////////// FirstName, LastName
+            ////////////////PhoneNumber
+            ////////////////Street,City - State.Zip
+
+            string line1 = email + "," + password;
 
             this.Hide();
             new Form1().Show();
