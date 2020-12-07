@@ -9,6 +9,7 @@ namespace Software_Engineering
     {
         private bool isCashCheck;
         private bool isCard;
+        private bool isDiffCard;
         private string Directory = Path.GetDirectoryName(Application.ExecutablePath);
         string AccountInfo,ChangedAccounInfo;
         string CardInfo;
@@ -63,18 +64,21 @@ namespace Software_Engineering
         {
             isCashCheck = true;
             isCard = false;
+            isDiffCard = false;
         }
 
         private void CheckButton_CheckedChanged(object sender, EventArgs e)
         {
             isCashCheck = true;
             isCard = false;
+            isDiffCard = false;
         }
 
         private void DefaultCardButton_CheckedChanged(object sender, EventArgs e)
         {
             isCashCheck = false;
             isCard = true;
+            isDiffCard = true;
         }
 
         private void BackButton_Click(object sender, EventArgs e)
@@ -86,29 +90,35 @@ namespace Software_Engineering
         private void NextButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-
-            if(isCard.Equals(true))
+            if(isCard.Equals(true) || isDiffCard.Equals(true))
             {
-                if (!NewCardInfo[0].Equals("") && !NewCardInfo[1].Equals("") && !NewCardInfo[2].Equals(""))
+                if (isDiffCard.Equals(true))
                 {
-                    CardInfo = NewCardInfo[0] + "," + NewCardInfo[1] + "-" + NewCardInfo[2];
-                    ChangedAccounInfo = AccountInfo;
-                    ChangedAccounInfo = ChangedAccounInfo.Replace(ChangedAccounInfo.Substring(ChangedAccounInfo.IndexOf("$")), "$" + CardInfo);
-                    
-                    Directory = Path.GetDirectoryName(Application.ExecutablePath);
-                    Directory = Directory.Substring(0, Directory.IndexOf("Eric's Half"));
-                    string OpenFile = Directory + "\\Arturo's Half\\Michael_Cafe.txt";
+                    if (!NewCardInfo[0].Equals("") && !NewCardInfo[1].Equals("") && !NewCardInfo[2].Equals(""))
+                    {
+                        CardInfo = NewCardInfo[0] + "," + NewCardInfo[1] + "-" + NewCardInfo[2];
+                        ChangedAccounInfo = AccountInfo;
+                        ChangedAccounInfo = ChangedAccounInfo.Replace(ChangedAccounInfo.Substring(ChangedAccounInfo.IndexOf("$")), "$" + CardInfo);
 
-                    //File manipulation to update the account information
-                    string FileText = File.ReadAllText(OpenFile);
-                    FileText = FileText.Replace(AccountInfo, ChangedAccounInfo);
-                    File.WriteAllText(OpenFile, FileText);
-                    new Reciept_Card().Show();
+                        Directory = Path.GetDirectoryName(Application.ExecutablePath);
+                        Directory = Directory.Substring(0, Directory.IndexOf("Eric's Half"));
+                        string OpenFile = Directory + "\\Arturo's Half\\Michael_Cafe.txt";
+
+                        //File manipulation to update the account information
+                        string FileText = File.ReadAllText(OpenFile);
+                        FileText = FileText.Replace(AccountInfo, ChangedAccounInfo);
+                        File.WriteAllText(OpenFile, FileText);
+                        new Reciept_Card().Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please fill out all fields when adding a new card", "Card Failed",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Please fill out all fields when adding a new card", "Card Failed",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    new Reciept_Card().Show();
                 }
 
             }
@@ -126,6 +136,7 @@ namespace Software_Engineering
         {
             isCashCheck = false;
             isCard = true;
+            isDiffCard = true;
         }
         private void CardNumText_TextChanged(object sender, EventArgs e)
         {

@@ -22,10 +22,16 @@ As Plain or Toasted and Buttered,4-5.56
 Pancake Platter,3-17.97
 Pancake with Eggs,1-4.79
 \
-/test@gmail.com-Active
+/test@gmail.com-Cancelled
 Lemonade,1-2.50
 Coffee,2-5.00
 As Plain or Toasted and Buttered,4-5.56
 Pancake Platter,2-11.98
+\
+/test@gmail.com-Active
+Water,1-2.00
+Coffee,2-5.00
+As Plain or Toasted and Buttered,3-4.17
+Pancake with Eggs,2-9.58
 \
 #End Of File#
