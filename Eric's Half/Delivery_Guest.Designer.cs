@@ -83,7 +83,6 @@ namespace Software_Engineering
             this.PhoneNumberText.TabIndex = 11;
             this.PhoneNumberText.Text = "Phone Number";
             this.PhoneNumberText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.PhoneNumberText.TextChanged += new System.EventHandler(this.PhoneNumberText_TextChanged);
             // 
             // FirstNameText
             // 
@@ -94,7 +93,6 @@ namespace Software_Engineering
             this.FirstNameText.TabIndex = 10;
             this.FirstNameText.Text = "First Name";
             this.FirstNameText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.FirstNameText.TextChanged += new System.EventHandler(this.FirstNameText_TextChanged);
             // 
             // Label2
             // 
@@ -148,7 +146,6 @@ namespace Software_Engineering
             this.AptNumText.Size = new System.Drawing.Size(65, 22);
             this.AptNumText.TabIndex = 18;
             this.AptNumText.Text = "Apt #";
-            this.AptNumText.TextChanged += new System.EventHandler(this.AptNumText_TextChanged);
             // 
             // StreetNameText
             // 
@@ -183,7 +180,6 @@ namespace Software_Engineering
             this.LastNameText.TabIndex = 23;
             this.LastNameText.Text = "Last Name";
             this.LastNameText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.LastNameText.TextChanged += new System.EventHandler(this.LastNameText_TextChanged);
             // 
             // Delivery_Guest
             // 
