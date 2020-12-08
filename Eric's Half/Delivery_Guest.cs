@@ -50,11 +50,6 @@ namespace Software_Engineering
             
         }
 
-        private void AptNumText_TextChanged(object sender, System.EventArgs e)
-        {
-           
-        }
-
         private void CityText_TextChanged(object sender, System.EventArgs e)
         {
           

@@ -14,7 +14,6 @@ namespace Software_Engineering
         
         public Reciept_Cash()
         {
-            isError = false;
             InitializeComponent();
         }
 

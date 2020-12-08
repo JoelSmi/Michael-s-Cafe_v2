@@ -92,6 +92,7 @@ namespace Software_Engineering
             this.CustomerNameText.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CustomerNameText.Location = new System.Drawing.Point(42, 88);
             this.CustomerNameText.Name = "CustomerNameText";
+            this.CustomerNameText.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.CustomerNameText.Size = new System.Drawing.Size(100, 22);
             this.CustomerNameText.TabIndex = 8;
             this.CustomerNameText.Text = "Customer Name";
@@ -119,6 +120,7 @@ namespace Software_Engineering
             this.DiffAddButton.TabStop = true;
             this.DiffAddButton.Text = "Use different Address";
             this.DiffAddButton.UseVisualStyleBackColor = true;
+            this.DiffAddButton.CheckedChanged += new System.EventHandler(this.DiffAddButton_CheckedChanged);
             // 
             // CustomerAddressText
             // 
@@ -140,6 +142,7 @@ namespace Software_Engineering
             this.StreetNameText.TabIndex = 12;
             this.StreetNameText.Text = "Street Name";
             this.StreetNameText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.StreetNameText.TextChanged += new System.EventHandler(this.StreetNameText_TextChanged_1);
             // 
             // AptNumText
             // 
@@ -159,6 +162,7 @@ namespace Software_Engineering
             this.CityText.TabIndex = 14;
             this.CityText.Text = "City";
             this.CityText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.CityText.TextChanged += new System.EventHandler(this.CityText_TextChanged_1);
             // 
             // StateText
             // 
@@ -169,6 +173,7 @@ namespace Software_Engineering
             this.StateText.TabIndex = 15;
             this.StateText.Text = "State";
             this.StateText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.StateText.TextChanged += new System.EventHandler(this.StateText_TextChanged_1);
             // 
             // ZipText
             // 
@@ -179,6 +184,7 @@ namespace Software_Engineering
             this.ZipText.TabIndex = 16;
             this.ZipText.Text = "Zipcode";
             this.ZipText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ZipText.TextChanged += new System.EventHandler(this.ZipText_TextChanged_1);
             // 
             // NextButton
             // 
@@ -191,6 +197,7 @@ namespace Software_Engineering
             this.NextButton.TabIndex = 17;
             this.NextButton.Text = "Next";
             this.NextButton.UseVisualStyleBackColor = false;
+            this.NextButton.Click += new System.EventHandler(this.NextButton_Click_1);
             // 
             // Delivery
             // 
@@ -213,6 +220,7 @@ namespace Software_Engineering
             this.Controls.Add(this.BackButton);
             this.Name = "Delivery";
             this.Text = "Delivery";
+            this.Load += new System.EventHandler(this.Delivery_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
