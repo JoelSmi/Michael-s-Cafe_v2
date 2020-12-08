@@ -59,12 +59,14 @@ namespace WindowsFormsApp1
                 while (!CurrLine.Equals("#End Of File#")) {
                     if (CurrLine.Contains("LoggedOut") && !CurrLine.Contains("Guest"))
                     {
-                       if ((CurrLine.Contains(username)) && (CurrLine.Contains(password)))
+                        fileUsername = CurrLine.Substring(CurrLine.IndexOf("/") + 1, CurrLine.IndexOf(",") - 1);
+                        filePassword = CurrLine.Substring(CurrLine.IndexOf(",") + 1, CurrLine.IndexOf("-") - CurrLine.IndexOf(",") - 1);
+                        if ((fileUsername.Equals(username)) && (filePassword.Equals(password)))
                         {
                             ab.Close();
                             string OpenFile = Directory + "\\Michael_Cafe.txt";
                             string FileText = File.ReadAllText(OpenFile);
-                            FileText = FileText.Replace("LoggedOut", "LoggedIn");
+                            FileText = FileText.Replace("/" + fileUsername + "," + filePassword + "-"+"LoggedOut", "/" + fileUsername + "," + filePassword + "-" + "LoggedIn");
                             File.WriteAllText(OpenFile, FileText);
                             this.Hide();
                             new Menu_Screen().Show();
