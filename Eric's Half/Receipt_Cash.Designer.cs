@@ -117,6 +117,7 @@ namespace Software_Engineering
             this.CustomerNameText.TabIndex = 4;
             this.CustomerNameText.Text = "Customer Name";
             this.CustomerNameText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.CustomerNameText.Visible = false;
             // 
             // TotalText
             // 

@@ -30,14 +30,6 @@ namespace WindowsFormsApp1
         {
 
         }
-
-        //Back Button
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            new Form1().Show();
-        }
-
         private void BackBtn_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -48,8 +40,8 @@ namespace WindowsFormsApp1
         {
             using (StreamReader ab = new StreamReader(@"" + Directory + "\\Michael_Cafe.txt"))
             {
-                username = usernameTextBox1.Text;
-                password = textBox1.Text;
+                username = usernameTextBox1.Text.Trim() ;
+                password = textBox1.Text.Trim();
 
                 if (usernameTextBox1.Text.Trim() == string.Empty)
                 {
@@ -63,23 +55,35 @@ namespace WindowsFormsApp1
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-
-                if ((fileUsername.Equals(username)) && (fileUsername.Equals(password)))
-                {
-                    string OpenFile = Directory + "\\Michael_Cafe.txt";
-                    string FileText = File.ReadAllText(OpenFile);
-                    FileText = FileText.Replace("LoggedOut", "LoggedIn");
-                    File.WriteAllText(OpenFile, FileText);
-                    this.Hide();
-                    new Menu_Screen().Show();
+                string CurrLine = ab.ReadLine();
+                while (!CurrLine.Equals("#End Of File#")) {
+                    if (CurrLine.Contains("LoggedOut") && !CurrLine.Contains("Guest"))
+                    {
+                        fileUsername = CurrLine.Substring(CurrLine.IndexOf("/") + 1, CurrLine.IndexOf(",")-1); ;
+                        filePassword = CurrLine.Substring(CurrLine.IndexOf(",") + 1, (CurrLine.IndexOf("-") - CurrLine.IndexOf(",")-1));
+                        usernameTextBox1.Text = fileUsername;
+                        textBox1.Text = filePassword;
+                       if ((fileUsername.Equals(username)) && (fileUsername.Equals(password)))
+                        {
+                            ab.Close();
+                            string OpenFile = Directory + "\\Michael_Cafe.txt";
+                            string FileText = File.ReadAllText(OpenFile);
+                            FileText = FileText.Replace("LoggedOut", "LoggedIn");
+                            File.WriteAllText(OpenFile, FileText);
+                            this.Hide();
+                            new Menu_Screen().Show();
+                            break;
+                        }
+                    }
+                    CurrLine = ab.ReadLine();
+                    if (CurrLine.Equals("#End Of File#"))
+                    {
+                        MessageBox.Show("Your login credentials don't match an account in our system.", "Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        ab.Close();
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("Your login credentials don't match an account in our system.", "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                }
-                ab.Close();
+                
 
 
             }
