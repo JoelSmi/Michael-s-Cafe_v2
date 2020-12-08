@@ -40,8 +40,8 @@ namespace WindowsFormsApp1
         {
             using (StreamReader ab = new StreamReader(@"" + Directory + "\\Michael_Cafe.txt"))
             {
-                username = usernameTextBox1.Text.Trim() ;
-                password = textBox1.Text.Trim();
+                username = usernameTextBox1.Text.ToString();
+                password = textBox1.Text.ToString();
 
                 if (usernameTextBox1.Text.Trim() == string.Empty)
                 {
@@ -59,11 +59,7 @@ namespace WindowsFormsApp1
                 while (!CurrLine.Equals("#End Of File#")) {
                     if (CurrLine.Contains("LoggedOut") && !CurrLine.Contains("Guest"))
                     {
-                        fileUsername = CurrLine.Substring(CurrLine.IndexOf("/") + 1, CurrLine.IndexOf(",")-1); ;
-                        filePassword = CurrLine.Substring(CurrLine.IndexOf(",") + 1, (CurrLine.IndexOf("-") - CurrLine.IndexOf(",")-1));
-                        usernameTextBox1.Text = fileUsername;
-                        textBox1.Text = filePassword;
-                       if ((fileUsername.Equals(username)) && (fileUsername.Equals(password)))
+                       if ((CurrLine.Contains(username)) && (CurrLine.Contains(password)))
                         {
                             ab.Close();
                             string OpenFile = Directory + "\\Michael_Cafe.txt";

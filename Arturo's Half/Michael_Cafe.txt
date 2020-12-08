@@ -2,13 +2,11 @@
 *
 $768234873,8/26-123
 /Guest-LoggedOut
-*
-$34563563453,9/34-453
-/test@gmail.com,Password-LoggedIn
+123 Test Ave,123 Test Ave-123 Test Ave.123 Test Ave
+$4567,3/22-122
+/tes@gmail.com,Password-LoggedOut
 Joel,Smith
 7701234567
-*12345 Example St,Marietta-GA.30060
-/Guest-LoggedOut
-*
-$69777997,9/22-345
+*123 Test St ,Marietta - GA.30060
+$3254563,9/25-889
 #End Of File#
