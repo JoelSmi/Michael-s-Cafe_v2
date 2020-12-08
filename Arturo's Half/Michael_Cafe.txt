@@ -4,11 +4,10 @@ $768234873,8/26-123
 /Guest-LoggedOut
 *
 $34563563453,9/34-453
-/test@gmail.com,Password-LoggedOut
+/test@gmail.com,Password-LoggedIn
 Joel,Smith
 7701234567
-*123 Test St ,Marietta - GA.30060
-$7908875,234-234
+*12345 Example St,Marietta-GA.30060
 /Guest-LoggedOut
 *
 $69777997,9/22-345
