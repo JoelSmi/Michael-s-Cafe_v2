@@ -43,7 +43,7 @@ namespace Software_Engineering
                 String Directory = Path.GetDirectoryName(Application.ExecutablePath);
                 Directory = Directory.Substring(0, Directory.IndexOf("Eric's Half"));
                 Process.Start(@"" + Directory + "\\Arturo's Half\\bin\\Debug\\WindowsFormsApp1.exe");
-                Close();
+                this.Close();
                 isError = true;
             }
         }
@@ -60,175 +60,182 @@ namespace Software_Engineering
                 LoadError(str);
                 if (isError == true)
                 {
-                    Close();
-                }
-            }
-
-            while (!str.Equals("\\"))
-            {
-                str = sr.ReadLine();
-                Lines++;
-            }
-            Lines--;
-            sr.Close();
-
-            //Reopening the file once the order is found
-            sr = new StreamReader(Directory + "\\Arturo's Half\\Order.txt");
-            str = sr.ReadLine();
-
-            //Finding the currently active Order that is on file. If none is found it will return the customer to the Opening Screen
-            while (!str.Contains("Active"))
-            {
-                str = sr.ReadLine();
-                LoadError(str);
-                if(isError == true)
-                {
-                    break;
-                }
-            }
-
-            switch (Lines)
-            {
-                case 10:
-                    Item10.Visible = true;
-                    ItemCost10.Visible = true;
-                    ItemQ10.Visible = true;
-                    ItemRemove10.Visible = true;
-
-                    //Setting the Text values for the textboxs for Item 10
-                    str = sr.ReadLine();
-                    Itemline10 = str;
-                    Prices[9] = double.Parse(str.Substring(str.IndexOf('-') + 1));
-                    Item10.Text = str.Substring(0, str.IndexOf(','));
-                    ItemCost10.Text = "$" + str.Substring(str.IndexOf('-') + 1);
-                    ItemQ10.Text = str.Substring(str.IndexOf(',') + 1, (str.IndexOf('-') - str.IndexOf(',')) - 1);
-                    goto case 9;
-                case 9:
-                    Item9.Visible = true;
-                    ItemCost9.Visible = true;
-                    ItemQ9.Visible = true;
-                    ItemRemove9.Visible = true;
-
-                    //Setting the Text values for the textboxs for Item 9
-                    str = sr.ReadLine();
-                    Itemline9 = str;
-                    Prices[8] = double.Parse(str.Substring(str.IndexOf('-') + 1));
-                    Item9.Text = str.Substring(0, str.IndexOf(','));
-                    ItemCost9.Text = "$" + str.Substring(str.IndexOf('-') + 1);
-                    ItemQ9.Text = str.Substring(str.IndexOf(',') + 1, (str.IndexOf('-') - str.IndexOf(',')) - 1);
-                    goto case 8;
-                case 8:
-                    Item8.Visible = true;
-                    ItemCost8.Visible = true;
-                    ItemQ8.Visible = true;
-                    ItemRemove8.Visible = true;
-
-                    //Setting the Text values for the textboxs for Item 8
-                    str = sr.ReadLine();
-                    Itemline8 = str;
-                    Prices[7] = double.Parse(str.Substring(str.IndexOf('-') + 1));
-                    Item8.Text = str.Substring(0, str.IndexOf(','));
-                    ItemCost8.Text = "$" + str.Substring(str.IndexOf('-') + 1);
-                    ItemQ8.Text = str.Substring(str.IndexOf(',') + 1, (str.IndexOf('-') - str.IndexOf(',')) - 1);
-                    goto case 7;
-                case 7:
-                    Item7.Visible = true;
-                    ItemCost7.Visible = true;
-                    ItemQ7.Visible = true;
-                    ItemRemove7.Visible = true;
-
-                    //Setting the Text values for the textboxs for Item 7
-                    str = sr.ReadLine();
-                    Itemline7 = str;
-                    Prices[6] = double.Parse(str.Substring(str.IndexOf('-') + 1));
-                    Item7.Text = str.Substring(0, str.IndexOf(','));
-                    ItemCost7.Text = "$" + str.Substring(str.IndexOf('-') + 1);
-                    ItemQ7.Text = str.Substring(str.IndexOf(',') + 1, (str.IndexOf('-') - str.IndexOf(',')) - 1);
-                    goto case 6;
-                case 6:
-                    Item6.Visible = true;
-                    ItemCost6.Visible = true;
-                    ItemQ6.Visible = true;
-                    ItemRemove6.Visible = true;
-
-                    //Setting the Text values for the textboxs for Item 6
-                    str = sr.ReadLine();
-                    Itemline6 = str;
-                    Prices[5] = double.Parse(str.Substring(str.IndexOf('-') + 1));
-                    Item6.Text = str.Substring(0, str.IndexOf(','));
-                    ItemCost6.Text = "$" + str.Substring(str.IndexOf('-') + 1);
-                    ItemQ6.Text = str.Substring(str.IndexOf(',') + 1, (str.IndexOf('-') - str.IndexOf(',')) - 1);
-                    goto case 5;
-                case 5:
-                    Item5.Visible = true;
-                    ItemCost5.Visible = true;
-                    ItemQ5.Visible = true;
-                    ItemRemove5.Visible = true;
-
-                    //Setting the Text values for the textboxs for Item 5
-                    str = sr.ReadLine();
-                    Itemline5 = str;
-                    Prices[4] = double.Parse(str.Substring(str.IndexOf('-') + 1));
-                    Item5.Text = str.Substring(0, str.IndexOf(','));
-                    ItemCost5.Text = "$" + str.Substring(str.IndexOf('-') + 1);
-                    ItemQ5.Text = str.Substring(str.IndexOf(',') + 1, (str.IndexOf('-') - str.IndexOf(',')) - 1);
-                    goto case 4;
-                case 4:
-                    Item4.Visible = true;
-                    ItemCost4.Visible = true;
-                    ItemQ4.Visible = true;
-                    ItemRemove4.Visible = true;
-
-                    //Setting the Text values for the textboxs for Item 4
-                    str = sr.ReadLine();
-                    Itemline4 = str;
-                    Prices[3] = double.Parse(str.Substring(str.IndexOf('-') + 1));
-                    Item4.Text = str.Substring(0, str.IndexOf(','));
-                    ItemCost4.Text = "$" + str.Substring(str.IndexOf('-') + 1);
-                    ItemQ4.Text = str.Substring(str.IndexOf(',') + 1, (str.IndexOf('-') - str.IndexOf(',')) - 1);
-                    goto case 3;
-                case 3:
-                    Item3.Visible = true;
-                    ItemCost3.Visible = true;
-                    ItemQ3.Visible = true;
-                    ItemRemove3.Visible = true;
-
-                    //Setting the Text values for the textboxs for Item 3
-                    str = sr.ReadLine();
-                    Itemline3 = str;
-                    Prices[2] = double.Parse(str.Substring(str.IndexOf('-') + 1));
-                    Item3.Text = str.Substring(0, str.IndexOf(','));
-                    ItemCost3.Text = "$" + str.Substring(str.IndexOf('-') + 1);
-                    //Currently not working
-                    ItemQ3.Text = str.Substring(str.IndexOf(',') + 1, (str.IndexOf('-') - str.IndexOf(',')) - 1);
-                    goto case 2;
-                case 2:
-                    Item2.Visible = true;
-                    ItemCost2.Visible = true;
-                    ItemQ2.Visible = true;
-                    ItemRemove2.Visible = true;
-
-                    //Setting the Text values for the textboxs for Item 2
-                    str = sr.ReadLine();
-                    Itemline2 = str;
-                    Prices[1] = double.Parse(str.Substring(str.IndexOf('-') + 1));
-                    Item2.Text = str.Substring(0, str.IndexOf(','));
-                    ItemCost2.Text = "$" + str.Substring(str.IndexOf('-') + 1);
-                    ItemQ2.Text = str.Substring(str.IndexOf(',') + 1, (str.IndexOf('-') - str.IndexOf(',') - 1));
-                    goto case 1;
-                case 1:
-                    //Setting the Text values for the textboxs for Item 1
-                    str = sr.ReadLine();
-                    Itemline1 = str;
-                    Prices[0] = double.Parse(str.Substring(str.IndexOf('-') + 1));
-                    Item1.Text = str.Substring(0, str.IndexOf(','));
-                    ItemCost1.Text = "$" + str.Substring(str.IndexOf('-') + 1);
-                    ItemQ1.Text = str.Substring(str.IndexOf(',') + 1, (str.IndexOf('-') - str.IndexOf(',')) - 1);
-                    goto default;
-                default:
                     sr.Close();
-                    CalculateTotal();
                     break;
+                }
+            }
+            if (!isError.Equals(true))
+            {
+                while (!str.Equals("\\"))
+                {
+                    str = sr.ReadLine();
+                    Lines++;
+                }
+                Lines--;
+                sr.Close();
+
+                //Reopening the file once the order is found
+                sr = new StreamReader(Directory + "\\Arturo's Half\\Order.txt");
+                str = sr.ReadLine();
+
+                //Finding the currently active Order that is on file. If none is found it will return the customer to the Opening Screen
+                while (!str.Contains("Active"))
+                {
+                    str = sr.ReadLine();
+                    LoadError(str);
+                    if (isError == true)
+                    {
+                        break;
+                    }
+                }
+
+                switch (Lines)
+                {
+                    case 10:
+                        Item10.Visible = true;
+                        ItemCost10.Visible = true;
+                        ItemQ10.Visible = true;
+                        ItemRemove10.Visible = true;
+
+                        //Setting the Text values for the textboxs for Item 10
+                        str = sr.ReadLine();
+                        Itemline10 = str;
+                        Prices[9] = double.Parse(str.Substring(str.IndexOf('-') + 1));
+                        Item10.Text = str.Substring(0, str.IndexOf(','));
+                        ItemCost10.Text = "$" + str.Substring(str.IndexOf('-') + 1);
+                        ItemQ10.Text = str.Substring(str.IndexOf(',') + 1, (str.IndexOf('-') - str.IndexOf(',')) - 1);
+                        goto case 9;
+                    case 9:
+                        Item9.Visible = true;
+                        ItemCost9.Visible = true;
+                        ItemQ9.Visible = true;
+                        ItemRemove9.Visible = true;
+
+                        //Setting the Text values for the textboxs for Item 9
+                        str = sr.ReadLine();
+                        Itemline9 = str;
+                        Prices[8] = double.Parse(str.Substring(str.IndexOf('-') + 1));
+                        Item9.Text = str.Substring(0, str.IndexOf(','));
+                        ItemCost9.Text = "$" + str.Substring(str.IndexOf('-') + 1);
+                        ItemQ9.Text = str.Substring(str.IndexOf(',') + 1, (str.IndexOf('-') - str.IndexOf(',')) - 1);
+                        goto case 8;
+                    case 8:
+                        Item8.Visible = true;
+                        ItemCost8.Visible = true;
+                        ItemQ8.Visible = true;
+                        ItemRemove8.Visible = true;
+
+                        //Setting the Text values for the textboxs for Item 8
+                        str = sr.ReadLine();
+                        Itemline8 = str;
+                        Prices[7] = double.Parse(str.Substring(str.IndexOf('-') + 1));
+                        Item8.Text = str.Substring(0, str.IndexOf(','));
+                        ItemCost8.Text = "$" + str.Substring(str.IndexOf('-') + 1);
+                        ItemQ8.Text = str.Substring(str.IndexOf(',') + 1, (str.IndexOf('-') - str.IndexOf(',')) - 1);
+                        goto case 7;
+                    case 7:
+                        Item7.Visible = true;
+                        ItemCost7.Visible = true;
+                        ItemQ7.Visible = true;
+                        ItemRemove7.Visible = true;
+
+                        //Setting the Text values for the textboxs for Item 7
+                        str = sr.ReadLine();
+                        Itemline7 = str;
+                        Prices[6] = double.Parse(str.Substring(str.IndexOf('-') + 1));
+                        Item7.Text = str.Substring(0, str.IndexOf(','));
+                        ItemCost7.Text = "$" + str.Substring(str.IndexOf('-') + 1);
+                        ItemQ7.Text = str.Substring(str.IndexOf(',') + 1, (str.IndexOf('-') - str.IndexOf(',')) - 1);
+                        goto case 6;
+                    case 6:
+                        Item6.Visible = true;
+                        ItemCost6.Visible = true;
+                        ItemQ6.Visible = true;
+                        ItemRemove6.Visible = true;
+
+                        //Setting the Text values for the textboxs for Item 6
+                        str = sr.ReadLine();
+                        Itemline6 = str;
+                        Prices[5] = double.Parse(str.Substring(str.IndexOf('-') + 1));
+                        Item6.Text = str.Substring(0, str.IndexOf(','));
+                        ItemCost6.Text = "$" + str.Substring(str.IndexOf('-') + 1);
+                        ItemQ6.Text = str.Substring(str.IndexOf(',') + 1, (str.IndexOf('-') - str.IndexOf(',')) - 1);
+                        goto case 5;
+                    case 5:
+                        Item5.Visible = true;
+                        ItemCost5.Visible = true;
+                        ItemQ5.Visible = true;
+                        ItemRemove5.Visible = true;
+
+                        //Setting the Text values for the textboxs for Item 5
+                        str = sr.ReadLine();
+                        Itemline5 = str;
+                        Prices[4] = double.Parse(str.Substring(str.IndexOf('-') + 1));
+                        Item5.Text = str.Substring(0, str.IndexOf(','));
+                        ItemCost5.Text = "$" + str.Substring(str.IndexOf('-') + 1);
+                        ItemQ5.Text = str.Substring(str.IndexOf(',') + 1, (str.IndexOf('-') - str.IndexOf(',')) - 1);
+                        goto case 4;
+                    case 4:
+                        Item4.Visible = true;
+                        ItemCost4.Visible = true;
+                        ItemQ4.Visible = true;
+                        ItemRemove4.Visible = true;
+
+                        //Setting the Text values for the textboxs for Item 4
+                        str = sr.ReadLine();
+                        Itemline4 = str;
+                        Prices[3] = double.Parse(str.Substring(str.IndexOf('-') + 1));
+                        Item4.Text = str.Substring(0, str.IndexOf(','));
+                        ItemCost4.Text = "$" + str.Substring(str.IndexOf('-') + 1);
+                        ItemQ4.Text = str.Substring(str.IndexOf(',') + 1, (str.IndexOf('-') - str.IndexOf(',')) - 1);
+                        goto case 3;
+                    case 3:
+                        Item3.Visible = true;
+                        ItemCost3.Visible = true;
+                        ItemQ3.Visible = true;
+                        ItemRemove3.Visible = true;
+
+                        //Setting the Text values for the textboxs for Item 3
+                        str = sr.ReadLine();
+                        Itemline3 = str;
+                        Prices[2] = double.Parse(str.Substring(str.IndexOf('-') + 1));
+                        Item3.Text = str.Substring(0, str.IndexOf(','));
+                        ItemCost3.Text = "$" + str.Substring(str.IndexOf('-') + 1);
+                        //Currently not working
+                        ItemQ3.Text = str.Substring(str.IndexOf(',') + 1, (str.IndexOf('-') - str.IndexOf(',')) - 1);
+                        goto case 2;
+                    case 2:
+                        Item2.Visible = true;
+                        ItemCost2.Visible = true;
+                        ItemQ2.Visible = true;
+                        ItemRemove2.Visible = true;
+
+                        //Setting the Text values for the textboxs for Item 2
+                        str = sr.ReadLine();
+                        Itemline2 = str;
+                        Prices[1] = double.Parse(str.Substring(str.IndexOf('-') + 1));
+                        Item2.Text = str.Substring(0, str.IndexOf(','));
+                        ItemCost2.Text = "$" + str.Substring(str.IndexOf('-') + 1);
+                        ItemQ2.Text = str.Substring(str.IndexOf(',') + 1, (str.IndexOf('-') - str.IndexOf(',') - 1));
+                        goto case 1;
+                    case 1:
+                        //Setting the Text values for the textboxs for Item 1
+                        str = sr.ReadLine();
+                        Itemline1 = str;
+                        Prices[0] = double.Parse(str.Substring(str.IndexOf('-') + 1));
+                        Item1.Text = str.Substring(0, str.IndexOf(','));
+                        ItemCost1.Text = "$" + str.Substring(str.IndexOf('-') + 1);
+                        ItemQ1.Text = str.Substring(str.IndexOf(',') + 1, (str.IndexOf('-') - str.IndexOf(',')) - 1);
+                        goto default;
+                    default:
+                        sr.Close();
+                        CalculateTotal();
+                        break;
+                }
+            }
+            else
+            {
+                Application.Exit();
             }
 
         }

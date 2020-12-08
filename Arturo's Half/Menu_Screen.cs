@@ -413,7 +413,7 @@ namespace WindowsFormsApp1
 
                 Directory = Directory.Substring(0, Directory.IndexOf("Arturo's Half"));
                 Process.Start(Directory + "\\Eric's Half\\bin\\Debug\\Software_Engineering.exe");
-                this.Close();
+                Application.Exit();
             }
         }
     }
