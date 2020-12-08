@@ -127,7 +127,7 @@ namespace Software_Engineering
             this.CustomerAddressText.AutoSize = true;
             this.CustomerAddressText.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CustomerAddressText.ForeColor = System.Drawing.Color.White;
-            this.CustomerAddressText.Location = new System.Drawing.Point(78, 160);
+            this.CustomerAddressText.Location = new System.Drawing.Point(53, 163);
             this.CustomerAddressText.Name = "CustomerAddressText";
             this.CustomerAddressText.Size = new System.Drawing.Size(129, 16);
             this.CustomerAddressText.TabIndex = 11;
