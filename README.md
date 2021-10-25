@@ -16,7 +16,7 @@
 * Loging in would involve accessing the customer file and seaching the username and pasword for proper checking
 * All three of these start screen options: Continue as Guest, Account Creation, or logging in, would eventually end up at the menu screen where the customer is able to select the items they wish to purchase
 
-##### Issues Recognized:
+###### Issues Recognized:
 * Security for the customer information file
 * communication and formating of information between screens/application components
 
